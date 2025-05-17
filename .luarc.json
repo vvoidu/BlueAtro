@@ -1,0 +1,28 @@
+{
+  "diagnostics.disable": ["unused-local"],
+  "workspace.library": ["../smods/lsp_def"],
+  "hint.enable": true,
+  "diagnostics.globals": [
+    "create_badge",
+    "G",
+    "localize",
+    "juice_card_until",
+    "pseudorandom",
+    "pseudoseed",
+    "card_eval_status_text",
+    "playing_card_joker_effects",
+    "create_playing_card",
+    "play_sound",
+    "lighten",
+    "copy_card",
+    "pseudoshuffle",
+    "draw_card",
+    "NFS",
+        "get_blind_amount",
+        "update_hand_text",
+        "level_up_hand",
+        "end_round",
+        "new_round",
+        "juice_card"
+  ]
+}

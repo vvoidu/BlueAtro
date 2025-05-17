@@ -1,0 +1,25 @@
+[manifest]
+version = "1.2"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = 'functions/state_events.lua'
+pattern = '''-- TARGET: effects before deck final_scoring_step'''
+position = "after"
+payload = '''if G.GAME.blueatro_overtime_list then
+  for _, overtime_source in ipairs(G.GAME.blueatro_overtime_list) do
+		SMODS.calculate_effect({message = localize("k_again_ex")}, overtime_source)
+    BlueAtro.force_score_card(scoring_hand[#scoring_hand], {
+      cardarea = G.play,
+      full_hand = G.play.cards,
+      scoring_hand = scoring_hand,
+      scoring_name = text,
+      poker_hands = poker_hands
+    })
+  end
+  G.GAME.blueatro_overtime_list = nil
+end
+'''
+match_indent = true
