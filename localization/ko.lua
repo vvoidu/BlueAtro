@@ -401,24 +401,18 @@ return {
 			j_blueatro_mushiqueen_card = {
 				name = "무시퀸 카드",
 				text = {
-					"정확히 카드 4장으로 이루어진",
+					"정확히 카드 {C:attention}4{}장으로 이루어진",
 					"핸드를 플레이할 때마다",
-					"{C:green}#1#/#2#{}의 확률로",
-					"무작위한 {C:blue}일반{C:attention}조커{}를 생성합니다",
+					"무작위한 {C:blue}일반 {C:attention}조커{}를 생성합니다",
 				},
 			},
 			j_blueatro_challenge_letter = {
 				name = "도전장",
 				text = {
-					"",
-				},
-			},
-			j_blueatro_cath_palug = {
-				name = "카스 팔루그",
-				text = {
-					"{C:attention}와일드 카드{}가 득점할 시",
-					"{C:green}#1#/#2#{}의 확률로",
-					"플레이한 족보를 업그레이드합니다",
+					"{X:mult,C:white}X#1#{} 배수",
+					"{C:attention}보스 블라인드 #2#{}개를",
+					"클리어하기 전까지 발동하지 않습니다",
+					"{C:inactive}(현재 #3#/#2#)",
 				},
 			},
 		},

@@ -427,8 +427,8 @@ return {
 			j_blueatro_mushiqueen_card = {
 				name = "Mushiqueen Card",
 				text = {
-					"{C:green}#1# in #2#{} chance to create a",
-					"a random {C:blue}Common {C:attention}Joker{} when",
+					"Creates a a random",
+					"{C:blue}Common {C:attention}Joker{} when",
 					"exactly {C:attention}4{} cards are played",
 				},
 			},
@@ -441,10 +441,6 @@ return {
 					"are beaten",
 					"{C:inactive}(Currently #3#/#2#)",
 				},
-			},
-			j_blueatro_cath_palug = {
-				name = "Cath Palug",
-				text = {},
 			},
 		},
 		Other = {},
