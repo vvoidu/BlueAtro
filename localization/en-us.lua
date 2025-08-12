@@ -427,7 +427,7 @@ return {
 			j_blueatro_mushiqueen_card = {
 				name = "Mushiqueen Card",
 				text = {
-					"Creates a a random",
+					"Creates a random",
 					"{C:blue}Common {C:attention}Joker{} when",
 					"exactly {C:attention}4{} cards are played",
 				},

@@ -379,7 +379,7 @@ return {
 				},
 			},
 			j_blueatro_activity_report = {
-				name = "전술 보고서",
+				name = "활동 보고서",
 				text = {
 					"라운드 종료 시",
 					"무작위한 족보 두가지의",
