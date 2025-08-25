@@ -365,7 +365,7 @@ return {
 				name = "배게 싸움",
 				text = {
 					"모든 {C:attention}에디션{}이 없는 {C:attention}기본{}",
-					"카드들을 {C:attention}#1#{}번 재발동합니다",
+					"카드들을 재발동합니다",
 				},
 			},
 			j_blueatro_resort_restoration = {

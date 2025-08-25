@@ -388,7 +388,6 @@ return {
 				text = {
 					"Retrigger all cards without",
 					"{C:attention}Enhancements{} or {C:attention}Editions{}",
-					"{C:attention}#1#{} additional times",
 				},
 			},
 			j_blueatro_resort_restoration = {
