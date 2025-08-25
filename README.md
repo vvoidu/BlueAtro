@@ -5,7 +5,7 @@
 # BlueAtro
 **Blue Archive themed Balatro mod!**
 
-Tries to 
+Tries to be reasonably balanced around the base game.
 Supports English and Korean.
 
 ### Dependencies
