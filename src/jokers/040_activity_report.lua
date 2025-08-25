@@ -18,10 +18,10 @@ SMODS.Joker({
 				end
 			end
 
-			local hand, _ = pseudorandom_element(valid_hands, "activity_report", {})
-			SMODS.smart_level_up_hand(card, hand, false)
-			hand, _ = pseudorandom_element(valid_hands, "activity_report", {})
-			SMODS.smart_level_up_hand(card, hand, false)
+			for i = 1, 3 do
+				local hand, _ = pseudorandom_element(valid_hands, "activity_report", {})
+				SMODS.smart_level_up_hand(card, hand, false)
+			end
 		end
 	end,
 })

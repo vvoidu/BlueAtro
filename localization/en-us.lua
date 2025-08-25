@@ -134,7 +134,7 @@ return {
 					"{C:mult}+#1#{} Mult",
 					"Immediately {C:red}self-destructs",
 					"if there are no",
-					"remaining Discards",
+					"remaining {C:attention}Discards{}",
 				},
 			},
 			j_blueatro_stargazing = {
@@ -185,7 +185,7 @@ return {
 				text = {
 					"Played {C:attention}Queens{}",
 					"permanently gain",
-					"{C:chips}+#1#{} Chips when scored",
+					"{C:mult}+#1#{} Mult when scored",
 				},
 			},
 			j_blueatro_double_o = {
@@ -333,7 +333,7 @@ return {
 				name = "Dowsing Rods",
 				text = {
 					"When {C:attention}Blind{} is selected,",
-					"cards with the the least common {C:attention}ranks{}",
+					"cards with the least common {C:attention}ranks{}",
 					"are shuffled to the top of the deck",
 					"{C:inactive}(Ties are shuffled together)",
 				},
@@ -395,15 +395,15 @@ return {
 				name = "Resort Restoration",
 				text = {
 					"Earn {C:money}$#1#{} at end of round",
-					"Cashout increases by {C:money}$#2#{}",
-					"if played hand",
+					"Cashout increases by",
+					"{C:money}$#2#{} if played hand",
 					"contains a {C:attention}Full House{}",
 				},
 			},
 			j_blueatro_activity_report = {
 				name = "Activity Report",
 				text = {
-					"Upgrade two random",
+					"Upgrade three random",
 					"{C:attention}poker hands{} at",
 					"the end of round",
 				},
