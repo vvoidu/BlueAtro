@@ -441,6 +441,14 @@ return {
 					"{C:inactive}(Currently #3#/#2#)",
 				},
 			},
+			j_blueatro_cath_palug = {
+				name = "Cath Palug",
+				text = {
+					"{C:attention}X in 5{} chance to",
+					"upgrade played {C:attention}poker hand{}",
+					"where X is the number of {C:attention}Wild Cards{} played",
+				},
+			},
 		},
 		Other = {},
 		Planet = {},

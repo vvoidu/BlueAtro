@@ -27,7 +27,7 @@ SMODS.Joker({
 				message = localize({ type = "variable", key = "a_xmult", vars = { card.ability.extra.xmult } }),
 				card = card,
 			}
-		elseif context.end_of_round and context.main_eval and not context.blueprint then
+		elseif context.end_of_round and context.main_eval and not context.blueprint and not context.game_over then
 			card.ability.extra.xmult = self.config.extra.xmult
 			return {
 				message = localize("k_reset"),

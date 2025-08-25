@@ -26,7 +26,13 @@ SMODS.Joker({
 				message = localize("k_upgrade_ex"),
 				colour = G.C.GREEN,
 			}
-		elseif context.end_of_round and not context.repetition and not context.individual and not context.blueprint then
+		elseif
+			context.end_of_round
+			and not context.repetition
+			and not context.individual
+			and not context.blueprint
+			and not context.game_over
+		then
 			card.ability.extra.odds = self.config.extra.odds
 			return {
 				message = localize("k_reset"),

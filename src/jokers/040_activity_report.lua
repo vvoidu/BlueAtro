@@ -10,7 +10,7 @@ SMODS.Joker({
 	perishable_compat = true,
 	loc_vars = function(_, info_queue, card) end,
 	calculate = function(self, card, context)
-		if context.end_of_round and context.main_eval then
+		if context.end_of_round and context.main_eval and not context.game_over then
 			local valid_hands = {} -- Set to array
 			for hand, hand_data in pairs(G.GAME.hands) do
 				if hand_data.visible then

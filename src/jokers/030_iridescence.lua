@@ -16,6 +16,7 @@ SMODS.Joker({
 			context.end_of_round
 			and context.cardarea == G.jokers
 			and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit
+			and not context.game_over
 		then
 			G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 			G.E_MANAGER:add_event(Event({

@@ -29,6 +29,7 @@ SMODS.Joker({
 			and context.main_eval
 			and not context.blueprint
 			and G.GAME.blind_on_deck == "Boss"
+			and not context.game_over
 		then
 			card.ability.extra.xmult = self.config.extra.xmult
 			return {

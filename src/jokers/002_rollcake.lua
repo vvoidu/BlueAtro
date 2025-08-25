@@ -51,7 +51,7 @@ SMODS.Joker({
 			end
 		end
 
-		if context.end_of_round and context.main_eval and not context.blueprint then
+		if context.end_of_round and context.main_eval and not context.blueprint and not context.game_over then
 			if card.ability.extra.rounds_left - 1 <= 0 then
 				BlueAtro.pop_card(card)
 				return {
