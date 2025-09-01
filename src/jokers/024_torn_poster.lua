@@ -22,6 +22,9 @@ SMODS.Joker({
 
 local _card_remove = Card.remove
 function Card:remove()
+	-- FIXME: This triggers when exiting to main menu.
+	-- The game is saved beforehand so it doesn't have any effect,
+	-- but plays the sound effect which is not intended behavior.
 	if
 		self.config.center_key == "j_blueatro_torn_poster"
 		and self.added_to_deck
