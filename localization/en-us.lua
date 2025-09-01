@@ -410,6 +410,7 @@ return {
 			j_blueatro_perfect_maid = {
 				name = "Perfect Maid",
 				text = {
+					"+{C:attention}#1#{} hand size",
 					"Discard all cards",
 					"held in hand when",
 					"a hand is played",
@@ -444,9 +445,9 @@ return {
 			j_blueatro_cath_palug = {
 				name = "Cath Palug",
 				text = {
-					"{C:attention}X in 5{} chance to",
+					"{C:green}1 in #1#{} chance to",
 					"upgrade played {C:attention}poker hand{}",
-					"where X is the number of {C:attention}Wild Cards{} played",
+					"for each {C:attention}Wild Card{} played",
 				},
 			},
 		},
