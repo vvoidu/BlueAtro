@@ -389,6 +389,7 @@ return {
 			j_blueatro_perfect_maid = {
 				name = "완벽한 메이드",
 				text = {
+					"{C:attention}+#1#{} 핸드 크기",
 					"핸드를 플레이하면",
 					"즉시 손패에 남은 모든",
 					"카드를 버립니다",

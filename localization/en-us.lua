@@ -410,7 +410,7 @@ return {
 			j_blueatro_perfect_maid = {
 				name = "Perfect Maid",
 				text = {
-					"+{C:attention}#1#{} hand size",
+					"{C:attention}+#1#{} hand size",
 					"Discard all cards",
 					"held in hand when",
 					"a hand is played",
