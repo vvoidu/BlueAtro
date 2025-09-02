@@ -97,9 +97,7 @@ return {
 			j_blueatro_elixir_of_youth = {
 				name = "Elixir of Youth",
 				text = {
-					"If {C:attention}first hand{} of round is a",
-					"single {C:attention}face card{}, destroy it and",
-					"add a random enhanced {C:attention}9{} to {C:attention}hand{}",
+					"",
 				},
 			},
 			j_blueatro_pointman = {

@@ -96,9 +96,7 @@ return {
 			j_blueatro_elixir_of_youth = {
 				name = "회춘의 비약",
 				text = {
-					"라운드의 {C:attention}첫 핸드{}가 {C:attention}그림 카드{}",
-					"1장뿐이라면, 그 카드를 파괴한뒤",
-					"무작위로 강화된 {C:attention}9{}를 {C:attention}패{}에 넣습니다",
+					"",
 				},
 			},
 			j_blueatro_pointman = {
