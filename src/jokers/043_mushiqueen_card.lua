@@ -10,14 +10,14 @@ SMODS.Joker({
 	perishable_compat = true,
 	loc_vars = function(_, info_queue, card) end,
 	calculate = function(self, card, context)
-		if context.before and context.main_eval and #G.play.cards == 4 then
+		if context.before and context.main_eval and #G.scoring_hand == 4 then
 			G.E_MANAGER:add_event(Event({
 				func = function()
 					if #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then
 						SMODS.add_card({
 							set = "Joker",
 							key_append = "mushiqueen",
-							rarity = 0,
+							rarity = 1,
 						})
 					end
 					return true

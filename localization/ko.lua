@@ -276,7 +276,7 @@ return {
 				name = "번역 오류",
 				text = {
 					"{C:attention}조커{}가 {C:chips}+조각{}을",
-					"부여할 시 대신 {C:chips}+배수{}를",
+					"부여할 시 대신 {C:mult}+멀트{}를",
 					"할수밖에 없다",
 				},
 			},
@@ -302,7 +302,7 @@ return {
 				name = "헬멧단",
 				text = {
 					"{X:mult,C:white}X#1#{} 배수",
-					"{C:attention}조커{}를 올기려면",
+					"{C:attention}조커{}를 옮기려면",
 					"{C:money}$#2#{}를 내야합니다",
 				},
 			},
@@ -395,14 +395,17 @@ return {
 			},
 			j_blueatro_multitrack_drifting = {
 				name = "복선 드리프트",
-				text = {},
+				text = {
+					"손패에 남은 최고의 {C:attention}족보{}에",
+					"해당하는 {C:chips}칩{}과 {C:mult}배수{}를 부여합니다"
+				},
 			},
 			j_blueatro_mushiqueen_card = {
 				name = "무시퀸 카드",
 				text = {
-					"정확히 카드 {C:attention}4{}장으로 이루어진",
+					"정확히 카드 {C:attention}4{}장이 득점하는",
 					"핸드를 플레이할 때마다",
-					"무작위한 {C:blue}일반 {C:attention}조커{}를 생성합니다",
+					"무작위한 {C:green}희귀 {C:attention}조커{}를 생성합니다",
 				},
 			},
 			j_blueatro_challenge_letter = {

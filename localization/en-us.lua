@@ -426,8 +426,9 @@ return {
 				name = "Mushiqueen Card",
 				text = {
 					"Creates a random",
-					"{C:blue}Common {C:attention}Joker{} when",
-					"exactly {C:attention}4{} cards are played",
+					"{C:green}Uncommon {C:attention}Joker{} if",
+					"played hand contains exactly",
+					"{C:attention}4{} scoring cards",
 				},
 			},
 			j_blueatro_challenge_letter = {
