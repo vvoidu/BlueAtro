@@ -4,7 +4,7 @@ SMODS.Joker({
 	pos = BlueAtro.id_to_atlas_pos(9),
 	config = { extra = { mult = 15 } },
 	rarity = 1,
-	cost = 6,
+	cost = 5,
 	blueprint_compat = true,
 	eternal_compat = false,
 	perishable_compat = true,
@@ -13,7 +13,7 @@ SMODS.Joker({
 	end,
 	calculate = function(_, card, context)
 		if G.GAME.current_round.discards_left == 0 then
-			SMODS.destroy_cards(card)
+			SMODS.destroy_cards({ card }, true)
 			return
 		end
 
