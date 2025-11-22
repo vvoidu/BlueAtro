@@ -1,11 +1,3 @@
-local function should_proc(held_cards)
-	if held_cards == nil or #held_cards == 0 then
-		return true
-	end
-	local poker_hand, _, _, _, _ = G.FUNCS.get_poker_hand_info(held_cards)
-	return poker_hand == "High Card"
-end
-
 SMODS.Joker({
 	key = "vanivani",
 	atlas = "blueatro_joker_atlas",
@@ -20,12 +12,19 @@ SMODS.Joker({
 		return { vars = { card.ability.extra.xmult } }
 	end,
 	calculate = function(self, card, context)
-		if context.joker_main and should_proc(G.hand.cards) then
-			return {
-				x_mult = card.ability.extra.xmult,
-				card = context.blueprint_card or card,
-				colour = G.C.MULT,
-			}
+		if context.joker_main then
+			if G.hand.cards == nil or #G.hand.cards == 0 then
+				return true
+			end
+			local poker_hand, _, _, _, _ = G.FUNCS.get_poker_hand_info(G.hand.cards)
+
+			if poker_hand == "High Card" then
+				return {
+					x_mult = card.ability.extra.xmult,
+					card = context.blueprint_card or card,
+					colour = G.C.MULT,
+				}
+			end
 		end
 	end,
 	joker_display_def = function(JokerDisplay)
@@ -41,7 +40,17 @@ SMODS.Joker({
 						unhighlighted[#unhighlighted + 1] = held
 					end
 				end
-				card.joker_display_values.xmult = should_proc(unhighlighted) and card.ability.extra.xmult or 1.0
+
+				if #unhighlighted == 0 then
+					card.joker_display_values.xmult = card.ability.extra.xmult
+				else
+					local text, poker_hand, scoring_hand = JokerDisplay.evaluate_hand(unhighlighted)
+					if text == "Unknown" then
+						card.joker_display_values.xmult = "?"
+					else
+						card.joker_display_values.xmult = card.ability.extra.xmult
+					end
+				end
 			end,
 		}
 	end,

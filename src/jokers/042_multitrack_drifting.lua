@@ -12,6 +12,9 @@ SMODS.Joker({
 	calculate = function(self, card, context)
 		if context.joker_main then
 			local poker_hand, _, _, _, _ = G.FUNCS.get_poker_hand_info(G.hand.cards)
+			if poker_hand == "NULL" then
+				poker_hand = "High Card"
+			end
 
 			return {
 				mult = G.GAME.hands[poker_hand].mult,
@@ -40,14 +43,20 @@ SMODS.Joker({
 						unhighlighted[#unhighlighted + 1] = held
 					end
 				end
-				local poker_hand, disp_text, _, _, _ = G.FUNCS.get_poker_hand_info(unhighlighted)
-				if poker_hand == "NULL" then
+				local text, poker_hand, scoring_hand = JokerDisplay.evaluate_hand(unhighlighted)
+
+				if text == "NULL" then
 					poker_hand = "High Card"
 					disp_text = localize("High Card", "poker_hands")
+				elseif text == "Unknown" then
+					card.joker_display_values.chips = "?"
+					card.joker_display_values.mult = "?"
+					card.joker_display_values.handtype = "???"
+				else
+					card.joker_display_values.chips = G.GAME.hands[text].chips
+					card.joker_display_values.mult = G.GAME.hands[text].mult
+					card.joker_display_values.handtype = text
 				end
-				card.joker_display_values.chips = G.GAME.hands[poker_hand].chips
-				card.joker_display_values.mult = G.GAME.hands[poker_hand].mult
-				card.joker_display_values.handtype = disp_text
 			end,
 		}
 	end,
