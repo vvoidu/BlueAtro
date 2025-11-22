@@ -1,0 +1,30 @@
+[manifest]
+version = "1.2"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = 'functions/state_events.lua'
+pattern = '''check_for_unlock({type = 'run_card_replays'})'''
+position = "after"
+payload = '''
+if #SMODS.find_card("j_blueatro_perfect_maid") > 0 then
+  G.E_MANAGER:add_event(Event({
+    func = function()
+      G.hand:unhighlight_all()
+      -- Temporarily allow unlimited highlights
+      local highlight_limit_backup = G.hand.config.highlighted_limit
+      G.hand.config.highlighted_limit = 65535
+      play_sound("blueatro_e_pyon", 1.0, 0.6)
+      for _, c in ipairs(G.hand.cards) do
+        G.hand:add_to_highlighted(c, true)
+      end
+      G.FUNCS.discard_cards_from_highlighted(nil, true)
+      G.hand.config.highlighted_limit = highlight_limit_backup
+      return true
+    end
+  }))
+end
+'''
+match_indent = true
