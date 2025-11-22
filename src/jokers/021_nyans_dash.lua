@@ -11,7 +11,6 @@ SMODS.calculate_context = function(context, return_table)
 	local ret = _smods_calculate_context(context, return_table)
 
 	if context.after then
-		--	BEGIN: Nyan's Dash
 		local base_hands = {
 			"Pair",
 			"Two Pair",
@@ -28,7 +27,6 @@ SMODS.calculate_context = function(context, return_table)
 		local yuzu_combo = G.GAME.current_round.blueatro.yuzu_combo
 		table.remove(yuzu_combo, 1)
 		yuzu_combo[#yuzu_combo + 1] = next
-		--	END: Nyan's Dash
 	end
 
 	return ret
@@ -48,7 +46,6 @@ SMODS.Joker({
 		return {
 			vars = {
 				card.ability.extra.xmult_gain,
-				card.ability.extra.xmult_loss,
 				card.ability.extra.xmult,
 				localize(G.GAME.current_round.blueatro.yuzu_combo[1], "poker_hands"),
 				localize(G.GAME.current_round.blueatro.yuzu_combo[2], "poker_hands"),

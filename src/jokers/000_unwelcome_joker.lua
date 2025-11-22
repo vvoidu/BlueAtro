@@ -20,7 +20,8 @@ SMODS.Joker({
 				remove = true,
 			}
 		elseif context.after and context.main_eval then
-			BlueAtro.pop_card(card, "blueatro_e_explosion")
+			SMODS.destroy_cards(card)
+			play_sound("blueatro_e_explosion")
 		end
 	end,
 })

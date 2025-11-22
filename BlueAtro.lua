@@ -6,6 +6,20 @@ SMODS.current_mod.optional_features = function()
 	}
 end
 
+SMODS.Language({
+	key = "ko",
+	label = "한국어",
+	font = {
+		file = "oyster.ttf",
+		render_scale = G.TILESIZE * 8,
+		TEXT_HEIGHT_SCALE = 0.83,
+		TEXT_OFFSET = { x = 0, y = 0 },
+		FONTSCALE = 0.1,
+		squish = 1,
+		DESCSCALE = 1,
+	},
+})
+
 SMODS.Atlas({
 	key = "modicon",
 	path = "icon.png",

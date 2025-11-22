@@ -4,6 +4,7 @@
   "author": ["void"],
   "description": "Blue Archive themed Balatro mod.",
   "prefix": "blueatro",
+  "priority": -1200,
   "display_name": "BlueAtro",
   "main_file": "BlueAtro.lua",
   "badge_colour": "6CB9FC",

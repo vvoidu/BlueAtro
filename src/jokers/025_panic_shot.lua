@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "panic_shot",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(25),
-	config = { extra = { xmult = 4, odds = 5 } },
+	config = { extra = { xmult = 5, odds = 5 } },
 	rarity = 2,
 	cost = 6,
 	blueprint_compat = true,
@@ -32,6 +32,7 @@ SMODS.Joker({
 			and not context.individual
 			and not context.blueprint
 			and not context.game_over
+			and card.ability.extra.odss ~= self.config.extra.odds
 		then
 			card.ability.extra.odds = self.config.extra.odds
 			return {

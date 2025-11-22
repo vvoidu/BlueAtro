@@ -9,20 +9,11 @@ SMODS.Joker({
 	eternal_compat = true,
 	perishable_compat = true,
 	loc_vars = function(_, info_queue, card)
-		info_queue[#info_queue + 1] = G.P_CENTERS.m_blueatro_pyroxene
 		return { vars = { card.ability.extra.chips } }
-	end,
-	in_pools = function(self, args)
-		for _, card in ipairs(G.playing_cards) do
-			if SMODS.has_enhancement(card, "m_blueatro_pyroxene") then
-				return true
-			end
-		end
-		return false
 	end,
 	calculate = function(_, card, context)
 		if context.individual and context.cardarea == G.hand and not context.end_of_round then
-			if SMODS.has_enhancement(context.other_card, "m_blueatro_pyroxene") then
+			if next(SMODS.get_enhancements(context.other_card)) then
 				if context.other_card.debuff then
 					return {
 						message = localize("k_debuffed"),
@@ -48,7 +39,7 @@ SMODS.Joker({
 				for _, playing_card in ipairs(G.hand.cards) do
 					if
 						not playing_card.highlighted
-						and SMODS.has_enhancement(playing_card, "m_blueatro_pyroxene")
+						and next(SMODS.get_enhancements(playing_card))
 						and not (playing_card.facing == "back")
 						and not playing_card.debuff
 					then

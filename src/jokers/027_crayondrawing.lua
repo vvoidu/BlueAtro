@@ -19,15 +19,21 @@ SMODS.Joker({
 				colour = G.C.CHIPS,
 			}
 		elseif context.before and context.main_eval and not context.blueprint then
-			-- FIXME: Wild cards!!!!!!
 			local suits = {}
+			local wilds = 0
 			for _, scoring_card in ipairs(context.scoring_hand) do
 				suits[scoring_card.base.suit] = true
+				if SMODS.has_enhancement(scoring_card, "m_wild") then
+					wilds = wilds + 1
+				end
 			end
+
 			local unique_suits = 0
 			for _ in pairs(suits) do
 				unique_suits = unique_suits + 1
 			end
+			unique_suits = math.min(4, unique_suits + wilds)
+
 			card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chips_gain * unique_suits
 			return {
 				message = localize("k_upgrade_ex"),

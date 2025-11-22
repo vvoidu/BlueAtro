@@ -87,7 +87,8 @@ return {
 			j_blueatro_hero = {
 				name = "용사",
 				text = {
-					"이 조커는 카드들이 {C:attention}#2#{}번 득점할 때마다,",
+					"이 조커는 카드가",
+					"{C:attention}#2#{}번 득점할 때마다",
 					"배수 획득량이 {C:mult}+#1#{} 증가합니다",
 					"{C:inactive}(#4#번 남음)",
 					"{C:inactive}(현재 {C:mult}+#3#{}{C:inactive} 배수)",
@@ -102,17 +103,20 @@ return {
 			j_blueatro_pointman = {
 				name = "포인트맨",
 				text = {
-					"이 조커의 배수 획득량은 이 조커의 오른쪽에 있는",
-					"조커의 갯수에 {X:mult,C:white}X#1#{}를 곱한 값입니다",
+					"이 조커의 배수 획득량은",
+					"이 조커의 오른쪽에 있는",
+					"조커의 갯수에 {X:mult,C:white}X#1#{}를",
+					"곱한 값입니다",
 					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
 				},
 			},
 			j_blueatro_white_rabbit = {
 				name = "백토",
 				text = {
-					"{C:mult}+#1#{} 배수,",
+					"{C:mult}+#1#{} 배수",
 					"{C:attention}블라인드{}를 선택할 시",
-					"이 조커의 복제본을 생성합니다",
+					"이 조커의 복제본을",
+					"생성합니다",
 				},
 			},
 			j_blueatro_crafting_chamber = {
@@ -136,13 +140,14 @@ return {
 				name = "천체관측",
 				text = {
 					"{C:tarot}타로{} 카드를 사용할시",
-					"무작위 {C:planet}행성{} 카드를 생성합니다",
+					"무작위 {C:planet}행성{} 카드를",
+					"생성합니다",
 				},
 			},
 			j_blueatro_mob_of_mobs = {
 				name = "모브의 모임",
 				text = {
-					"이 조커는 {C:attention}블라인드{}를 선택하면,",
+					"이 조커는 {C:attention}블라인드{}를 선택하면",
 					"보유한 {C:blue}일반{} 조커마다",
 					"배수 획득량이 {X:mult,C:white}X#2#{} 증가합니다",
 					"{C:inactive}(현재 {X:mult,C:white}X#1#{}{C:inactive} 배수)",
@@ -151,7 +156,8 @@ return {
 			j_blueatro_cheerleader = {
 				name = "치어리더",
 				text = {
-					"각 득점한 카드가 손패에 남아 있는",
+					"각 득점한 카드가",
+					"손패에 남아 있는",
 					"{C:attention}동일한 랭크{}의 카드의",
 					"장수만큼 다시 발동합니다",
 				},
@@ -161,7 +167,8 @@ return {
 				text = {
 					"정확히 {C:attention}#2#{}장을 버릴때마다",
 					"{C:money}$#1#{}를 획득합니다",
-					"카드의 갯수는 매 라운드 변경됩니다",
+					"카드의 갯수는",
+					"매 라운드 변경됩니다",
 				},
 			},
 			j_blueatro_chicken_skewer = {
@@ -176,7 +183,8 @@ return {
 				name = "와라쿠 히메 포토카드",
 				text = {
 					"플레이해 득점한 {C:attention}퀸{}에",
-					"배수 획득량을 영구적으로 {C:mult}+#1#{}추가합니다",
+					"배수 획득량을 영구적으로",
+					"{C:mult}+#1#{} 추가합니다",
 				},
 			},
 			j_blueatro_double_o = {
@@ -190,7 +198,8 @@ return {
 			j_blueatro_calculator = {
 				name = "회계의 계산기",
 				text = {
-					"손패에 남아 있는 {C:attention}청휘석 카드{}마다",
+					"손패에 남아 있는",
+					"{C:attention}강화된 카드{}마다",
 					"칩 {C:chips}+#1#{}개를 획득합니다",
 				},
 			},
@@ -228,9 +237,9 @@ return {
 					"이 조커는 콤보에 맞는 패를 낼때마다",
 					"배수 획득량이 {X:mult,C:white}X#1#{} 증가합니다",
 					"콤보를 떨구면 배수 획득량이 초기화됩니다",
-					"{C:inactive}(현재 {X:mult,C:white}X#3#{C:inactive} 배수)",
+					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
 					"",
-					"콤보: {C:attention}#4#{}, {C:inactive,s:0.9}#5#, #6#, ... ",
+					"콤보: {C:attention}#2#{}, {C:inactive,s:0.9}#5#, #6#, ... ",
 				},
 			},
 			j_blueatro_account_reroll = {
@@ -282,9 +291,11 @@ return {
 			j_blueatro_crayondrawing = {
 				name = "크레파스 그림",
 				text = {
-					"득점하는 다른 문양 하나마다 이 조커의",
-					"칩 획득량이 {C:chips}+#1#{}개 증가합니다",
-					"{C:inactive}(현재 칩 {C:chips}+#2#{}{C:inactive} 개{})",
+					"플레이해 득점하는",
+					"문양의 종류 하나마다",
+					"이 조커의 칩 획득량이",
+					"{C:chips}+#1#{}개 증가합니다",
+					"{C:inactive}(현재 칩 {C:chips}+#2#{}{C:inactive} 개)",
 				},
 			},
 			j_blueatro_vanivani = {
@@ -329,28 +340,46 @@ return {
 					"{C:inactive}(비길시 같이 섞입니다)",
 				},
 			},
+			j_blueatro_ambulance = {
+				name = "응급 돌파 11호",
+				text = {
+					"현재 {C:attention}블라인드{} 도중",
+					"판매한 {C:attention}조커{}마다",
+					"{X:mult,C:white}X#1#{} 배수를 획득합니다",
+					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
+				},
+			},
+			j_blueatro_bunny_grenade = {
+				name = "토끼 꼬리 수류탄",
+				text = {
+					"현재 라운드의 첫 패에",
+					"드로우한 {C:attention}7{} 한 장 마다",
+					"{X:mult,C:white}X#1#{} 배수를 획득합니다",
+					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
+				},
+			},
 			j_blueatro_timid_observation = {
 				name = "소심한 관측",
 				text = {
 					"다른 {C:attention}조커{}가",
 					"{C:chips}+칩{}이나 {C:mult}+배수{}를 부여할 시",
-					"이 카드의 칩 획득량이 {C:chips}+#1#{}개 증가합니다",
+					"이 카드의 칩 획득량이",
+					"{C:chips}+#1#{}개 증가합니다",
 					"{C:inactive}(현재 칩 {C:chips}+#2#{}{C:inactive} 개{})",
 				},
 			},
-			j_blueatro_eridu = {
-				name = "요새도시 에리두",
+			j_blueatro_overtime = {
+				name = "잔업",
 				text = {
-					"{C:attention}조커{}가 {C:dollars}돈{}을 부여할 시,",
-					"대신 이 조커가 같은 양의",
-					"{C:mult}배수 획득량{}을 얻습니다",
-					"{C:inactive}(현재 {C:mult}+#1#{}{C:inactive} 배수{C:inactive})",
+					"모든 {C:attention}조커{}가 계산된후",
+					"마지막으로 득점한 카드를",
+					"한 번 재발동시킵니다",
 				},
 			},
 			j_blueatro_kuroko = {
 				name = "시로코 테러",
 				text = {
-					"카드 {C:attention}3{}을 구매할 때마다,",
+					"카드 {C:attention}3{}장을 구매할 때마다,",
 					"가장 왼쪽의 {C:attention}이터널{}이 아닌 {C:attention}조커{}를",
 					"{C:attention}파괴{}하고 이 카드의 배수 획득량이",
 					"{X:mult,C:white}X#2#{} 증가합니다",
@@ -361,7 +390,7 @@ return {
 			j_blueatro_pillow_fight = {
 				name = "배게 싸움",
 				text = {
-					"모든 {C:attention}에디션{}이 없는 {C:attention}기본{}",
+					"{C:attention}강화 효과{}나 {C:attention}에디션{}이 없는",
 					"카드들을 재발동합니다",
 				},
 			},
@@ -412,8 +441,44 @@ return {
 				text = {
 					"{X:mult,C:white}X#1#{} 배수",
 					"{C:attention}보스 블라인드 #2#{}개를",
-					"클리어하기 전까지 발동하지 않습니다",
+					"클리어하기 전까지",
+					"발동하지 않습니다",
 					"{C:inactive}(현재 #3#/#2#)",
+				},
+			},
+			j_blueatro_cath_palug = {
+				name = "카스 팔루그",
+				text = {
+					"플레이한 {C:attention}와일드 카드{}마다",
+					"{C:green}1/#1#{}의 확률로",
+					"플레이한 족보 레벨을",
+					"업그레이드합니다",
+				},
+			},
+			j_blueatro_scoop = {
+				name = "독점 취재",
+				text = {
+					"{X:mult,C:white}X#1#{} 배수",
+					"{C:chips}칩{}이 {C:mult}배수{}를",
+					"넘을수 없습니다",
+				},
+			},
+			j_blueatro_arcana_rifle = {
+				name = "저격소총의 아르카나",
+				text = {
+					"{C:tarot}타로{} 카드를 사용할때마다",
+					"이 카드의 배수 획득량이",
+					"{X:mult,C:white}X#1#{} 증가합니다",
+					"플레이한 후 초기화됩니다",
+					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
+				},
+			},
+			j_blueatro_peroro = {
+				name = "페로로 조커",
+				text = {
+					"{C:attention}보스 블라인드{}를 선택할 시",
+					"양 옆에 있는 조커의 {C:attention}판매가{}를",
+					"이 조커의 {C:attention}판매가{}에 더합니다",
 				},
 			},
 		},
@@ -422,7 +487,16 @@ return {
 		Spectral = {},
 		Stake = {},
 		Tag = {},
-		Tarot = {},
+		Tarot = {
+			c_blueatro_whale = {
+				name = "고래",
+				text = {
+					"선택한 카드 {C:attention}#1#{}장을",
+					"{C:attention}청휘석 카드{]로",
+					"강화합니다",
+				},
+			},
+		},
 		Voucher = {},
 	},
 	misc = {

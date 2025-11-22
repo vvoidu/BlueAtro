@@ -9,7 +9,7 @@ target = 'functions/state_events.lua'
 pattern = '''check_for_unlock({type = 'run_card_replays'})'''
 position = "after"
 payload = '''
-if #SMODS.find_card("j_blueatro_perfect_maid") > 0 then
+if next(SMODS.find_card("j_blueatro_perfect_maid")) then
   G.E_MANAGER:add_event(Event({
     func = function()
       G.hand:unhighlight_all()

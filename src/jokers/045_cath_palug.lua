@@ -14,7 +14,7 @@ SMODS.Joker({
 	calculate = function(self, card, context)
 		if context.before and context.main_eval then
 			for _, playing_card in ipairs(G.play.cards) do
-				if SMODS.has_enhancement(playing_card, "m_wild") then
+				if SMODS.has_enhancement(playing_card, "m_wild") and not playing_card.debuff then
 					if pseudorandom(pseudoseed("kazusa")) < G.GAME.probabilities.normal / card.ability.extra.odds then
 						card = context.blueprint or card
 						SMODS.calculate_effect({

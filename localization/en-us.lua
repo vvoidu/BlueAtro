@@ -197,8 +197,9 @@ return {
 			j_blueatro_calculator = {
 				name = "Treasurer's Calculator",
 				text = {
-					"Each {C:attention}Pyroxene Card{} held in",
-					"hand gives {C:chips}+#1#{} Chips",
+					"Each {C:attention}Enhanced Card{}",
+					"held in hand",
+					"gives {C:chips}+#1#{} Chips",
 				},
 			},
 			j_blueatro_sugar_rush = {
@@ -234,9 +235,9 @@ return {
 					"Gains {X:mult,C:white}X#1#{} Mult for each hand",
 					"matching the next hand in the combo",
 					"Mult is reset when combo is dropped",
-					"{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)",
+					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 					"",
-					"Combo: {C:attention}#4#{}, {C:inactive,s:0.9}#5#, #6#, ... ",
+					"Combo: {C:attention}#3#{}, {C:inactive,s:0.9}#5#, #6#, ... ",
 				},
 			},
 			j_blueatro_account_reroll = {
@@ -331,7 +332,7 @@ return {
 				name = "Dowsing Rods",
 				text = {
 					"When {C:attention}Blind{} is selected,",
-					"cards with the least common {C:attention}ranks{}",
+					"cards with the least common {C:attention}rank{}",
 					"are shuffled to the top of the deck",
 					"{C:inactive}(Ties are shuffled together)",
 				},
@@ -427,8 +428,8 @@ return {
 				text = {
 					"Creates a random",
 					"{C:green}Uncommon {C:attention}Joker{} if",
-					"played hand contains exactly",
-					"{C:attention}4{} scoring cards",
+					"played hand contains",
+					"exactly {C:attention}4{} scoring cards",
 				},
 			},
 			j_blueatro_challenge_letter = {
@@ -445,8 +446,33 @@ return {
 				name = "Cath Palug",
 				text = {
 					"{C:green}1 in #1#{} chance to",
-					"upgrade played {C:attention}poker hand{}",
+					"upgrade played poker hand",
 					"for each {C:attention}Wild Card{} played",
+				},
+			},
+			j_blueatro_scoop = {
+				name = "Exclusive Footage",
+				text = {
+					"{X:mult,C:white}X#1#{} Mult",
+					"{C:chips}Chips{} cannot",
+					"exceed {C:mult}Mult{}",
+				},
+			},
+			j_blueatro_arcana_rifle = {
+				name = "Arcana of Sniper Rifle",
+				text = {
+					"Gains {X:mult,C:white}X#1#{} Mult when",
+					"a {C:tarot}Tarot{} card is used",
+					"Resets after each hand",
+					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+				},
+			},
+			j_blueatro_peroro = {
+				name = "Peroro Joker",
+				text = {
+					"When a {C:attention}Boss Blind{} is selected,",
+					"this gains the {C:attention}sell value{}",
+					"of adjacent Jokers",
 				},
 			},
 		},
