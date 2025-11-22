@@ -137,8 +137,8 @@ return {
 			j_blueatro_stargazing = {
 				name = "Stargazing",
 				text = {
-					"Using a {C:tarot}Tarot{} card creates",
-					"a random {C:planet}Planet{} card",
+					"{C:tarot}Tarot{} card create a",
+					"random {C:planet}Planet{} card",
 					"{C:inactive}(Must have room){}",
 				},
 			},
@@ -154,9 +154,10 @@ return {
 			j_blueatro_cheerleader = {
 				name = "Cheerleader",
 				text = {
-					"Each scored card is retriggered",
-					"by the number of cards held in hand",
-					"with the {C:attention}same rank{}",
+					"Each scored card is",
+					"retriggered number of times",
+					"equal to the number of cards",
+					"held in hand with the {C:attention}same rank{}",
 				},
 			},
 			j_blueatro_bookkeeping = {

@@ -1,6 +1,6 @@
 local function should_proc(held_cards)
 	if held_cards == nil or #held_cards == 0 then
-		return false
+		return true
 	end
 	local poker_hand, _, _, _, _ = G.FUNCS.get_poker_hand_info(held_cards)
 	return poker_hand == "High Card"
@@ -10,7 +10,7 @@ SMODS.Joker({
 	key = "vanivani",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(28),
-	config = { extra = { xmult = 3 } },
+	config = { extra = { xmult = 4 } },
 	rarity = 3,
 	cost = 8,
 	blueprint_compat = true,

@@ -23,7 +23,7 @@ SMODS.Joker({
 	end,
 	calculate = function(self, card, context)
 		if context.before and context.main_eval and not context.blueprint then
-			play_sound("blueatro_e_pyon")
+			play_sound("blueatro_e_pyon", 1.0, 0.6)
 			for _, c in ipairs(G.hand.cards) do
 				if not c.highlighted then
 					G.hand.highlighted[#G.hand.highlighted + 1] = c
