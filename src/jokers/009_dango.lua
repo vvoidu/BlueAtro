@@ -13,7 +13,7 @@ SMODS.Joker({
 	end,
 	calculate = function(_, card, context)
 		if G.GAME.current_round.discards_left == 0 then
-			BlueAtro.pop_card(card)
+			SMODS.destroy_cards(card)
 			return
 		end
 
