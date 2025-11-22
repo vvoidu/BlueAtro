@@ -111,10 +111,9 @@ return {
 			j_blueatro_white_rabbit = {
 				name = "White Rabbit",
 				text = {
+					"{C:mult}+#1#{} Mult",
 					"When {C:attention}Blind{} is selected,",
-					"spend {C:money}$#1#{} to create",
-					"a {C:tarot}Wheel of Fortune{}",
-					"{C:inactive}(Must have room){}",
+					"creates a copy of itself",
 				},
 			},
 			j_blueatro_crafting_chamber = {

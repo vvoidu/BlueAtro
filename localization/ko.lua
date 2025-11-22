@@ -110,10 +110,9 @@ return {
 			j_blueatro_white_rabbit = {
 				name = "백토",
 				text = {
-					"{C:attention}블라인드{}를 선택하면,",
-					"{C:money}$#1#{}를 소모해",
-					"{C:tarot}운명의 수레바퀴{}를 생성합니다",
-					"{C:inactive}(공간이 있어야 합니다){}",
+					"{C:mult}+#1#{} 배수,",
+					"{C:attention}블라인드{}를 선택할 시",
+					"이 조커의 복제본을 생성합니다",
 				},
 			},
 			j_blueatro_crafting_chamber = {
@@ -397,7 +396,7 @@ return {
 				name = "복선 드리프트",
 				text = {
 					"손패에 남은 최고의 {C:attention}족보{}에",
-					"해당하는 {C:chips}칩{}과 {C:mult}배수{}를 부여합니다"
+					"해당하는 {C:chips}칩{}과 {C:mult}배수{}를 부여합니다",
 				},
 			},
 			j_blueatro_mushiqueen_card = {
