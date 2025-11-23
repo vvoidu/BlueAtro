@@ -1,7 +1,7 @@
 SMODS.Joker({
 	key = "peroro",
 	atlas = "blueatro_joker_atlas",
-	pos = BlueAtro.id_to_atlas_pos(47),
+	pos = BlueAtro.id_to_atlas_pos(48),
 	config = { extra = {} },
 	rarity = 2,
 	cost = 7,
