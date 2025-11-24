@@ -137,7 +137,7 @@ return {
 			j_blueatro_stargazing = {
 				name = "Stargazing",
 				text = {
-					"{C:tarot}Tarot{} card create a",
+					"{C:tarot}Tarot{} cards create a",
 					"random {C:planet}Planet{} card",
 					"{C:inactive}(Must have room){}",
 				},
