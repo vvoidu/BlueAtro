@@ -325,7 +325,7 @@ return {
 				},
 			},
 			j_blueatro_descartes = {
-				name = "데카르트",
+				name = "무소유",
 				text = {
 					"상점이 {C:attention}조커{}를",
 					"판매하지 않습니다",
@@ -424,8 +424,10 @@ return {
 			j_blueatro_multitrack_drifting = {
 				name = "복선 드리프트",
 				text = {
-					"손패에 남은 최고의 {C:attention}족보{}에",
-					"해당하는 {C:chips}칩{}과 {C:mult}배수{}를 부여합니다",
+					"손패에 남은 카드중",
+					"가장 왼쪽에 있는 카드 5장이",
+					"만드는 {C:attention}족보{}에 해당하는",
+					"{C:chips}칩{}과 {C:mult}배수{}를 부여합니다",
 				},
 			},
 			j_blueatro_mushiqueen_card = {

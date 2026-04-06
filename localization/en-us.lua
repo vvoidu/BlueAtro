@@ -322,7 +322,7 @@ return {
 				},
 			},
 			j_blueatro_descartes = {
-				name = "Descartes",
+				name = "Nonpossession",
 				text = {
 					"Shops do not",
 					"offer {C:attention}Jokers{}",
@@ -420,7 +420,8 @@ return {
 				text = {
 					"Gives {C:chips}Chips{} and {C:mult}Mult{}",
 					"of the best {C:attention}poker hand{}",
-					"that is held in hand",
+					"formed by first 5 cards",
+					"held in hand",
 				},
 			},
 			j_blueatro_mushiqueen_card = {

@@ -1,10 +1,8 @@
--- See lovely/scoop.toml for implementation of Chip cap.
-
 SMODS.Joker({
 	key = "arcana_rifle",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(47),
-	config = { extra = { xmult = 1, xmult_gain = 1 } },
+	config = { extra = { xmult = 1, xmult_gain = 1.5 } },
 	rarity = 3,
 	cost = 10,
 	blueprint_compat = true,
