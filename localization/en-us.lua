@@ -476,6 +476,14 @@ return {
 					"of adjacent Jokers",
 				},
 			},
+			j_blueatro_harmonica = {
+				name = "Worn Harmonica",
+				text = {
+					"After your final discard,",
+					"draw the first discard of",
+					"the round to hand",
+				},
+			},
 		},
 		Other = {},
 		Planet = {},
