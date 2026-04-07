@@ -23,7 +23,6 @@ SMODS.Joker({
 				return
 			end
 			for i = 1, #context.removed do
-				card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
 				SMODS.calculate_effect({
 					message = localize({
 						type = "variable",
@@ -32,28 +31,18 @@ SMODS.Joker({
 					}),
 				}, card)
 			end
-		elseif context.blueatro_destroying_joker and not context.blueprint then
-			if card == context.blueatro_destroyed_joker then
-				return
-			end
-			local new_mult = card.ability.extra.mult + card.ability.extra.mult_gain
-			card.ability.extra.mult = new_mult
-			-- Wrap it in an event so when multiple Jokers are destroyed a dead copy of this doesn't proc effects
-			G.E_MANAGER:add_event(Event({
-				func = function()
-					if card.removed then
-						return true
-					end
-					SMODS.calculate_effect({
-						message = localize({
-							type = "variable",
-							key = "a_mult",
-							vars = { new_mult },
-						}),
-					}, card)
-					return true
-				end,
-			}))
+		elseif
+			context.blueatro_destroying_joker
+			and not context.blueprint
+			and card ~= context.blueatro_destroyed_joker
+		then
+			SMODS.scale_card(card, {
+				ref_table = card.ability.extra,
+				ref_value = "mult",
+				scalar_value = "mult_gain",
+				message_colour = G.C.MULT,
+			})
+			return
 		end
 	end,
 	joker_display_def = function(JokerDisplay)

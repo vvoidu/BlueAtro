@@ -14,13 +14,14 @@ SMODS.Joker({
 	calculate = function(_, card, context)
 		if context.individual and context.cardarea == G.play then
 			if context.other_card:get_id() == 12 then
-				context.other_card.ability.perma_mult = (context.other_card.ability.perma_mult or 0)
-					+ card.ability.extra.mult_gain
-				return {
-					message = localize("k_upgrade_ex"),
-					colour = G.C.MULT,
-					card = context.blueprint_card or card,
-				}
+				SMODS.scale_card(context.other_card, {
+					ref_table = context.other_card.ability,
+					ref_value = "perma_mult",
+					scalar_table = card.ability.extra,
+					scalar_value = "mult_gain",
+					message_colour = G.C.MULT,
+				})
+				return
 			end
 		end
 	end,

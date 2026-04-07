@@ -9,7 +9,9 @@ SMODS.Joker({
 	eternal_compat = false,
 	perishable_compat = true,
 	loc_vars = function(_, info_queue, card)
-		return { vars = { card.ability.extra.rounds_left, (G.GAME.probabilities.normal or 1), card.ability.extra.odds } }
+		local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
+
+		return { vars = { card.ability.extra.rounds_left, num, denom } }
 	end,
 	calculate = function(_, card, context)
 		if context.hand_drawn and not context.blueprint then
@@ -25,7 +27,7 @@ SMODS.Joker({
 			if
 				G.GAME.current_round.hands_played == 0
 				and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit
-				and pseudorandom(pseudoseed("rollcake")) < G.GAME.probabilities.normal / card.ability.extra.odds
+				and SMODS.pseudorandom_probability(card, "rollcake", 1, card.ability.extra.odds)
 			then
 				G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 				G.E_MANAGER:add_event(Event({

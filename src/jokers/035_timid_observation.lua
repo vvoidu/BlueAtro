@@ -33,11 +33,12 @@ SMODS.Joker({
 				triggers = triggers + 1
 			end
 			while triggers > 0 do
-				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chips_gain * triggers
-				SMODS.calculate_effect({
-					message = localize("k_upgrade_ex"),
-					colour = G.C.CHIPS,
-				}, card)
+				SMODS.scale_card(card, {
+					ref_table = card.ability.extra,
+					ref_value = "chips",
+					scalar_value = "chips_gain",
+					message_colour = G.C.CHIPS,
+				})
 				triggers = triggers - 1
 			end
 		end

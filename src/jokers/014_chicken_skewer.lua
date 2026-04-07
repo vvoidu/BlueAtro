@@ -20,23 +20,22 @@ SMODS.Joker({
 			}
 		else
 			if context.card_added and context.card.ability.set == "Joker" and not context.blueprint then
-				card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_loss
-
-				if card.ability.extra.xmult <= 1 then
+				if card.ability.extra.xmult - card.ability.extra.xmult_loss <= 1 then
 					BlueAtro.destroy_cards({ card })
 					return {
 						message = localize("k_eaten_ex"),
 						colour = G.C.FILTER,
 					}
 				else
-					return {
-						message = localize({
-							type = "variable",
-							key = "a_xmult_minus",
-							vars = { card.ability.extra.xmult_loss },
-						}),
+					SMODS.scale_card(card, {
+						ref_table = card.ability.extra,
+						ref_value = "xmult",
+						scalar_value = "xmult_loss",
+						operation = "-",
+						message_key = "a_xmult_minus",
 						colour = G.C.RED,
-					}
+					})
+					return
 				end
 			end
 		end

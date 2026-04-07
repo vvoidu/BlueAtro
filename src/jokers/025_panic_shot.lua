@@ -9,11 +9,12 @@ SMODS.Joker({
 	eternal_compat = true,
 	perishable_compat = true,
 	loc_vars = function(self, info_queue, card)
-		return { vars = { (G.GAME.probabilities.normal or 1), card.ability.extra.odds, card.ability.extra.xmult } }
+		local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
+		return { vars = { num, denom, card.ability.extra.xmult } }
 	end,
 	calculate = function(self, card, context)
 		if context.joker_main and context.cardarea == G.jokers then
-			if pseudorandom(pseudoseed("kayokoplzfear")) < G.GAME.probabilities.normal / card.ability.extra.odds then
+			if SMODS.pseudorandom_probability(card, "kayokoplzfear", 1, card.ability.extra.odds) then
 				return {
 					x_mult = card.ability.extra.xmult,
 					card = context.blueprint_card or card,
@@ -56,10 +57,11 @@ SMODS.Joker({
 			},
 			extra_config = { colour = G.C.GREEN, scale = 0.3 },
 			calc_function = function(card)
+				local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
 				card.joker_display_values.odds = localize({
 					type = "variable",
 					key = "jdis_odds",
-					vars = { G.GAME and G.GAME.probabilities.normal or 1, card.ability.extra.odds },
+					vars = { num, denom },
 				})
 			end,
 		}

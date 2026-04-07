@@ -9,13 +9,14 @@ SMODS.Joker({
 	eternal_compat = true,
 	perishable_compat = true,
 	loc_vars = function(_, info_queue, card)
-		return { vars = { card.ability.extra.odds } }
+		local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
+		return { vars = { num, denom } }
 	end,
 	calculate = function(self, card, context)
 		if context.before and context.main_eval then
 			for _, playing_card in ipairs(G.play.cards) do
 				if SMODS.has_enhancement(playing_card, "m_wild") and not playing_card.debuff then
-					if pseudorandom(pseudoseed("kazusa")) < G.GAME.probabilities.normal / card.ability.extra.odds then
+					if SMODS.pseudorandom_probability(card, "kazusa", 1, card.ability.extra.odds) then
 						card = context.blueprint or card
 						SMODS.calculate_effect({
 							message = localize("k_level_up_ex"),
@@ -25,5 +26,23 @@ SMODS.Joker({
 				end
 			end
 		end
+	end,
+	joker_display_def = function(JokerDisplay)
+		return {
+			text = {
+				{ text = "(" },
+				{ ref_table = "card.joker_display_values", ref_value = "odds" },
+				{ text = ")" },
+			},
+			text_config = { colour = G.C.GREEN },
+			calc_function = function(card)
+				local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
+				card.joker_display_values.odds = localize({
+					type = "variable",
+					key = "jdis_odds",
+					vars = { num, denom },
+				})
+			end,
+		}
 	end,
 })

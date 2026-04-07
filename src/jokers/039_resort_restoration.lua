@@ -18,10 +18,12 @@ SMODS.Joker({
 	end,
 	calculate = function(self, card, context)
 		if context.before and not context.blueprint and next(context.poker_hands["Full House"]) then
-			card.ability.extra.dollar_gain = (card.ability.extra.dollar_gain or 0) + card.ability.extra.dollar_growth
-			return {
-				message = localize("k_upgrade_ex"),
-			}
+			SMODS.scale_card(card, {
+				ref_table = card.ability.extra,
+				ref_value = "dollar_gain",
+				scalar_value = "dollar_growth",
+			})
+			return
 		end
 	end,
 	calc_dollar_bonus = function(self, card)

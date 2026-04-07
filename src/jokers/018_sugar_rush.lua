@@ -16,7 +16,6 @@ SMODS.Joker({
 			return {
 				x_mult = card.ability.extra.xmult,
 				card = context.blueprint_card or card,
-				colour = G.C.Mult,
 			}
 		elseif context.beat_boss and context.main_eval and not context.blueprint then
 			card.ability.extra.xmult = self.config.extra.xmult
@@ -25,12 +24,17 @@ SMODS.Joker({
 				colour = G.C.FILTER,
 			}
 		elseif context.after then
-			if card.ability.extra.xmult - card.ability.extra.xmult_loss >= 1.0 then
-				card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_loss
-				return {
-					message = localize({ type = "variable", key = "a_xmult", vars = { card.ability.extra.xmult } }),
-					card = card,
-				}
+			if card.ability.extra.xmult > 1.0 then
+				SMODS.scale_card(card, {
+					ref_table = card.ability.extra,
+					ref_value = "xmult",
+					scalar_value = "xmult_loss",
+					operation = function(ref_table, ref_value, initial, change)
+						ref_table[ref_value] = math.max(1.0, initial - change)
+					end,
+					message_key = "a_xmult_minus",
+					colour = G.C.RED,
+				})
 			end
 		end
 	end,

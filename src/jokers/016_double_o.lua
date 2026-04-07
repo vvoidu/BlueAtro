@@ -19,11 +19,13 @@ SMODS.Joker({
 				colour = G.C.MULT,
 			}
 		elseif context.discard and not context.blueprint then
-			card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-			return {
-				message = localize({ type = "variable", key = "a_xmult", vars = { card.ability.extra.xmult } }),
-				card = card,
-			}
+			SMODS.scale_card(card, {
+				ref_table = card.ability.extra,
+				ref_value = "xmult",
+				scalar_value = "xmult_gain",
+				message_colour = G.C.MULT,
+			})
+			return
 		elseif context.ante_change and context.ante_end and context.main_eval and not context.blueprint then
 			card.ability.extra.xmult = self.config.extra.xmult
 			return {

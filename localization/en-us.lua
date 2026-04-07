@@ -446,7 +446,7 @@ return {
 			j_blueatro_cath_palug = {
 				name = "Cath Palug",
 				text = {
-					"{C:green}1 in #1#{} chance to",
+					"{C:green}#1# in #2#{} chance to",
 					"upgrade played poker hand",
 					"for each {C:attention}Wild Card{} played",
 				},

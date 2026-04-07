@@ -11,7 +11,7 @@ SMODS.Joker({
 	loc_vars = function(_, info_queue, card) end,
 	calculate = function(self, card, context)
 		if context.joker_main then
-			local subhand = table.unpack(G.hand.cards, 1, 5)
+			local subhand = (unpack or table.unpack)(G.hand.cards, 1, 5)
 			local poker_hand, _, _, _, _ = G.FUNCS.get_poker_hand_info(subhand)
 			if poker_hand == "NULL" then
 				poker_hand = "High Card"

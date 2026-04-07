@@ -14,12 +14,14 @@ SMODS.Joker({
 	calculate = function(self, card, context)
 		if context.using_consumeable and context.consumeable.ability.set == "Tarot" then
 			card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-			return {
-				message = localize("k_upgrade_ex"),
-				colour = G.C.MULT,
-			}
+			SMODS.scale_card(card, {
+				ref_table = card.ability.extra,
+				ref_value = "xmult",
+				scalar_value = "xmult_gain",
+				message_colour = G.C.MULT,
+			})
+			return
 		elseif context.joker_main then
-			local xmult = card.ability.extra.xmult
 			return {
 				xmult = card.ability.extra.xmult,
 			}

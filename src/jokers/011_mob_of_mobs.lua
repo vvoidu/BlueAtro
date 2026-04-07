@@ -19,12 +19,17 @@ SMODS.Joker({
 					common_count = common_count + 1
 				end
 			end
-			card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain * common_count
-			return {
-				message = localize({ type = "variable", key = "a_xmult", vars = { card.ability.extra.xmult } }),
-				colour = G.C.MULT,
-				card = card,
-			}
+
+			SMODS.scale_card(card, {
+				ref_table = card.ability.extra,
+				ref_value = "xmult",
+				scalar_value = "xmult_gain",
+				operation = function(ref_table, ref_value, initial, change)
+					ref_table[ref_value] = initial + common_count * change
+				end,
+				message_colour = G.C.MULT,
+			})
+			return
 		elseif context.joker_main then
 			return {
 				x_mult = card.ability.extra.xmult,

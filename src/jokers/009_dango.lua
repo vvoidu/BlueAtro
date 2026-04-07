@@ -14,7 +14,10 @@ SMODS.Joker({
 	calculate = function(_, card, context)
 		if G.GAME.current_round.discards_left == 0 then
 			SMODS.destroy_cards({ card }, true)
-			return
+			return {
+				message = localize("k_eaten_ex"),
+				colour = G.C.FILTER,
+			}
 		end
 
 		if context.joker_main then

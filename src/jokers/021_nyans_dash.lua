@@ -36,7 +36,7 @@ SMODS.Joker({
 	key = "nyans_dash",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(21),
-	config = { extra = { xmult_gain = 1.0, xmult = 1.0 } },
+	config = { extra = { xmult = 1.0, xmult_gain = 1.0 } },
 	rarity = 3,
 	cost = 8,
 	blueprint_compat = true,
@@ -63,19 +63,25 @@ SMODS.Joker({
 		elseif context.before and context.main_eval and not context.blueprint then
 			local hand_needed = G.GAME.current_round.blueatro.yuzu_combo[1]
 			if context.scoring_name == hand_needed then
-				card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
+				SMODS.scale_card(card, {
+					ref_table = card.ability.extra,
+					ref_value = "xmult",
+					scalar_value = "xmult_gain",
+					message_colour = G.C.MULT,
+				})
+				return
 			else
+				-- Check if redundant reset
 				if card.ability.extra.xmult == 1.0 then
 					return
 				end
 
 				card.ability.extra.xmult = 1.0
+				return {
+					message = localize("k_reset"),
+					colour = G.C.MULT,
+				}
 			end
-			return {
-				message = localize({ type = "variable", key = "a_xmult", vars = { card.ability.extra.xmult } }),
-				colour = G.C.MULT,
-				card = card,
-			}
 		end
 	end,
 	joker_display_def = function(JokerDisplay)

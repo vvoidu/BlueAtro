@@ -11,7 +11,6 @@ G.FUNCS.discard_cards_from_highlighted = function(e, hook)
 		for i, c in ipairs(G.hand.highlighted) do
 			G.GAME.blueatro_first_discard[i] = c.sort_id
 		end
-		print(G.GAME.blueatro_first_discard)
 	end
 	G_FUNCS_discard_cards_from_highlighted(e, hook)
 end
