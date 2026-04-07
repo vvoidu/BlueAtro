@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "dango",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(9),
-	config = { extra = { mult = 15 } },
+	config = { extra = { mult = 20 } },
 	rarity = 1,
 	cost = 5,
 	blueprint_compat = true,
@@ -12,7 +12,7 @@ SMODS.Joker({
 		return { vars = { card.ability.extra.mult } }
 	end,
 	calculate = function(_, card, context)
-		if G.GAME.current_round.discards_left == 0 then
+		if not card.getting_sliced and G.GAME.current_round.discards_left == 0 then
 			SMODS.destroy_cards({ card }, true)
 			return {
 				message = localize("k_eaten_ex"),

@@ -130,7 +130,7 @@ return {
 				text = {
 					"{C:mult}+#1#{} Mult",
 					"Immediately {C:red}self-destructs",
-					"if there are no",
+					"whenever there are no",
 					"remaining {C:attention}Discards{}",
 				},
 			},

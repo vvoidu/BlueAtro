@@ -11,7 +11,10 @@ SMODS.Joker({
 	loc_vars = function(_, info_queue, card) end,
 	calculate = function(self, card, context)
 		if context.joker_main then
-			local subhand = (unpack or table.unpack)(G.hand.cards, 1, 5)
+			local subhand = {}
+			for i = 1, math.min(5, #G.hand.cards) do
+				subhand[i] = G.hand.cards[i]
+			end
 			local poker_hand, _, _, _, _ = G.FUNCS.get_poker_hand_info(subhand)
 			if poker_hand == "NULL" then
 				poker_hand = "High Card"
@@ -38,13 +41,13 @@ SMODS.Joker({
 				{ text = ")" },
 			},
 			calc_function = function(card)
-				local unhighlighted = {}
-				for _, held in ipairs(G.hand.cards) do
+				local subhand = {}
+				for i = 1, math.min(5, #G.hand.cards) do
+					local held = G.hand.cards[i]
 					if not held.highlighted then
-						unhighlighted[#unhighlighted + 1] = held
+						subhand[#subhand + 1] = held
 					end
 				end
-				local subhand = table.unpack(unhighlighted, 1, 5)
 				local text, _, _ = JokerDisplay.evaluate_hand(subhand)
 
 				if text == "NULL" then
