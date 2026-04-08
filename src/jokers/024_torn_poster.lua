@@ -1,6 +1,6 @@
 SMODS.Sound({
 	key = "e_rip",
-	path = "e_rip.wav",
+	path = "e_rip.ogg",
 })
 
 SMODS.Joker({

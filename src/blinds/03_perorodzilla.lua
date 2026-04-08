@@ -11,7 +11,7 @@ SMODS.Sound({
 
 SMODS.Sound({
 	key = "e_perorolaser",
-	path = "e_perorolaser.wav",
+	path = "e_perorolaser.ogg",
 })
 
 SMODS.Blind({

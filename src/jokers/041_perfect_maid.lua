@@ -1,10 +1,10 @@
 -- Its effect cannot be implemented with `calculate`
 -- because discarding during scoring doesn't work properly.
--- See lovely.toki.toml
+-- See lovely/toki.toml
 
 SMODS.Sound({
 	key = "e_pyon",
-	path = "e_pyon.wav",
+	path = "e_pyon.ogg",
 })
 SMODS.Joker({
 	key = "perfect_maid",

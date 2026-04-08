@@ -1,14 +1,14 @@
 SMODS.Sound({
 	key = "e_gun_0",
-	path = "e_gun_0.wav",
+	path = "e_gun_0.ogg",
 })
 SMODS.Sound({
 	key = "e_gun_1",
-	path = "e_gun_1.wav",
+	path = "e_gun_1.ogg",
 })
 SMODS.Sound({
 	key = "e_gun_2",
-	path = "e_gun_2.wav",
+	path = "e_gun_2.ogg",
 })
 
 SMODS.Joker({
