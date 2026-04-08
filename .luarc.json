@@ -1,6 +1,11 @@
 {
-  "diagnostics.disable": ["unused-local"],
-  "workspace.library": ["../smods/lsp_def"],
+  "diagnostics.disable": [
+    "unused-local",
+    "duplicate-set-field"
+  ],
+  "workspace.library": [
+    "../smods/lsp_def"
+  ],
   "hint.enable": true,
   "diagnostics.globals": [
     "create_badge",
@@ -18,11 +23,12 @@
     "pseudoshuffle",
     "draw_card",
     "NFS",
-        "get_blind_amount",
-        "update_hand_text",
-        "level_up_hand",
-        "end_round",
-        "new_round",
-        "juice_card"
+    "get_blind_amount",
+    "update_hand_text",
+    "level_up_hand",
+    "end_round",
+    "new_round",
+    "juice_card",
+    "love"
   ]
 }

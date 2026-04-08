@@ -1,8 +1,8 @@
 local _Game_init_game_object = Game.init_game_object
 function Game:init_game_object()
 	local ret = _Game_init_game_object(self)
-	ret.current_round.blueatro = ret.current_round.blueatro or {}
-	ret.current_round.blueatro.yuzu_combo = { "Flush", "Three of a Kind", "Two Pair" }
+	ret.blueatro_ = ret.current_round.blueatro_or({})
+	ret.blueatro_yuzu_combo = { "Flush", "Three of a Kind", "Two Pair" }
 	return ret
 end
 
@@ -24,7 +24,7 @@ SMODS.calculate_context = function(context, return_table)
 			-- "Straight Flush"
 		}
 		local next = pseudorandom_element(base_hands, pseudoseed("yuzu_combo"))
-		local yuzu_combo = G.GAME.current_round.blueatro.yuzu_combo
+		local yuzu_combo = G.GAME.blueatro_yuzu_combo
 		table.remove(yuzu_combo, 1)
 		yuzu_combo[#yuzu_combo + 1] = next
 	end
@@ -47,9 +47,9 @@ SMODS.Joker({
 			vars = {
 				card.ability.extra.xmult_gain,
 				card.ability.extra.xmult,
-				localize(G.GAME.current_round.blueatro.yuzu_combo[1], "poker_hands"),
-				localize(G.GAME.current_round.blueatro.yuzu_combo[2], "poker_hands"),
-				localize(G.GAME.current_round.blueatro.yuzu_combo[3], "poker_hands"),
+				localize(G.GAME.blueatro_yuzu_combo[1], "poker_hands"),
+				localize(G.GAME.blueatro_yuzu_combo[2], "poker_hands"),
+				localize(G.GAME.blueatro_yuzu_combo[3], "poker_hands"),
 			},
 		}
 	end,
@@ -61,7 +61,7 @@ SMODS.Joker({
 				colour = G.C.MULT,
 			}
 		elseif context.before and context.main_eval and not context.blueprint then
-			local hand_needed = G.GAME.current_round.blueatro.yuzu_combo[1]
+			local hand_needed = G.GAME.blueatro_yuzu_combo[1]
 			if context.scoring_name == hand_needed then
 				SMODS.scale_card(card, {
 					ref_table = card.ability.extra,
@@ -100,7 +100,7 @@ SMODS.Joker({
 					return
 				end
 
-				local needed_hand = G.GAME.current_round.blueatro.yuzu_combo[1]
+				local needed_hand = G.GAME.blueatro_yuzu_combo[1]
 				card.joker_display_values.next_hand = localize(needed_hand, "poker_hands")
 
 				if #G.hand.highlighted == 0 then

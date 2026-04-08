@@ -239,7 +239,7 @@ return {
 					"콤보를 떨구면 배수 획득량이 초기화됩니다",
 					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
 					"",
-					"콤보: {C:attention}#2#{}, {C:inactive,s:0.9}#5#, #6#, ... ",
+					"콤보: {C:attention}#3#{}, {C:inactive,s:0.9}#4#, #5#, ... ",
 				},
 			},
 			j_blueatro_account_reroll = {

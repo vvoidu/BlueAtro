@@ -237,7 +237,7 @@ return {
 					"Mult is reset when combo is dropped",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 					"",
-					"Combo: {C:attention}#3#{}, {C:inactive,s:0.9}#5#, #6#, ... ",
+					"Combo: {C:attention}#3#{}, {C:inactive,s:0.9}#4#, #5#, ... ",
 				},
 			},
 			j_blueatro_account_reroll = {
