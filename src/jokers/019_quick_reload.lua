@@ -5,11 +5,11 @@ SMODS.Joker({
 	config = {},
 	rarity = 2,
 	cost = 7,
-	blueprint_compat = true,
+	blueprint_compat = false,
 	eternal_compat = true,
 	perishable_compat = true,
 	calculate = function(self, card, context)
-		if context.after and context.main_eval and next(context.poker_hands["Two Pair"]) and not context.blueprint then
+		if context.after and context.main_eval and next(context.poker_hands["Two Pair"]) then
 			local i = 0
 			for _, played_card in ipairs(G.play.cards) do
 				if (not played_card.shattered) and not played_card.destroyed then

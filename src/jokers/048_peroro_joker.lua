@@ -12,7 +12,7 @@ SMODS.Joker({
 		return { vars = {} }
 	end,
 	calculate = function(self, card, context)
-		if context.setting_blind and context.blind.boss and not context.blueprint then
+		if context.setting_blind and context.blind.boss then
 			local pos = BlueAtro.get_card_pos(G.jokers, card)
 			local sum = 0
 			sum = sum + (G.jokers.cards[pos - 1] and G.jokers.cards[pos - 1].sell_cost or 0)

@@ -15,7 +15,7 @@ SMODS.Joker({
 		if context.setting_blind and G.jokers and not context.blueprint and not context.retrigger_joker then
 			local common_count = 0
 			for i = 1, #G.jokers.cards do
-				if G.jokers.cards[i].config.center.rarity == 1 then
+				if G.jokers.cards[i]:is_rarity(1) then
 					common_count = common_count + 1
 				end
 			end

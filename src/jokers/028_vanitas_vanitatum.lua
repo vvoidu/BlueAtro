@@ -14,7 +14,7 @@ SMODS.Joker({
 	calculate = function(self, card, context)
 		if context.joker_main then
 			if G.hand.cards == nil or #G.hand.cards == 0 then
-				return true
+				return
 			end
 			local poker_hand, _, _, _, _ = G.FUNCS.get_poker_hand_info(G.hand.cards)
 

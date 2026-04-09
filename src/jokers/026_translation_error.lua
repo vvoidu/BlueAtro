@@ -12,12 +12,7 @@ SMODS.Joker({
 		badges[#badges + 1] = create_badge(localize("k_mistranslated_rare"), G.C.RARITY[3], G.C.WHITE, 1.2)
 	end,
 	calculate = function(self, card, context)
-		if
-			context.post_trigger
-			and context.other_card ~= card
-			and not context.blueprint
-			and context.other_ret.jokers
-		then
+		if context.post_trigger and context.other_card ~= card and context.other_ret.jokers then
 			local t = context.other_ret.jokers
 			local chips = t.chips or t.chip_mod
 			if chips then

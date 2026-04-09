@@ -12,7 +12,7 @@ SMODS.Joker({
 		return { vars = { card.ability.extra.mult } }
 	end,
 	calculate = function(_, card, context)
-		if not card.getting_sliced and G.GAME.current_round.discards_left == 0 then
+		if not card.getting_sliced and G.GAME.current_round.discards_left == 0 and not context.blueprint then
 			SMODS.destroy_cards({ card }, true)
 			return {
 				message = localize("k_eaten_ex"),

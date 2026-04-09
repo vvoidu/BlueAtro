@@ -44,7 +44,6 @@ SMODS.Joker({
 	calculate = function(self, card, context)
 		if
 			context.hand_drawn
-			and not context.blueprint
 			and G.GAME.blueatro_first_discard
 			and #G.GAME.blueatro_first_discard > 0
 			and G.GAME.current_round.discards_left == 0
