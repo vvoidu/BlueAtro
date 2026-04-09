@@ -484,6 +484,15 @@ return {
 					"the round to hand",
 				},
 			},
+			j_blueatro_germanium_bracelet = {
+				name = "Germanium Bracelet",
+				text = {
+					"Cards give Mult equal to",
+					"their {C:attention}rank{} when scored",
+					"Cards held in hand subtract",
+					"from Mult instead",
+				},
+			},
 		},
 		Other = {},
 		Planet = {},

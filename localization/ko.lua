@@ -492,6 +492,15 @@ return {
 					"패로 회수합니다",
 				},
 			},
+			j_blueatro_germanium_bracelet = {
+				name = "게르마늄 팔찌",
+				text = {
+					"득점하는 카드가 {C:attention}랭크{}를",
+					"배수에 추가합니다",
+					"손에 남은 카드는 대신",
+					"배수를 감소시킵니다",
+				},
+			},
 		},
 		Other = {},
 		Planet = {},

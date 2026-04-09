@@ -47,8 +47,10 @@ SMODS.Joker({
 					local text, poker_hand, scoring_hand = JokerDisplay.evaluate_hand(unhighlighted)
 					if text == "Unknown" then
 						card.joker_display_values.xmult = "?"
-					else
+					elseif text == "High Card" then
 						card.joker_display_values.xmult = card.ability.extra.xmult
+					else
+						card.joker_display_values.xmult = 1
 					end
 				end
 			end,
