@@ -9,9 +9,9 @@ SMODS.Joker({
 	pos = BlueAtro.id_to_atlas_pos(0),
 	config = { extra = {} },
 	rarity = 2,
-	cost = 6,
+	cost = 5,
 	blueprint_compat = true,
-	eternal_compat = true,
+	eternal_compat = false,
 	perishable_compat = false,
 	loc_vars = function(self, info_queue, card) end,
 	calculate = function(self, card, context)
@@ -20,7 +20,7 @@ SMODS.Joker({
 				remove = true,
 			}
 		elseif context.after and context.main_eval then
-			SMODS.destroy_cards(card)
+			SMODS.destroy_cards(card, true, true)
 			play_sound("blueatro_e_explosion")
 		end
 	end,

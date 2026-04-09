@@ -1,5 +1,11 @@
 --- Hooks that don't belong under specific files.
 
+SMODS.current_mod.reset_game_globals = function(run_start)
+	if run_start then
+		G.GAME.blueatro = {}
+	end
+end
+
 -- After playing a hand, cards marked with `card.blueatro_return_to_hand` are returned to hand instead
 G.FUNCS.draw_from_play_to_discard = function(_)
 	local play_count = #G.play.cards

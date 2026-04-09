@@ -1,7 +1,6 @@
 local _Game_init_game_object = Game.init_game_object
 function Game:init_game_object()
 	local ret = _Game_init_game_object(self)
-	ret.blueatro_ = ret.current_round.blueatro_or({})
 	ret.blueatro_yuzu_combo = { "Flush", "Three of a Kind", "Two Pair" }
 	return ret
 end
@@ -11,19 +10,14 @@ SMODS.calculate_context = function(context, return_table)
 	local ret = _smods_calculate_context(context, return_table)
 
 	if context.after then
-		local base_hands = {
+		local eligible_hands = {
 			"Pair",
 			"Two Pair",
 			"Three of a Kind",
 			"Straight",
 			"Flush",
-			"Full House",
-			"Four of a Kind",
-			-- omitted intentionally
-			-- "High Card",
-			-- "Straight Flush"
 		}
-		local next = pseudorandom_element(base_hands, pseudoseed("yuzu_combo"))
+		local next = pseudorandom_element(eligible_hands, pseudoseed("yuzu_combo"))
 		local yuzu_combo = G.GAME.blueatro_yuzu_combo
 		table.remove(yuzu_combo, 1)
 		yuzu_combo[#yuzu_combo + 1] = next
@@ -112,7 +106,7 @@ SMODS.Joker({
 				if text == needed_hand then
 					card.joker_display_values.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
 				else
-					card.joker_display_values.xmult = math.max(1.0, card.ability.extra.xmult / 2)
+					card.joker_display_values.xmult = 1.0
 				end
 			end,
 		}
