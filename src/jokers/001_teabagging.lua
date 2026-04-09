@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "teabagging",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(1),
-	config = { extra = { mult = 0, mult_gain = 4 } },
+	config = { extra = { mult = 0, mult_gain = 3 } },
 	rarity = 1,
 	cost = 4,
 	blueprint_compat = true,
@@ -32,9 +32,10 @@ SMODS.Joker({
 				}, card)
 			end
 		elseif
-			context.blueatro_destroying_joker
+			context.joker_type_destroyed
 			and not context.blueprint
-			and card ~= context.blueatro_destroyed_joker
+			and context.card.area == G.jokers
+			and card ~= context.card
 		then
 			SMODS.scale_card(card, {
 				ref_table = card.ability.extra,

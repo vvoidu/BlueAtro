@@ -22,16 +22,3 @@ G.FUNCS.draw_from_play_to_discard = function(_)
 		end
 	end
 end
-
--- Context for Joker destruction
-local _card_remove = Card.remove
-function Card:remove()
-	if self.added_to_deck and self.ability.set == "Joker" and not G.CONTROLLER.locks.selling_card then
-		SMODS.calculate_context({
-			blueatro_destroying_joker = true,
-			blueatro_destroyed_joker = self,
-		})
-	end
-
-	return _card_remove(self)
-end
