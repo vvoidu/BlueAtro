@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "timid_observation",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(35),
-	config = { extra = { chips = 0, chips_gain = 2 } },
+	config = { extra = { chips = 0, chips_gain = 3 } },
 	rarity = 1,
 	cost = 5,
 	blueprint_compat = true,

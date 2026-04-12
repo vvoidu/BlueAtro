@@ -352,9 +352,9 @@ return {
 			j_blueatro_bunny_grenade = {
 				name = "토끼 꼬리 수류탄",
 				text = {
-					"현재 라운드의 첫 패에",
+					"라운드의 첫 패에",
 					"드로우한 {C:attention}7{} 한 장 마다",
-					"{X:mult,C:white}X#1#{} 배수를 획득합니다",
+					"배수 획득량이 {X:mult,C:white}X#1#{} 증가합니다",
 					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
 				},
 			},
@@ -496,9 +496,9 @@ return {
 				name = "게르마늄 팔찌",
 				text = {
 					"득점하는 카드가 {C:attention}랭크{}를",
-					"배수에 추가합니다",
+					"{C:mult}배수{}에 추가합니다",
 					"손에 남은 카드는 대신",
-					"배수를 감소시킵니다",
+					"{C:mult}배수{}를 감소시킵니다",
 				},
 			},
 		},

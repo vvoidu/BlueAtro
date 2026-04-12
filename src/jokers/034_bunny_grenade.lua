@@ -2,8 +2,8 @@ SMODS.Joker({
 	key = "bunny_grenade",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(34),
-	config = { extra = { xmult = 1, xmult_gain = 0.75 } },
-	rarity = 3,
+	config = { extra = { xmult = 1, xmult_gain = 0.1 } },
+	rarity = 2,
 	cost = 7,
 	blueprint_compat = true,
 	eternal_compat = true,
@@ -23,16 +23,16 @@ SMODS.Joker({
 				return c:get_id() == 7
 			end)
 			card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain * count
-			return {
-				message = localize({ type = "variable", key = "a_xmult", vars = { card.ability.extra.xmult } }),
-				card = card,
-			}
-		elseif context.end_of_round and context.main_eval and not context.blueprint and not context.game_over then
-			card.ability.extra.xmult = self.config.extra.xmult
-			return {
-				message = localize("k_reset"),
-				colour = G.C.MULT,
-			}
+			SMODS.scale_card(card, {
+				ref_table = card.ability.extra,
+				ref_value = "xmult",
+				scalar_value = "xmult_gain",
+				operation = function(ref_table, ref_value, initial, change)
+					ref_table[ref_value] = initial + count * change
+				end,
+				message_colour = G.C.MULT,
+			})
+			return
 		end
 	end,
 	joker_display_def = function(JokerDisplay)

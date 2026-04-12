@@ -349,8 +349,8 @@ return {
 			j_blueatro_bunny_grenade = {
 				name = "Bunny Tail Grenade",
 				text = {
-					"{X:mult,C:white}X#1#{} Mult for each",
-					"{C:attention}7{} in first drawn",
+					"This gains {X:mult,C:white}X#1#{} Mult for",
+					"each {C:attention}7{} in first drawn",
 					"hand of the round",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
@@ -487,10 +487,10 @@ return {
 			j_blueatro_germanium_bracelet = {
 				name = "Germanium Bracelet",
 				text = {
-					"Cards give Mult equal to",
+					"Cards give {C:mult}Mult{} equal to",
 					"their {C:attention}rank{} when scored",
 					"Cards held in hand subtract",
-					"from Mult instead",
+					"from {C:mult}Mult{} instead",
 				},
 			},
 		},

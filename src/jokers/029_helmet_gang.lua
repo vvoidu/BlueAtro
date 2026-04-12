@@ -4,7 +4,7 @@ SMODS.Joker({
 	key = "helmet_gang",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(29),
-	config = { extra = { xmult = 2.5, price = 3 } },
+	config = { extra = { xmult = 2, price = 3 } },
 	rarity = 2,
 	cost = 6,
 	blueprint_compat = true,
