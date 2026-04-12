@@ -1,7 +1,8 @@
 {
   "diagnostics.disable": [
     "unused-local",
-    "duplicate-set-field"
+    "duplicate-set-field",
+        "redundant-parameter"
   ],
   "workspace.library": [
     "../smods/lsp_def"

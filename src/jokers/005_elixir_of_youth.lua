@@ -1,75 +1,58 @@
--- SMODS.Joker({
--- 	key = "elixir_of_youth",
--- 	atlas = "blueatro_joker_atlas",
--- 	pos = BlueAtro.id_to_atlas_pos(5),
--- 	config = {},
--- 	rarity = 3,
--- 	cost = 7,
--- 	blueprint_compat = false,
--- 	eternal_compat = true,
--- 	perishable_compat = true,
--- 	loc_vars = function(_, info_queue, card) end,
--- 	calculate = function(_, card, context)
--- 		if context.first_hand_drawn and not context.blueprint and not card.retrigger_joker then
--- 			juice_card_until(card, function()
--- 				return G.GAME.current_round.hands_played == 0
--- 			end, true)
--- 		elseif context.destroying_card and not context.blueprint and not context.retrigger_joker then
--- 			if
--- 				G.GAME.current_round.hands_played == 0
--- 				and #context.full_hand == 1
--- 				and context.full_hand[1]:is_face()
--- 				and not context.full_hand[1].debuff
--- 			then
--- 				-- Create the random 9
--- 				local suit = pseudorandom_element(SMODS.Suits, pseudoseed("elixir_of_youth_suit"))
--- 				local enhancement = SMODS.poll_enhancement({
--- 					type_key = "elixir_of_youth_enhancement",
--- 					guaranteed = true,
--- 				})
---
--- 				playing_card_joker_effects({ true })
--- 				G.E_MANAGER:add_event(Event({
--- 					trigger = "before",
--- 					func = function()
--- 						card:juice_up()
--- 						create_playing_card({
--- 							front = G.P_CARDS[suit.card_key .. "_9"],
--- 							center = G.P_CENTERS[enhancement],
--- 						}, G.hand, nil, nil, { G.C.SECONDARY_SET.Enhanced })
--- 						return true
--- 					end,
--- 				}))
--- 			end
--- 		end
--- 	end,
--- 	joker_display_def = function(JokerDisplay)
--- 		return {
--- 			text = {
--- 				{ text = "+" },
--- 				{ ref_table = "card.joker_display_values", ref_value = "count", retrigger_type = "mult" },
--- 			},
--- 			reminder_text = {
--- 				{ text = "(" },
--- 				{ ref_table = "card.joker_display_values", ref_value = "active_msg" },
--- 				{ text = ")" },
--- 			},
--- 			calc_function = function(card)
--- 				local _, _, scoring_hand = JokerDisplay.evaluate_hand()
--- 				local should_proc = #scoring_hand == 1 and scoring_hand[1]:is_face()
--- 				local active = G.GAME and G.GAME.current_round.hands_played == 0
--- 				card.joker_display_values.active = active
--- 				card.joker_display_values.active_msg = (active and localize("jdis_active") or localize("jdis_inactive"))
--- 				card.joker_display_values.count = (active and should_proc) and 1 or 0
--- 			end,
--- 			style_function = function(card, text, reminder_text, extra)
--- 				if text and text.children[1] and text.children[2] then
--- 					text.children[1].config.colour = card.joker_display_values.active and G.C.WHITE
--- 						or G.C.UI.TEXT_INACTIVE
--- 					text.children[2].config.colour = card.joker_display_values.active and G.C.WHITE
--- 						or G.C.UI.TEXT_INACTIVE
--- 				end
--- 			end,
--- 		}
--- 	end,
--- })
+SMODS.Joker({
+	key = "elixir_of_youth",
+	atlas = "blueatro_joker_atlas",
+	pos = BlueAtro.id_to_atlas_pos(5),
+	config = { extra = { odds = 3 } },
+	rarity = 3,
+	cost = 7,
+	blueprint_compat = true,
+	eternal_compat = true,
+	perishable_compat = true,
+	loc_vars = function(_, info_queue, card)
+		local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
+
+		return { vars = { num, denom } }
+	end,
+	calculate = function(_, card, context)
+		if
+			context.individual
+			and context.cardarea == G.play
+			and context.other_card:is_face()
+			and not context.other_card.debuffed
+			and SMODS.pseudorandom_probability(card, "elixir", 1, card.ability.extra.odds)
+		then
+			local c = context.other_card
+			assert(c)
+			assert(SMODS.modify_rank(c, -1, true))
+			-- Sprite needs to be captured here to keep track of all steps if repetitions happen
+			local sprite_target = c.config.card
+			G.E_MANAGER:add_event(Event({
+				trigger = "after",
+				delay = 0.4,
+				func = function()
+					c:flip()
+					play_sound("tarot1")
+					card:juice_up(0.3, 0.5)
+					return true
+				end,
+			}))
+			G.E_MANAGER:add_event(Event({
+				trigger = "after",
+				delay = 0.2,
+				func = function()
+					c:set_sprites(nil, sprite_target)
+					return true
+				end,
+			}))
+			G.E_MANAGER:add_event(Event({
+				trigger = "after",
+				delay = 0.15,
+				func = function()
+					card:juice_up(0.3, 0.5)
+					c:flip()
+					return true
+				end,
+			}))
+		end
+	end,
+})

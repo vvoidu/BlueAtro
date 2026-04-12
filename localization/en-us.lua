@@ -97,7 +97,10 @@ return {
 			j_blueatro_elixir_of_youth = {
 				name = "Elixir of Youth",
 				text = {
-					"",
+					"{C:attention}Face cards{} have a",
+					"{C:green}#1# in #2#{} chance to have",
+					"their rank lowered by {C:attention}1{}",
+					"when scored",
 				},
 			},
 			j_blueatro_pointman = {

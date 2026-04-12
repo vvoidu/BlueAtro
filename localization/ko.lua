@@ -97,7 +97,9 @@ return {
 			j_blueatro_elixir_of_youth = {
 				name = "회춘의 비약",
 				text = {
-					"",
+					"{C:attention}그림 카드{}가 득점할 때",
+					"{C:green}1/2{}의 확률로",
+					"랭크가 {C:attention}1{} 감소합니다",
 				},
 			},
 			j_blueatro_pointman = {
