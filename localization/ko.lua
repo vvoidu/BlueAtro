@@ -264,8 +264,8 @@ return {
 					"첫번째 {C:attention}조커{}를 파괴합니다",
 				},
 			},
-			j_blueatro_torn_poster = {
-				name = "찢어진 포스터",
+			j_blueatro_worn_poster = {
+				name = "낡은 포스터",
 				text = {
 					"{C:attention}파괴{}될 시 무작위한",
 					"{C:red}레어{} {C:attention}조커{}를 생성합니다",
@@ -501,6 +501,22 @@ return {
 					"{C:mult}배수{}에 추가합니다",
 					"손에 남은 카드는 대신",
 					"{C:mult}배수{}를 감소시킵니다",
+				},
+			},
+			j_blueatro_flower_divination = {
+				name = "진홍빛 꽃점",
+				text = {
+					"{C:attention}배수 카드{}가 득점 할 시",
+					"배수 획득량이",
+					"{C:mult}+#1#{} 증가합니다",
+					"{C:inactive}(현재 {C:mult}+#2#{}{C:inactive} 배수){}",
+				},
+			},
+			j_blueatro_publish = {
+				name = "출판, 증쇄, 유통",
+				text = {
+					"핸드 크기 {C:attention}+#1#{}",
+					"라운드 종료 시 {C:money}-$#2#{}",
 				},
 			},
 		},

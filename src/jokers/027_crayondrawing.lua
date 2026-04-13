@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "crayondrawing",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(27),
-	config = { extra = { chips = 0, chips_gain = 3 } },
+	config = { extra = { chips = 0, chips_gain = 5 } },
 	rarity = 1,
 	cost = 4,
 	blueprint_compat = true,

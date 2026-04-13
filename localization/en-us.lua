@@ -264,8 +264,8 @@ return {
 					"to create space",
 				},
 			},
-			j_blueatro_torn_poster = {
-				name = "Torn Poster",
+			j_blueatro_worn_poster = {
+				name = "Worn Poster",
 				text = {
 					"Creates a random",
 					"{C:red}Rare{} {C:attention}Joker{} when",
@@ -494,6 +494,21 @@ return {
 					"their {C:attention}rank{} when scored",
 					"Cards held in hand subtract",
 					"from {C:mult}Mult{} instead",
+				},
+			},
+			j_blueatro_flower_divination = {
+				name = "Crimson Flower Divination",
+				text = {
+					"Gains {C:mult}+#1#{} Mult whenever",
+					"a {C:attention}Mult Card{} scores",
+					"{C:inactive}(Currently {C:mult}+#2#{}{C:inactive} Mult){}",
+				},
+			},
+			j_blueatro_publish = {
+				name = "Publish, Print, Distribute",
+				text = {
+					"{C:attention}+#1#{} hand size",
+					"{C:money}-$#2#{} at end of round",
 				},
 			},
 		},
