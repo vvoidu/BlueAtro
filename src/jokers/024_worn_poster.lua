@@ -14,8 +14,8 @@ SMODS.Joker({
 	eternal_compat = false,
 	perishable_compat = true,
 	calculate = function(_, card, context)
-		play_sound("blueatro_e_rip", 1.0, 1.0)
 		if context.joker_type_destroyed and context.card == card then
+			play_sound("blueatro_e_rip", 1.0, 1.0)
 			G.E_MANAGER:add_event(Event({
 				func = function()
 					if #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then

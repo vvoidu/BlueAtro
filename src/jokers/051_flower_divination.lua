@@ -7,7 +7,7 @@ SMODS.Joker({
 	cost = 7,
 	blueprint_compat = true,
 	eternal_compat = true,
-	perishable_compat = true,
+	perishable_compat = false,
 	enhancement_gate = "m_mult",
 	loc_vars = function(_, info_queue, card)
 		return { vars = { card.ability.extra.mult_gain, card.ability.extra.mult } }
@@ -22,6 +22,7 @@ SMODS.Joker({
 			and not context.end_of_round
 			and not SMODS.has_no_rank(context.other_card)
 			and not context.other_card.debuff
+			and not context.blueprint
 			and SMODS.has_enhancement(context.other_card, "m_mult")
 		then
 			SMODS.scale_card(card, {

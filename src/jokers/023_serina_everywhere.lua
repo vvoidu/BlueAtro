@@ -15,7 +15,13 @@ local _card_remove = Card.remove
 function Card:remove()
 	if self.config.center.key == "j_blueatro_serina" and self.added_to_deck then
 		local copy = copy_card(self)
-		copy.ability.extra.mult = self.ability.extra.mult + self.ability.extra.mult_gain
+		SMODS.scale_card(copy, {
+			ref_table = copy.ability.extra,
+			ref_value = "mult",
+			scalar_value = "mult_gain",
+			no_message = true,
+			block_overrides = { message = true },
+		})
 		copy.added_to_deck = nil
 		BlueAtro.blueatro_serina_storage:emplace(copy)
 	end
@@ -83,7 +89,7 @@ SMODS.Joker({
 	key = "serina",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(23),
-	config = { extra = { mult = 0, mult_gain = 3 } },
+	config = { extra = { mult = 0, mult_gain = 4 } },
 	rarity = 1,
 	cost = 5,
 	blueprint_compat = true,

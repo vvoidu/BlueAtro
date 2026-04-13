@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "double_o",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(16),
-	config = { extra = { xmult = 1, xmult_gain = 0.05 } },
+	config = { extra = { xmult = 1, xmult_gain = 0.15 } },
 	rarity = 3,
 	cost = 9,
 	blueprint_compat = true,

@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "publish",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(52),
-	config = { extra = { h_size = 4, cost = 3 } },
+	config = { extra = { h_size = 4, cost = 5 } },
 	rarity = 2,
 	cost = 5,
 	blueprint_compat = false,

@@ -353,8 +353,8 @@ return {
 				name = "Bunny Tail Grenade",
 				text = {
 					"This gains {X:mult,C:white}X#1#{} Mult for",
-					"each {C:attention}7{} in first drawn",
-					"hand of the round",
+					"each {C:attention}7{} drawn",
+					"at start of round",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
 			},
@@ -375,14 +375,13 @@ return {
 					"all {C:attention}Jokers{} are scored",
 				},
 			},
-			j_blueatro_kuroko = {
-				name = "Shiroko Terror",
+			j_blueatro_invocation = {
+				name = "Blooming Resolution",
 				text = {
-					"After every {C:attention}3{} cards purchased,",
-					"{C:attention}destroys{} leftmost non-{C:attention}Eternal{}",
-					"{C:attention}Joker{} and gains {X:mult,C:white}X#2#{} Mult",
-					"{C:inactive}(Currently {X:mult,C:white}X#1#{} {C:inactive}Mult)",
-					"{C:inactive}(Bought #3#/3 cards){}",
+					"All cards in the full deck",
+					"permanently gain {C:chips}+#3#{} Chips",
+					"every {C:money}$#1#{} spent",
+					"{C:inactive}(Currently $#2#/#1#){}",
 				},
 			},
 			j_blueatro_pillow_fight = {

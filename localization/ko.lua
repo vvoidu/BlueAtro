@@ -378,15 +378,14 @@ return {
 					"한 번 재발동시킵니다",
 				},
 			},
-			j_blueatro_kuroko = {
-				name = "시로코 테러",
+			j_blueatro_invocation = {
+				name = "꽃 피우는 의지",
 				text = {
-					"카드 {C:attention}3{}장을 구매할 때마다,",
-					"가장 왼쪽의 {C:attention}이터널{}이 아닌 {C:attention}조커{}를",
-					"{C:attention}파괴{}하고 이 카드의 배수 획득량이",
-					"{X:mult,C:white}X#2#{} 증가합니다",
-					"{C:inactive}(현재 {X:mult,C:white}X#1#{} {C:inactive}배수)",
-					"{C:inactive}(현재 #3#/3장){}",
+					"{C:money}$#1#{}을 소모할 때마다",
+					"덱의 모든 카드가",
+					"칩 {C:chips}+#3#{}개를",
+					"영구적으로 얻습니다",
+					"{C:inactive}(현재 $#2#/#1#){}",
 				},
 			},
 			j_blueatro_pillow_fight = {
