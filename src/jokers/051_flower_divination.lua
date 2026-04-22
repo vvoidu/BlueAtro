@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "flower_divination",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(50),
-	config = { extra = { mult = 0, mult_gain = 4 } },
+	config = { extra = { mult = 0, mult_gain = 1 } },
 	rarity = 2,
 	cost = 7,
 	blueprint_compat = true,
