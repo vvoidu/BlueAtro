@@ -31,7 +31,7 @@ SMODS.Joker({
 							for i = #G.jokers.cards, pos + 1, -1 do
 								G.jokers.cards[i] = G.jokers.cards[i - 1]
 							end
-							G.jokers.cards[pos] = c
+							G.jokers.cards[pos + 1] = c
 							play_sound("generic1")
 							SMODS.calculate_effect({
 								message = localize("k_rerolled"),

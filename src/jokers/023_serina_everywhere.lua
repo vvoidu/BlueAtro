@@ -44,6 +44,11 @@ SMODS.calculate_context = function(context, return_table)
 
 		local slots_needed = #BlueAtro.blueatro_serina_storage.cards - negatives_count
 		local available_slots = G.jokers.config.card_limit - (#G.jokers.cards + G.GAME.joker_buffer)
+		available_slots = available_slots
+			+ BlueAtro.count_filtered(G.jokers, function(c)
+				return c.edition.negative
+			end, true)
+
 		if slots_needed > available_slots then
 			local destruction_count = slots_needed - available_slots
 			for _, victim in ipairs(G.jokers.cards) do
