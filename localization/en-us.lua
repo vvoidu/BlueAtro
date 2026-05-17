@@ -192,7 +192,7 @@ return {
 			j_blueatro_double_o = {
 				name = "Callsign Double O",
 				text = {
-					"Gains {X:mult,C:white}X#1#{} Mult each card",
+					"Gains {X:mult,C:white}X#1#{} Mult for each card",
 					"discarded this {C:attention}Ante{}",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},

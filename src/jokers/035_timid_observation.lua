@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "timid_observation",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(35),
-	config = { extra = { chips = 0, chips_gain = 3 } },
+	config = { extra = { chips = 0, chips_gain = 2 } },
 	rarity = 1,
 	cost = 5,
 	blueprint_compat = true,
@@ -29,7 +29,7 @@ SMODS.Joker({
 			if t.chips or t.chip_mod then
 				triggers = triggers + 1
 			end
-			if t.mult or t.mult_mod then
+			if t.h_mult or t.mult or t.mult_mod then
 				triggers = triggers + 1
 			end
 			while triggers > 0 do

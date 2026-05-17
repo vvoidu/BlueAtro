@@ -39,7 +39,7 @@ SMODS.Joker({
 				local _, _, scoring_hand = JokerDisplay.evaluate_hand()
 				for i = 1, #scoring_hand do
 					local c = scoring_hand[i]
-					if not SMODS.has_no_rank(c) then
+					if not SMODS.has_no_rank(c) and not card.debuff then
 						mult = mult + JokerDisplay.calculate_card_triggers(c) * c:get_id()
 					end
 				end
@@ -47,7 +47,7 @@ SMODS.Joker({
 				for i = 1, #G.hand.cards do
 					local c = G.hand.cards[i]
 					if not SMODS.has_no_rank(c) then
-						if not c.highlighted then
+						if not c.highlighted and not card.debuff then
 							-- Held in hand
 							mult = mult - JokerDisplay.calculate_card_triggers(c, true) * c:get_id()
 						end

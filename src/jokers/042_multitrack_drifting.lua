@@ -42,17 +42,24 @@ SMODS.Joker({
 			},
 			calc_function = function(card)
 				local subhand = {}
-				for i = 1, math.min(5, #G.hand.cards) do
+				local count = 0
+				for i = 1, #G.hand.cards do
 					local held = G.hand.cards[i]
 					if not held.highlighted then
 						subhand[#subhand + 1] = held
+						count = count + 1
+						if count == 5 then
+							break
+						end
 					end
 				end
 				local text, _, _ = JokerDisplay.evaluate_hand(subhand)
 
 				if text == "NULL" then
 					text = "High Card"
-				elseif text == "Unknown" then
+				end
+
+				if text == "Unknown" then
 					card.joker_display_values.chips = "?"
 					card.joker_display_values.mult = "?"
 					card.joker_display_values.handtype = "???"

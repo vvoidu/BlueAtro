@@ -12,7 +12,9 @@ SMODS.Joker({
 		return {
 			vars = {
 				card.ability.extra.mult_gain,
+				card.ability.extra.cards_needed,
 				card.ability.extra.mult,
+				card.ability.extra.cards_needed - card.ability.extra.cards_scored,
 			},
 		}
 	end,

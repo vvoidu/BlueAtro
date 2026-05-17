@@ -98,11 +98,6 @@ SMODS.Joker({
 	loc_vars = function(_, info_queue, card)
 		return { vars = { card.ability.extra.mult_gain, card.ability.extra.mult } }
 	end,
-	add_to_deck = function(self, card, from_debuff)
-		if not from_debuff then
-			card.sell_cost = 0
-		end
-	end,
 	calculate = function(self, card, context)
 		if context.joker_main and card.ability.extra.mult > 0 then
 			return {

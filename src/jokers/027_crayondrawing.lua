@@ -22,9 +22,11 @@ SMODS.Joker({
 			local suits = {}
 			local wilds = 0
 			for _, scoring_card in ipairs(context.scoring_hand) do
-				suits[scoring_card.base.suit] = true
-				if SMODS.has_enhancement(scoring_card, "m_wild") then
-					wilds = wilds + 1
+				if not scoring_card.debuff then
+					suits[scoring_card.base.suit] = true
+					if SMODS.has_enhancement(scoring_card, "m_wild") then
+						wilds = wilds + 1
+					end
 				end
 			end
 
