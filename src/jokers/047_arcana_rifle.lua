@@ -25,7 +25,7 @@ SMODS.Joker({
 			return {
 				xmult = card.ability.extra.xmult,
 			}
-		elseif context.after and card.ability.extra.xmult ~= self.config.extra.xmult then
+		elseif context.end_of_round and card.ability.extra.xmult ~= self.config.extra.xmult then
 			card.ability.extra.xmult = self.config.extra.xmult
 			return {
 				message = localize("k_reset"),

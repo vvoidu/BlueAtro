@@ -466,7 +466,7 @@ return {
 				text = {
 					"Gains {X:mult,C:white}X#1#{} Mult when",
 					"a {C:tarot}Tarot{} card is used",
-					"Resets after each hand",
+					"Resets after at end of round",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
 			},
