@@ -484,6 +484,7 @@ return {
 					"After your final discard,",
 					"draw the first discard of",
 					"the round to hand",
+					"{C:inactive}(May draw past hand size){}",
 				},
 			},
 			j_blueatro_germanium_bracelet = {

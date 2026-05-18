@@ -491,6 +491,7 @@ return {
 					"이 라운드에서 첫번째로",
 					"버린 카드들을",
 					"패로 회수합니다",
+					"{C:inactive}(이 효과로 핸드 크기를 초과할 수 있습니다){}",
 				},
 			},
 			j_blueatro_germanium_bracelet = {
