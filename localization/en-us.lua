@@ -354,7 +354,7 @@ return {
 				text = {
 					"This gains {X:mult,C:white}X#1#{} Mult for",
 					"each {C:attention}7{} drawn",
-					"at start of round",
+					"at the start of round",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
 			},
@@ -466,7 +466,7 @@ return {
 				text = {
 					"Gains {X:mult,C:white}X#1#{} Mult when",
 					"a {C:tarot}Tarot{} card is used",
-					"Resets after at end of round",
+					"Resets at the end of round",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
 			},

@@ -4,7 +4,7 @@ SMODS.Joker({
 	pos = BlueAtro.id_to_atlas_pos(32),
 	config = {},
 	rarity = 2,
-	cost = 5,
+	cost = 4,
 	blueprint_compat = false,
 	eternal_compat = true,
 	perishable_compat = true,
