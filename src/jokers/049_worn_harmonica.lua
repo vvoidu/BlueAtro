@@ -70,6 +70,7 @@ SMODS.Joker({
 							end
 						end
 					end
+					G.GAME.blueatro_first_discard = nil
 					return true
 				end,
 			}))
