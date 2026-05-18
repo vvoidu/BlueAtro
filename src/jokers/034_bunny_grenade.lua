@@ -23,7 +23,6 @@ SMODS.Joker({
 				return c:get_id() == 7
 			end)
 			if count > 0 then
-				card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain * count
 				SMODS.scale_card(card, {
 					ref_table = card.ability.extra,
 					ref_value = "xmult",
