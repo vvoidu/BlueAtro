@@ -22,16 +22,18 @@ SMODS.Joker({
 			local count = BlueAtro.count_filtered(G.hand.cards, function(c)
 				return c:get_id() == 7
 			end)
-			card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain * count
-			SMODS.scale_card(card, {
-				ref_table = card.ability.extra,
-				ref_value = "xmult",
-				scalar_value = "xmult_gain",
-				operation = function(ref_table, ref_value, initial, change)
-					ref_table[ref_value] = initial + count * change
-				end,
-				message_colour = G.C.MULT,
-			})
+			if count > 0 then
+				card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain * count
+				SMODS.scale_card(card, {
+					ref_table = card.ability.extra,
+					ref_value = "xmult",
+					scalar_value = "xmult_gain",
+					operation = function(ref_table, ref_value, initial, change)
+						ref_table[ref_value] = initial + count * change
+					end,
+					message_colour = G.C.MULT,
+				})
+			end
 			return
 		end
 	end,
