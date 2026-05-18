@@ -457,7 +457,7 @@ return {
 				name = "Exclusive Footage",
 				text = {
 					"{X:mult,C:white}X#1#{} Mult",
-					"{C:chips}Chips{} cannot",
+					"{C:chips}Chips{} can {C:attention}never{}",
 					"exceed {C:mult}Mult{}",
 				},
 			},

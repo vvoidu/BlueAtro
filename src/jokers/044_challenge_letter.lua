@@ -22,7 +22,7 @@ SMODS.Joker({
 			and card.ability.extra.bosses_beaten < card.ability.extra.bosses_needed
 		then
 			card.ability.extra.bosses_beaten = card.ability.extra.bosses_beaten + 1
-			if card.ability.extra.bosses_beaten >= card.ability.bosses_active then
+			if card.ability.extra.bosses_beaten >= card.ability.extra.bosses_needed then
 				return {
 					message = localize("k_active_ex"),
 					card = card,
@@ -37,11 +37,7 @@ SMODS.Joker({
 					card = card,
 				}
 			end
-		elseif
-			context.joker_main
-			and context.main_eval
-			and card.ability.extra.bosses_beaten >= card.ability.extra.bosses_needed
-		then
+		elseif context.joker_main and card.ability.extra.bosses_beaten >= card.ability.extra.bosses_needed then
 			return {
 				xmult = card.ability.extra.xmult,
 				card = context.blueprint_card or card,
@@ -63,9 +59,9 @@ SMODS.Joker({
 				card.joker_display_values.xmult = (
 					card.ability.extra.bosses_needed <= card.ability.extra.bosses_beaten and 3
 				) or 1
-				card.joker_display_values.active = card.ability.extra.bosses_beaten >= card.ability.bosses_needed
+				card.joker_display_values.active = card.ability.extra.bosses_beaten >= card.ability.extra.bosses_needed
 						and localize("k_active")
-					or string.format("%d/%d", card.ability.extra.bosses_beaten, card.ability.extra)
+					or string.format("%d/%d", card.ability.extra.bosses_beaten, card.ability.extra.bosses_needed)
 			end,
 		}
 	end,

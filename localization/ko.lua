@@ -462,8 +462,8 @@ return {
 				name = "독점 취재",
 				text = {
 					"{X:mult,C:white}X#1#{} 배수",
-					"{C:chips}칩{}이 {C:mult}배수{}를",
-					"넘을수 없습니다",
+					"{C:chips}칩{}이 {C:attention}절대{} {C:mult}배수{}를",
+					"초과할 수 없습니다",
 				},
 			},
 			j_blueatro_arcana_rifle = {
