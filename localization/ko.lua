@@ -345,8 +345,8 @@ return {
 			j_blueatro_ambulance = {
 				name = "응급 돌파 11호",
 				text = {
-					"현재 {C:attention}블라인드{} 도중",
-					"판매한 {C:attention}조커{}마다",
+					"{C:attention}블라인드{} 도중",
+					"{C:attention}조커{}를 판매할 때마다",
 					"{X:mult,C:white}X#1#{} 배수를 획득합니다",
 					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
 				},
@@ -516,6 +516,15 @@ return {
 				text = {
 					"핸드 크기 {C:attention}+#1#{}",
 					"라운드 종료 시 {C:money}-$#2#{}",
+				},
+			},
+			j_blueatro_dhina = {
+				name = "Ma Non Troppo",
+				text = {
+					"한 라운드에 3번 까지,",
+					"{C:attention}6{}만 플레이 하면",
+					"핸드 {C:blue}+1{}번을 얻습니다",
+					"{C:inactive}(#1#번 남음)",
 				},
 			},
 		},

@@ -30,6 +30,7 @@
     "end_round",
     "new_round",
     "juice_card",
-    "love"
+    "love",
+        "ease_hands_played"
   ]
 }

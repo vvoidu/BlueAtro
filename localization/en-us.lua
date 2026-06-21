@@ -343,9 +343,9 @@ return {
 			j_blueatro_ambulance = {
 				name = "Tactical Ambulance 11",
 				text = {
-					"{X:mult,C:white}X#1#{} Mult for",
-					"each {C:attention}Joker{} sold during",
-					"the current {C:attention}Blind{}",
+					"Gains {X:mult,C:white}X#1#{} Mult for",
+					"when a {C:attention}Joker{} is sold",
+					"during a {C:attention}Blind{}",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
 			},
@@ -509,6 +509,15 @@ return {
 				text = {
 					"{C:attention}+#1#{} hand size",
 					"{C:money}-$#2#{} at end of round",
+				},
+			},
+			j_blueatro_dhina = {
+				name = "Ma Non Troppo",
+				text = {
+					"If only {C:attention}6{}s are played,",
+					"gain {C:blue}+1{} hand, up to",
+					"3 times per round",
+					"{C:inactive}(#1# uses left)",
 				},
 			},
 		},

@@ -29,8 +29,7 @@ SMODS.Joker({
 			}
 		elseif
 			context.end_of_round
-			and not context.repetition
-			and not context.individual
+			and context.main_eval
 			and not context.blueprint
 			and not context.game_over
 			and card.ability.extra.odss ~= self.config.extra.odds

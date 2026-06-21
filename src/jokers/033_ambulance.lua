@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "ambulance",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(33),
-	config = { extra = { xmult = 1, xmult_gain = 2 } },
+	config = { extra = { xmult = 1, xmult_gain = 0.25 } },
 	rarity = 2,
 	cost = 6,
 	blueprint_compat = true,
@@ -32,12 +32,6 @@ SMODS.Joker({
 				colour = G.C.MULT,
 			})
 			return
-		elseif context.end_of_round and context.main_eval and not context.blueprint and not context.game_over then
-			card.ability.extra.xmult = self.config.extra.xmult
-			return {
-				message = localize("k_reset"),
-				colour = G.C.MULT,
-			}
 		end
 	end,
 	joker_display_def = function(JokerDisplay)
