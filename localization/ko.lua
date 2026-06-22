@@ -527,6 +527,16 @@ return {
 					"{C:inactive}(#1#번 남음)",
 				},
 			},
+			j_blueatro_americano = {
+				name = "아이스 아메리카노",
+				text = {
+					"{C:diamond}다이아몬드{} 문양 카드들을",
+					"플레이해 득점할 때마다",
+					"{X:mult,C:white}X#1#{} 배수를 획득합니다",
+					"발동할 때 마다 {X:mult,C:white}X#2#{}",
+					"배수를 잃습니다",
+				},
+			},
 		},
 		Other = {},
 		Planet = {},

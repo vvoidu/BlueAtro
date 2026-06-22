@@ -520,6 +520,16 @@ return {
 					"{C:inactive}(#1# uses left)",
 				},
 			},
+			j_blueatro_americano = {
+				name = "Iced Americano",
+				text = {
+					"Played cards with",
+					"{C:diamond}Diamond{} suit give",
+					"{X:mult,C:white}X#1#{} Mult when scored",
+					"Loses {X:mult,C:white}X#2#{} Mult",
+					"whenever this triggers",
+				},
+			},
 		},
 		Other = {},
 		Planet = {},
