@@ -9,7 +9,7 @@ SMODS.Joker({
 	eternal_compat = true,
 	perishable_compat = true,
 	loc_vars = function(_, info_queue, card)
-		local enhanced_count = BlueAtro.count_filtered(G.playing_cards, function(c)
+		local enhanced_count = BlueAtro.count_filtered(G.playing_cards or {}, function(c)
 			return next(SMODS.get_enhancements(c))
 		end, true)
 		return {

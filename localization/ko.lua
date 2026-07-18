@@ -550,8 +550,8 @@ return {
 			j_blueatro_tsuchinoko_search = {
 				name = "츠치노코 수색",
 				text = {
-					"{C:attention}전체 덱{}에 강화된 카드가",
-					"정확히 {C:attention}4{}장,",
+					"{C:attention}전체 덱{}에 강화된",
+					"카드가 정확히 {C:attention}4{}장",
 					"있을 시 그 카드들이",
 					"{X:mult,C:white}X#1#{} 배수를 부여합니다",
 					"{C:inactive}(현재 #2#{C:inactive}장)",
