@@ -20,7 +20,7 @@ SMODS.Joker({
 		elseif context.beat_boss and context.main_eval and not context.blueprint then
 			card.ability.extra.xmult = self.config.extra.xmult
 			return {
-				message = localize("k_sugar_replenished"),
+				message = localize("k_blueatro_sugar_replenished"),
 				colour = G.C.FILTER,
 			}
 		elseif context.after then

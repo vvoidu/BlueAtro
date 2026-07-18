@@ -34,7 +34,7 @@ SMODS.Joker({
 							G.jokers.cards[pos + 1] = c
 							play_sound("generic1")
 							SMODS.calculate_effect({
-								message = localize("k_rerolled"),
+								message = localize("k_blueatro_rerolled"),
 							}, card)
 						else
 							SMODS.calculate_effect({

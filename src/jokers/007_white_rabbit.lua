@@ -7,7 +7,7 @@ SMODS.Joker({
 	key = "white_rabbit",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(7),
-	config = { extra = { mult = 4 } },
+	config = { extra = { mult = 2 } },
 	rarity = 1,
 	cost = 5,
 	blueprint_compat = true,
@@ -28,7 +28,7 @@ SMODS.Joker({
 				card = context.blueprint_card or card,
 			}
 		elseif context.setting_blind and not context.blueprint then
-			if #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then
+			while #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit do
 				G.GAME.joker_buffer = G.GAME.joker_buffer + 1
 				G.E_MANAGER:add_event(Event({
 					func = function()
@@ -40,9 +40,6 @@ SMODS.Joker({
 						return true
 					end,
 				}))
-				return { message = localize("k_duplicated_ex") }
-			else
-				return { message = localize("k_no_room_ex") }
 			end
 		end
 	end,

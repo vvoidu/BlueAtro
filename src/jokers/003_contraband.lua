@@ -52,7 +52,7 @@ SMODS.Joker({
 					end,
 				}))
 				return {
-					message = localize("k_shikei"),
+					message = localize("k_blueatro_shikei"),
 					colour = G.C.SECONDARY_SET.Tarot,
 					card = context.blueprint_card or card,
 				}

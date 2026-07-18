@@ -8,6 +8,7 @@ def create_atlas(input_dir, output_path, width, height, rows, columns, blank_pat
     images = sorted(os.listdir(input_dir))
     new_image = Image.new("RGBA", (width * columns, height * rows), (250, 250, 250, 0))
 
+    i = 0
     for i, img_file in enumerate(images):
         img_path = os.path.join(input_dir, img_file)
         if img_path == blank_path:
@@ -64,6 +65,15 @@ if __name__ == "__main__":
             15,
             1,
             "art/blinds/1x/1x_blank.png",
+        ),
+        (
+            "art/stickers/1x",
+            "assets/1x/stickers.png",
+            71,
+            95,
+            1,
+            10,
+            "art/stickers/1x/1x_blank.png",
         ),
     ]
 

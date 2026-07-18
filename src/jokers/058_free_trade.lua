@@ -1,0 +1,24 @@
+-- SMODS.Joker({
+-- 	key = "free_trade",
+-- 	atlas = "blueatro_joker_atlas",
+-- 	pos = BlueAtro.id_to_atlas_pos(58),
+-- 	config = {},
+-- 	rarity = 2,
+-- 	cost = 6,
+-- 	blueprint_compat = false,
+-- 	eternal_compat = false,
+-- 	perishable_compat = true,
+-- 	calculate = function(_, card, context)
+-- 		if context.selling_self then
+-- 			local candidates = {}
+-- 			for i = 1, #G.jokers.cards do
+-- 				if G.jokers.cards[i] ~= card and not SMODS.is_eternal(G.jokers.cards[i], card) then
+-- 					candidates[#candidates + 1] = G.jokers.cards[i]
+-- 				end
+-- 			end
+-- 			local target = pseudorandom_element(candidates, "ba_freetrade")
+-- 			target.ability.extra_value = (target.ability.extra_value or 0) + card.sell_cost
+-- 			-- TODO: Transfer this ability
+-- 		end
+-- 	end,
+-- })

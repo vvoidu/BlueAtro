@@ -116,7 +116,8 @@ return {
 				text = {
 					"{C:mult}+#1#{} Mult",
 					"When {C:attention}Blind{} is selected,",
-					"creates a copy of itself",
+					"duplicates itself until",
+					"Joker slots are full",
 				},
 			},
 			j_blueatro_crafting_chamber = {
@@ -343,7 +344,7 @@ return {
 			j_blueatro_ambulance = {
 				name = "Tactical Ambulance 11",
 				text = {
-					"Gains {X:mult,C:white}X#1#{} Mult for",
+					"Gains {X:mult,C:white}X#1#{} Mult",
 					"when a {C:attention}Joker{} is sold",
 					"during a {C:attention}Blind{}",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
@@ -499,8 +500,10 @@ return {
 			j_blueatro_flower_divination = {
 				name = "Crimson Flower Divination",
 				text = {
-					"Gains {C:mult}+#1#{} Mult whenever",
-					"a {C:attention}Mult Card{} scores",
+					"This card {C:attention}Mult{}",
+					"equal to the suit of all",
+					"scoring cards in your",
+					"first played hand",
 					"{C:inactive}(Currently {C:mult}+#2#{}{C:inactive} Mult){}",
 				},
 			},
@@ -515,7 +518,7 @@ return {
 				name = "Ma Non Troppo",
 				text = {
 					"If only {C:attention}6{}s are played,",
-					"gain {C:blue}+1{} hand, up to",
+					"gain {C:blue}+1{} hand up to",
 					"3 times per round",
 					"{C:inactive}(#1# uses left)",
 				},
@@ -524,14 +527,59 @@ return {
 				name = "Iced Americano",
 				text = {
 					"Played cards with",
-					"{C:diamond}Diamond{} suit give",
+					"{C:diamonds}Diamond{} suit give",
 					"{X:mult,C:white}X#1#{} Mult when scored",
 					"Loses {X:mult,C:white}X#2#{} Mult",
 					"whenever this triggers",
 				},
 			},
+			j_blueatro_cats_cradle = {
+				name = "Cat's Cradle",
+				text = {
+					"Enhanced cards",
+					"held in hand",
+					"gain {C:purple}Furin Kazan{}",
+				},
+			},
+			j_blueatro_tsuchinoko_search = {
+				name = "Tsuchinoko Search",
+				text = {
+					"If your {C:attention}full deck{}",
+					"contains {C:attention}exactly{}",
+					"{C:attention}4{} Enhanced cards,",
+					"they give {X:mult,C:white}X#1#{} Mult",
+					"when they score",
+					"{C:inactive}(Currently #2#{C:inactive})",
+				},
+			},
+			j_blueatro_fortified_city = {
+				name = "Fortified City",
+				text = {
+					"When a poker hand is played,",
+					"it permanently takes",
+					"the level upgrades",
+					"of all weaker hands",
+				},
+			},
+			j_blueatro_free_trade = {
+				name = "Free Trade",
+				text = {
+					"When this card is sold,",
+					"a random Joker gains its",
+					"{C:attention}sell value{} and this ability",
+					"{C:inactive}(Except Eternal Jokers)",
+				},
+			},
 		},
-		Other = {},
+		Other = {
+			blueatro_furin_kazan = {
+				name = "Furin Kazan",
+				text = {
+					"{X:mult,C:white}X#1#{} Mult",
+					"Removed when scored",
+				},
+			},
+		},
 		Planet = {},
 		Spectral = {},
 		Stake = {},
@@ -554,15 +602,16 @@ return {
 		challenge_names = {},
 		collabs = {},
 		dictionary = {
-			k_shikei = "SHIKEI!",
-			k_levelup = "Panpakapan!",
-			k_nihaha = "Nihaha!",
-			k_sugar_replenished = "Sugar Replenished!",
-			k_rerolled = "Rerolled!",
-			k_mistranslated_rare = "Lair",
+			k_blueatro_shikei = "SHIKEI!",
+			k_blueatro_nihaha = "Nihaha!",
+			k_blueatro_sugar_replenished = "Sugar Replenished!",
+			k_blueatro_rerolled = "Rerolled!",
+			k_blueatro_mistranslated_rare = "Lair",
 		},
 		high_scores = {},
-		labels = {},
+		labels = {
+			blueatro_furin_kazan = "Furin Kazan",
+		},
 		poker_hand_descriptions = {},
 		poker_hands = {},
 		quips = {},

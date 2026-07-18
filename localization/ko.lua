@@ -117,6 +117,7 @@ return {
 				text = {
 					"{C:mult}+#1#{} 배수",
 					"{C:attention}블라인드{}를 선택할 시",
+					"모든 조커 슬롯을 채울 때까지",
 					"이 조커의 복제본을",
 					"생성합니다",
 				},
@@ -490,7 +491,8 @@ return {
 					"마지막 버리기를 사용한 후",
 					"이 라운드에서 첫번째로",
 					"버린 카드들을 패로 회수합니다",
-					"{C:inactive}(이 효과로 핸드 크기를 초과할 수 있습니다){}",
+					"{C:inactive}(이 효과로 핸드 크기를",
+					"{C:inactive}초과할 수 있습니다){}",
 				},
 			},
 			j_blueatro_germanium_bracelet = {
@@ -507,7 +509,7 @@ return {
 				text = {
 					"{C:attention}배수 카드{}가 득점 할 시",
 					"배수 획득량이",
-					"{C:mult}+#1#{} 증가합니다",
+					"라운드 첫",
 					"{C:inactive}(현재 {C:mult}+#2#{}{C:inactive} 배수){}",
 				},
 			},
@@ -530,15 +532,58 @@ return {
 			j_blueatro_americano = {
 				name = "아이스 아메리카노",
 				text = {
-					"{C:diamond}다이아몬드{} 문양 카드들을",
+					"{C:diamonds}다이아몬드{} 문양 카드들을",
 					"플레이해 득점할 때마다",
 					"{X:mult,C:white}X#1#{} 배수를 획득합니다",
 					"발동할 때 마다 {X:mult,C:white}X#2#{}",
 					"배수를 잃습니다",
 				},
 			},
+			j_blueatro_cats_cradle = {
+				name = "실뜨기",
+				text = {
+					"손패에 남은 강화된 카드에",
+					"{C:purple}풍림화산{} 스티커를",
+					"부여합니다",
+				},
+			},
+			j_blueatro_tsuchinoko_search = {
+				name = "츠치노코 수색",
+				text = {
+					"{C:attention}전체 덱{}에 강화된 카드가",
+					"정확히 {C:attention}4{}장,",
+					"있을 시 그 카드들이",
+					"{X:mult,C:white}X#1#{} 배수를 부여합니다",
+					"{C:inactive}(현재 #2#{C:inactive}장)",
+				},
+			},
+			j_blueatro_fortified_city = {
+				name = "요새도시",
+				text = {
+					"득점하는 족보가",
+					"그 보다 약한 족보들의",
+					"레벨을 영구히 가져갑니다",
+				},
+			},
+			j_blueatro_free_trade = {
+				name = "특수무역",
+				text = {
+					"이 카드를 판매 할 시,",
+					"무작위한 조커가 이 카드의",
+					"{C:attention}판매가{}와 이 능력을 얻습니다",
+					"{C:inactive}(이터널 조커는 제외합니다)",
+				},
+			},
 		},
-		Other = {},
+		Other = {
+			blueatro_furin_kazan = {
+				name = "풍림화산",
+				text = {
+					"{X:mult,C:white}X#1#{} 배수",
+					"득점 시 제거됩니다",
+				},
+			},
+		},
 		Planet = {},
 		Spectral = {},
 		Stake = {},
@@ -562,15 +607,16 @@ return {
 		challenge_names = {},
 		collabs = {},
 		dictionary = {
-			k_shikei = "사형!",
-			k_levelup = "빠밤빠밤!",
-			k_nihaha = "니하하!",
-			k_sugar_replenished = "당분 보충!",
-			k_rerolled = "리세!",
-			k_mistranslated_rare = "번식지",
+			k_blueatro_shikei = "사형!",
+			k_blueatro_nihaha = "니하하!",
+			k_blueatro_sugar_replenished = "당분 보충!",
+			k_blueatro_rerolled = "리세!",
+			k_blueatro_mistranslated_rare = "번식지",
 		},
 		high_scores = {},
-		labels = {},
+		labels = {
+			blueatro_furin_kazan = "풍림화산",
+		},
 		poker_hand_descriptions = {},
 		poker_hands = {},
 		quips = {},

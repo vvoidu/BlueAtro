@@ -47,6 +47,7 @@ assert(SMODS.load_file("src/hooks.lua"))()
 assert(SMODS.load_file("src/utils.lua"))()
 
 assert(SMODS.load_file("src/enhancements.lua"))()
+assert(SMODS.load_file("src/stickers.lua"))()
 assert(SMODS.load_file("src/tarots.lua"))()
 
 local function load_dir(dir, sort)

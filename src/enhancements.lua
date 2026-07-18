@@ -1,5 +1,5 @@
 SMODS.Atlas({
-	key = "enhancements_atlas",
+	key = "blueatro_enhancements_atlas",
 	path = "enhancements.png",
 	px = 71,
 	py = 95,
@@ -7,7 +7,7 @@ SMODS.Atlas({
 
 SMODS.Enhancement({
 	key = "pyroxene",
-	atlas = "enhancements_atlas",
+	atlas = "blueatro_enhancements_atlas",
 	pos = { x = 0, y = 0 },
 	config = { extra = { cost = 1, xmult = 2 } },
 	loc_vars = function(_, info_queue, card)

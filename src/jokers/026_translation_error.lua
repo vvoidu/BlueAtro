@@ -9,7 +9,7 @@ SMODS.Joker({
 	eternal_compat = true,
 	perishable_compat = false,
 	set_card_type_badge = function(self, card, badges)
-		badges[#badges + 1] = create_badge(localize("k_mistranslated_rare"), G.C.RARITY[3], G.C.WHITE, 1.2)
+		badges[#badges + 1] = create_badge(localize("k_blueatro_mistranslated_rare"), G.C.RARITY[3], G.C.WHITE, 1.2)
 	end,
 	calculate = function(self, card, context)
 		if context.post_trigger and context.other_card ~= card and context.other_ret.jokers then
