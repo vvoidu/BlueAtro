@@ -21,7 +21,7 @@ SMODS.Joker({
 						SMODS.calculate_effect({
 							message = localize("k_level_up_ex"),
 						}, card)
-						SMODS.smart_level_up_hand(playing_card, context.scoring_name, false)
+						SMODS.upgrade_poker_hands({ from = playing_card, hands = { context.scoring_name } })
 					end
 				end
 			end
