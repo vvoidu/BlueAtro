@@ -20,7 +20,7 @@ SMODS.Joker({
 				remove = true,
 			}
 		elseif context.after and context.main_eval then
-			SMODS.destroy_cards(card, true, true)
+			SMODS.destroy_cards({ card }, { bypass_eternal = true })
 			play_sound("blueatro_e_explosion")
 		end
 	end,

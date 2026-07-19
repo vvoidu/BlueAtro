@@ -561,13 +561,12 @@ return {
 					"of all weaker hands",
 				},
 			},
-			j_blueatro_free_trade = {
-				name = "Free Trade",
+			j_blueatro_ichika_smile = {
+				name = "100-Percent Smile",
 				text = {
-					"When this card is sold,",
-					"a random Joker gains its",
-					"{C:attention}sell value{} and this ability",
-					"{C:inactive}(Except Eternal Jokers)",
+					"{C:blue}+#1#{} hands",
+					"Destroyed when the",
+					"{C:attention}final hand{} is played",
 				},
 			},
 		},

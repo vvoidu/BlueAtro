@@ -24,7 +24,7 @@ SMODS.Joker({
 			if not context.blueprint then
 				card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_loss
 				if card.ability.extra.xmult <= 1 then
-					SMODS.destroy_cards(card, nil, nil, true)
+					SMODS.destroy_cards(card, { bypass_eternal = true })
 					return {
 						message = localize("k_eaten_ex"),
 						colour = G.C.FILTER,

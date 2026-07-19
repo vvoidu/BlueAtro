@@ -117,9 +117,8 @@ return {
 				text = {
 					"{C:mult}+#1#{} 배수",
 					"{C:attention}블라인드{}를 선택할 시",
-					"모든 조커 슬롯을 채울 때까지",
-					"이 조커의 복제본을",
-					"생성합니다",
+					"모든 빈 조커 슬롯을 이 카드의",
+					"복제본으로 채웁니다",
 				},
 			},
 			j_blueatro_crafting_chamber = {
@@ -565,13 +564,12 @@ return {
 					"레벨을 영구히 가져갑니다",
 				},
 			},
-			j_blueatro_free_trade = {
-				name = "특수무역",
+			j_blueatro_ichika_smile = {
+				name = "100점 만점의 미소",
 				text = {
-					"이 카드를 판매 할 시,",
-					"무작위한 조커가 이 카드의",
-					"{C:attention}판매가{}와 이 능력을 얻습니다",
-					"{C:inactive}(이터널 조커는 제외합니다)",
+					"핸드 {C:blue}+#1#{}번",
+					"{C:attention}마지막 핸드{}를 낼 시",
+					"파괴됩니다",
 				},
 			},
 		},

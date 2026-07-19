@@ -21,7 +21,7 @@ SMODS.Joker({
 		else
 			if context.card_added and context.card.ability.set == "Joker" and not context.blueprint then
 				if card.ability.extra.xmult - card.ability.extra.xmult_loss <= 1 then
-					SMODS.destroy_cards({ card }, true)
+					SMODS.destroy_cards(card, { bypass_eternal = true, pinch_anim = true })
 					return {
 						message = localize("k_eaten_ex"),
 						colour = G.C.FILTER,

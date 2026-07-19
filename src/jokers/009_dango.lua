@@ -13,7 +13,7 @@ SMODS.Joker({
 	end,
 	calculate = function(_, card, context)
 		if not card.getting_sliced and G.GAME.current_round.discards_left == 0 and not context.blueprint then
-			SMODS.destroy_cards({ card }, true)
+			SMODS.destroy_cards({ card }, { bypass_eternal = true, pinch_anim = true })
 			return {
 				message = localize("k_eaten_ex"),
 				colour = G.C.FILTER,
