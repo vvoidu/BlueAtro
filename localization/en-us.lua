@@ -107,7 +107,7 @@ return {
 				name = "Pointman",
 				text = {
 					"This has {X:mult,C:white}X#1#{} Mult for",
-					"each Joker to the right",
+					"each Joker to the {C:attention}right{}",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
 			},
@@ -229,7 +229,7 @@ return {
 				text = {
 					"This Joker gains {C:mult}+#1#{} Mult",
 					"for each poker hand with",
-					"level higher than played hand",
+					"level {C:attention}higher{} than played hand",
 					"{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
 				},
 			},
@@ -295,7 +295,7 @@ return {
 				text = {
 					"This Joker gains",
 					"{C:chips}+#1#{} Chips for",
-					"each unique suit",
+					"each unique {C:attention}suit{}",
 					"in scoring hand",
 					"{C:inactive}(Currently {C:chips}+#2#{}{C:inactive} Chips{C:inactive})",
 				},
@@ -482,7 +482,7 @@ return {
 			j_blueatro_harmonica = {
 				name = "Worn Harmonica",
 				text = {
-					"After your final discard,",
+					"After your {C:attnention}final discard{},",
 					"draw the first discard of",
 					"the round to hand",
 					"{C:inactive}(May draw past hand size){}",
@@ -556,7 +556,7 @@ return {
 					"When a poker hand is played,",
 					"it permanently takes",
 					"the level upgrades",
-					"of all weaker hands",
+					"of all {C:attention}weaker hands{}",
 				},
 			},
 			j_blueatro_ichika_smile = {
