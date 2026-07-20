@@ -332,8 +332,8 @@ return {
 					"offer {C:attention}Jokers{}",
 				},
 			},
-			j_blueatro_dowsing_rods = {
-				name = "Dowsing Rods",
+			j_blueatro_big_catch = {
+				name = "Big Catch",
 				text = {
 					"When {C:attention}Blind{} is selected,",
 					"cards with the least common {C:attention}rank{}",

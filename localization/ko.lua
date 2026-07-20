@@ -333,8 +333,8 @@ return {
 					"판매하지 않습니다",
 				},
 			},
-			j_blueatro_dowsing_rods = {
-				name = "다우징 로드",
+			j_blueatro_big_catch = {
+				name = "월척",
 				text = {
 					"{C:attention}블라인드{} 선택 시,",
 					"덱에 가장 적은 {C:attention}랭크{}의",

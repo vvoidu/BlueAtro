@@ -1,5 +1,5 @@
 SMODS.Joker({
-	key = "dowsing_rods",
+	key = "big_catch",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(32),
 	config = {},
