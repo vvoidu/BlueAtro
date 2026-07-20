@@ -218,7 +218,7 @@ return {
 				name = "능숙한 재장전",
 				text = {
 					"플레이한 핸드에",
-					"{C:attention}투페어{}가 포함되 있을 경우",
+					"{C:attention}투페어{}가 포함될 경우",
 					"{C:attention}플레이한 카드{}들 중 처음",
 					"두장을 손에 다시 넣습니다",
 				},
@@ -541,7 +541,7 @@ return {
 			j_blueatro_cats_cradle = {
 				name = "실뜨기",
 				text = {
-					"손패에 남은 강화된 카드에",
+					"손패에 남은 {C:attention}강화된 카드{}에",
 					"{C:purple}풍림화산{} 스티커를",
 					"부여합니다",
 				},

@@ -534,7 +534,7 @@ return {
 			j_blueatro_cats_cradle = {
 				name = "Cat's Cradle",
 				text = {
-					"Enhanced cards",
+					"{C:attention}Enhanced cards{}",
 					"held in hand",
 					"gain {C:purple}Furin Kazan{}",
 				},
