@@ -500,11 +500,9 @@ return {
 			j_blueatro_flower_divination = {
 				name = "Crimson Flower Divination",
 				text = {
-					"This card {C:attention}Mult{}",
-					"equal to the suit of all",
-					"scoring cards in your",
-					"first played hand",
-					"{C:inactive}(Currently {C:mult}+#2#{}{C:inactive} Mult){}",
+					"When the {C:attention}last{} played card scores,",
+					"it permanently gains the chip values",
+					"of all other scoring cards",
 				},
 			},
 			j_blueatro_publish = {

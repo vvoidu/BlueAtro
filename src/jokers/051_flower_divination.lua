@@ -2,48 +2,42 @@ SMODS.Joker({
 	key = "flower_divination",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(51),
-	config = { extra = { mult = 1 } },
+	config = {},
 	rarity = 3,
-	cost = 7,
+	cost = 8,
 	blueprint_compat = true,
 	eternal_compat = true,
-	perishable_compat = false,
-	enhancement_gate = "m_mult",
+	perishable_compat = true,
 	loc_vars = function(_, info_queue, card)
-		return { vars = { (card.ability.extra.mult_multiplier - 1) * 100, card.ability.extra.mult } }
+		return { vars = {} }
 	end,
 	calculate = function(_, card, context)
-		if context.joker_main then
-			return {
-				mult = card.ability.extra.mult,
-			}
-		elseif
+		if
 			context.individual
 			and context.cardarea == G.play
 			and not context.end_of_round
-			and not SMODS.has_no_rank(context.other_card)
 			and not context.other_card.debuff
-			and not context.blueprint
-			and SMODS.has_enhancement(context.other_card, "m_mult")
 		then
-			SMODS.scale_card(card, {
-				ref_table = card.ability.extra,
-				ref_value = "mult",
-				scalar_value = "mult_multiplier",
-				message_colour = G.C.MULT,
-				operation = function(ref_table, ref_value, initial, change)
-					ref_table[ref_value] = initial * change
-				end,
-			})
-			return
+			local pos = BlueAtro.get_card_pos(G.play, context.other_card)
+			if pos ~= #G.play.cards then
+				return
+			end
+
+			local chip_value = 0
+			for i = 1, #G.play.cards - 1 do
+				local prev_card = G.play.cards[i]
+				if not prev_card.debuff then
+					chip_value = chip_value + prev_card:get_chip_bonus()
+				end
+			end
+
+			if chip_value > 0 then
+				context.other_card.ability.perma_bonus = (context.other_card.ability.perma_bonus or 0) + chip_value
+				return {
+					message = localize("k_upgrade_ex"),
+					colour = G.C.CHIPS,
+				}
+			end
 		end
-	end,
-	joker_display_def = function(JokerDisplay)
-		return {
-			text = {
-				{ text = "+", colour = G.C.MULT },
-				{ ref_table = "card.ability.extra", ref_value = "mult", colour = G.C.MULT },
-			},
-		}
 	end,
 })

@@ -506,10 +506,10 @@ return {
 			j_blueatro_flower_divination = {
 				name = "진홍빛 꽃점",
 				text = {
-					"{C:attention}배수 카드{}가 득점 할 시",
-					"배수 획득량이",
-					"라운드 첫",
-					"{C:inactive}(현재 {C:mult}+#2#{}{C:inactive} 배수){}",
+					"플레이해 득점한",
+					"{C:attention}마지막{} 카드가",
+					"다른 득점한 카드들의",
+					"칩 갯수를 영구히 얻습니다",
 				},
 			},
 			j_blueatro_publish = {
