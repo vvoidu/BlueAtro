@@ -10,7 +10,6 @@ Supports English and Korean.
 
 ### Dependencies
 - [Steamodded](https://github.com/Steamopollys/Steamodded/)
-- [Lovely](https://github.com/ethangreen-dev/lovely-injector)
 
 ### Compatible With
 - [JokerDisplay](https://github.com/nh6574/JokerDisplay)
