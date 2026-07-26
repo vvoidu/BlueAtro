@@ -19,7 +19,7 @@ SMODS.Joker({
 			and context.cardarea == G.play
 			and context.other_card:is_face()
 			and not context.other_card.debuffed
-			and SMODS.pseudorandom_probability(card, "elixir", 1, card.ability.extra.odds)
+			and SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds)
 		then
 			local c = context.other_card
 			assert(c)

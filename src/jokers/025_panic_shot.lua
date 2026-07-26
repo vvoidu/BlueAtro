@@ -14,7 +14,7 @@ SMODS.Joker({
 	end,
 	calculate = function(self, card, context)
 		if context.joker_main and context.cardarea == G.jokers then
-			if SMODS.pseudorandom_probability(card, "kayokoplzfear", 1, card.ability.extra.odds) then
+			if SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds) then
 				return {
 					x_mult = card.ability.extra.xmult,
 					card = context.blueprint_card or card,

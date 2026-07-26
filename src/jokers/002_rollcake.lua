@@ -27,7 +27,7 @@ SMODS.Joker({
 			if
 				G.GAME.current_round.hands_played == 0
 				and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit
-				and SMODS.pseudorandom_probability(card, "rollcake", 1, card.ability.extra.odds)
+				and SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds)
 			then
 				G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 				G.E_MANAGER:add_event(Event({

@@ -16,7 +16,7 @@ SMODS.Joker({
 		if context.before and context.main_eval then
 			for _, playing_card in ipairs(G.play.cards) do
 				if SMODS.has_enhancement(playing_card, "m_wild") and not playing_card.debuff then
-					if SMODS.pseudorandom_probability(card, "kazusa", 1, card.ability.extra.odds) then
+					if SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds) then
 						card = context.blueprint or card
 						SMODS.calculate_effect({
 							message = localize("k_level_up_ex"),
