@@ -90,7 +90,7 @@ return {
 				text = {
 					"Gains {C:mult}+#1#{} Mult every",
 					"{C:attention}#2#{} cards scored",
-					"{C:inactive}(#4# cards left)",
+					"{C:inactive}({C:attention}#4#{} cards left)",
 					"{C:inactive}(Currently {C:mult}+#3#{}{C:inactive} Mult){}",
 				},
 			},
@@ -126,7 +126,7 @@ return {
 					"After selling {C:attention}#1#{} cards,",
 					"create a random {C:tarot}Tarot{} card",
 					"{C:inactive}(Must have room){}",
-					"{C:inactive}(#2# left){}",
+					"{C:inactive}({C:attention}#2#{} left){}",
 				},
 			},
 			j_blueatro_dango = {
@@ -382,7 +382,7 @@ return {
 					"All cards in the full deck",
 					"permanently gain {C:chips}+#3#{} Chips",
 					"every {C:money}$#1#{} spent",
-					"{C:inactive}(Currently $#2#/#1#){}",
+					"{C:inactive}(Currently ${C:attention}#2#{}/{C:attention}#1#{}){}",
 				},
 			},
 			j_blueatro_pillow_fight = {
@@ -443,7 +443,7 @@ return {
 					"Inactive until",
 					"{C:attention}#2# Boss Blinds{}",
 					"are beaten",
-					"{C:inactive}(Currently #3#/#2#)",
+					"{C:inactive}(Currently {C:attention}#3#{}/{C:attention}#2#{})",
 				},
 			},
 			j_blueatro_cath_palug = {
@@ -518,7 +518,7 @@ return {
 					"If only {C:attention}6{}s are played,",
 					"gain {C:blue}+1{} hand up to",
 					"3 times per round",
-					"{C:inactive}(#1# uses left)",
+					"{C:inactive}({C:attention}#1#{} uses left)",
 				},
 			},
 			j_blueatro_americano = {
@@ -547,7 +547,7 @@ return {
 					"{C:attention}4{} Enhanced cards,",
 					"they give {X:mult,C:white}X#1#{} Mult",
 					"when they score",
-					"{C:inactive}(Currently #2#{C:inactive})",
+					"{C:inactive}(Currently {C:attention}#2#{}){}",
 				},
 			},
 			j_blueatro_fortified_city = {

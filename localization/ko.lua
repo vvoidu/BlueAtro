@@ -15,7 +15,7 @@ return {
 			bl_blueatro_chesed = {
 				name = "헤세드",
 				text = {
-					"핸드를 낼때마다 요구",
+					"핸드를 낼 때마다 요구",
 					"점수가 20% 증가합니다",
 				},
 			},
@@ -90,7 +90,7 @@ return {
 					"이 조커는 카드가",
 					"{C:attention}#2#{}번 득점할 때마다",
 					"배수 획득량이 {C:mult}+#1#{} 증가합니다",
-					"{C:inactive}(#4#번 남음)",
+					"{C:inactive}({C:attention}#4#{}번 남음)",
 					"{C:inactive}(현재 {C:mult}+#3#{}{C:inactive} 배수)",
 				},
 			},
@@ -124,10 +124,10 @@ return {
 			j_blueatro_crafting_chamber = {
 				name = "크래프트 챔버",
 				text = {
-					"{C:attention}카드{}를 {C:attention}#1#{}장 판매할때마다,",
+					"{C:attention}카드{}를 {C:attention}#1#{}장 판매할 때마다,",
 					"무작위한 {C:tarot}타로{} 카드를 생성합니다",
 					"{C:inactive}(공간이 있어야 합니다){}",
-					"{C:inactive}(#2#장 남음){}",
+					"{C:inactive}({C:attention}#2#{}장 남음){}",
 				},
 			},
 			j_blueatro_dango = {
@@ -141,7 +141,7 @@ return {
 			j_blueatro_stargazing = {
 				name = "천체관측",
 				text = {
-					"{C:tarot}타로{} 카드를 사용할시",
+					"{C:tarot}타로{} 카드를 사용할 시",
 					"무작위 {C:planet}행성{} 카드를",
 					"생성합니다",
 				},
@@ -167,7 +167,7 @@ return {
 			j_blueatro_bookkeeping = {
 				name = "총결산",
 				text = {
-					"정확히 {C:attention}#2#{}장을 버릴때마다",
+					"정확히 {C:attention}#2#{}장을 버릴 때마다",
 					"{C:money}$#1#{}를 획득합니다",
 					"카드의 갯수는",
 					"매 라운드 변경됩니다",
@@ -192,7 +192,7 @@ return {
 			j_blueatro_double_o = {
 				name = "콜사인 더블오",
 				text = {
-					"이번 {C:attention}앤티{}동안 버린 카드마다",
+					"이번 {C:attention}앤티{} 동안 버린 카드마다",
 					"{X:mult,C:white}X#1#{} 배수를 얻습니다",
 					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
 				},
@@ -218,7 +218,7 @@ return {
 				name = "능숙한 재장전",
 				text = {
 					"플레이한 핸드에",
-					"{C:attention}투페어{}가 포함될 경우",
+					"{C:attention}투 페어{}가 포함될 경우",
 					"{C:attention}플레이한 카드{}들 중 처음",
 					"두장을 손에 다시 넣습니다",
 				},
@@ -236,7 +236,7 @@ return {
 			j_blueatro_nyans_dash = {
 				name = "냥즈 대쉬",
 				text = {
-					"이 조커는 콤보에 맞는 패를 낼때마다",
+					"이 조커는 콤보에 맞는 패를 낼 때마다",
 					"배수 획득량이 {X:mult,C:white}X#1#{} 증가합니다",
 					"콤보를 떨구면 배수 획득량이 초기화됩니다",
 					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
@@ -256,7 +256,7 @@ return {
 				name = "어디서나 세리나",
 				text = {
 					"이 조커가 판매되거나 파괴되면,",
-					"라운드가 끝날때 돌아오며",
+					"라운드가 끝날 때 돌아오며",
 					"배수 획득량이 {C:mult}+#1#{} 증가합니다",
 					"{C:inactive}(현재 {C:mult}+#2#{C:inactive} 배수)",
 					" ",
@@ -278,7 +278,7 @@ return {
 					"{C:green}#1#/#2#{}의 확률로",
 					"{X:mult,C:white}X#3#{} 배수를 획득합니다",
 					"상점을 {C:attention}새로고침{}할 때마다",
-					"블라인드에 승리할때 까지",
+					"블라인드에 승리할 때까지",
 					"확률이 증가합니다",
 				},
 			},
@@ -322,7 +322,7 @@ return {
 				name = "색채",
 				text = {
 					"라운드 종료 시",
-					"무작위한 {C:attention}이터널{}",
+					"무작위한 {C:attention}영구{}",
 					"{C:spectral}유령{} 카드를 생성합니다",
 				},
 			},
@@ -385,7 +385,7 @@ return {
 					"덱의 모든 카드가",
 					"칩 {C:chips}+#3#{}개를",
 					"영구적으로 얻습니다",
-					"{C:inactive}(현재 $#2#/#1#){}",
+					"{C:inactive}(현재 ${C:attention}#2#{}/{C:attention}#1#{}){}",
 				},
 			},
 			j_blueatro_pillow_fight = {
@@ -446,7 +446,7 @@ return {
 					"{C:attention}보스 블라인드 #2#{}개를",
 					"클리어하기 전까지",
 					"발동하지 않습니다",
-					"{C:inactive}(현재 #3#/#2#)",
+					"{C:inactive}(현재 {C:attention}#3#{}/{C:attention}#2#{})",
 				},
 			},
 			j_blueatro_cath_palug = {
@@ -469,7 +469,7 @@ return {
 			j_blueatro_arcana_rifle = {
 				name = "저격소총의 아르카나",
 				text = {
-					"{C:tarot}타로{} 카드를 사용할때마다",
+					"{C:tarot}타로{} 카드를 사용할 때마다",
 					"이 카드의 배수 획득량이",
 					"{X:mult,C:white}X#1#{} 증가합니다",
 					"라운드 종료 시 초기화됩니다",
@@ -520,12 +520,12 @@ return {
 				},
 			},
 			j_blueatro_dhina = {
-				name = "Ma Non Troppo",
+				name = "마 논 트로포",
 				text = {
 					"한 라운드에 3번 까지,",
 					"{C:attention}6{}만 플레이 하면",
 					"핸드 {C:blue}+1{}번을 얻습니다",
-					"{C:inactive}(#1#번 남음)",
+					"{C:inactive}({C:attention}#1#{}번 남음)",
 				},
 			},
 			j_blueatro_americano = {
@@ -553,7 +553,7 @@ return {
 					"카드가 정확히 {C:attention}4{}장",
 					"있을 시 그 카드들이",
 					"{X:mult,C:white}X#1#{} 배수를 부여합니다",
-					"{C:inactive}(현재 #2#{C:inactive}장)",
+					"{C:inactive}(현재 {C:attention}#2#{}장){}",
 				},
 			},
 			j_blueatro_fortified_city = {
@@ -570,6 +570,25 @@ return {
 					"핸드 {C:blue}+#1#{}번",
 					"{C:attention}마지막 핸드{}를 낼 시",
 					"파괴됩니다",
+				},
+			},
+			j_blueatro_romantic_finale = {
+				name = "로망의 대단원",
+				text = {
+					"{C:attention}스트레이트 플러시{}가 포함된",
+					"핸드를 제출했고 덱의 남은 카드가",
+					"정확히 {C:attention}#1#{}장 일 시,",
+					"플레이한 카드가 득점 시",
+					"{X:mult,C:white}X#2#{} 배수를 부여합니다",
+				},
+			},
+			j_blueatro_wiretap_device = {
+				name = "도청 장치",
+				text = {
+					"{C:attention}라운드 종료 시{},",
+					"{C:green}#1#/#2#{} 확률로",
+					"무작위 조커에게",
+					"{C:attention}포일{} 에디션을 부여합니다",
 				},
 			},
 		},
@@ -591,7 +610,7 @@ return {
 				name = "고래",
 				text = {
 					"선택한 카드 {C:attention}#1#{}장을",
-					"{C:attention}청휘석 카드{]로",
+					"{C:attention}청휘석 카드{}로",
 					"강화합니다",
 				},
 			},
