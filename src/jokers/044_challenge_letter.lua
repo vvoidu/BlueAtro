@@ -57,7 +57,7 @@ SMODS.Joker({
 			},
 			calc_function = function(card)
 				card.joker_display_values.xmult = (
-					card.ability.extra.bosses_needed <= card.ability.extra.bosses_beaten and 3
+					card.ability.extra.bosses_needed <= card.ability.extra.bosses_beaten and card.ability.extra.xmult
 				) or 1
 				card.joker_display_values.active = card.ability.extra.bosses_beaten >= card.ability.extra.bosses_needed
 						and localize("k_active")

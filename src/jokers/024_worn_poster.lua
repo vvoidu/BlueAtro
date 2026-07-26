@@ -22,7 +22,7 @@ SMODS.Joker({
 						SMODS.add_card({
 							set = "Joker",
 							key_append = "abydos_poster",
-							rarity = 1,
+							rarity = "Rare",
 						})
 					end
 					return true

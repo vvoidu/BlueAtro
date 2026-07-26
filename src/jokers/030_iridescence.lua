@@ -24,9 +24,9 @@ SMODS.Joker({
 					local c = SMODS.add_card({ set = "Spectral" })
 					c.ability.eternal = true
 					G.GAME.consumeable_buffer = 0
-					SMODS.calculate_context({
+					SMODS.calculate_effect({
 						message = localize("k_plus_spectral"),
-					})
+					}, card)
 					return true
 				end,
 			}))

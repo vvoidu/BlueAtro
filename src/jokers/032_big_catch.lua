@@ -14,8 +14,8 @@ SMODS.Joker({
 
 local _CardArea_shuffle = CardArea.shuffle
 function CardArea:shuffle(seed)
-	if self == G.deck and #SMODS.find_card("j_blueatro_dowsing_rods") > 0 and G.STATE == G.STATES.DRAW_TO_HAND then
-		local rods = SMODS.find_card("j_blueatro_dowsing_rods")
+	if self == G.deck and #SMODS.find_card("j_blueatro_big_catch") > 0 and G.STATE == G.STATES.DRAW_TO_HAND then
+		local rods = SMODS.find_card("j_blueatro_big_catch")
 		rods[1]:juice_up()
 		play_sound("generic1")
 

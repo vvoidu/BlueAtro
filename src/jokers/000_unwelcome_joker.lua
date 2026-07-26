@@ -15,7 +15,7 @@ SMODS.Joker({
 	perishable_compat = false,
 	loc_vars = function(self, info_queue, card) end,
 	calculate = function(self, card, context)
-		if context.destroy_card and context.cardarea == G.play or context.cardarea == "unscored" then
+		if context.destroy_card and (context.cardarea == G.play or context.cardarea == "unscored") then
 			return {
 				remove = true,
 			}

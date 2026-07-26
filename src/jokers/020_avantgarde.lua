@@ -29,7 +29,7 @@ SMODS.Joker({
 				card = context.blueprint_card or card,
 				colour = G.C.MULT,
 			}
-		elseif context.before then
+		elseif context.before and not context.blueprint then
 			local lower_hands = get_lower_hands_count(context.scoring_name)
 			if lower_hands == 0 then
 				return

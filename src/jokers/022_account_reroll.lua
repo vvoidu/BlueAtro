@@ -17,7 +17,7 @@ SMODS.Joker({
 			end
 
 			local next_joker = G.jokers.cards[pos + 1]
-			if next_joker and not next_joker.eternal then
+			if next_joker and not next_joker.ability.eternal then
 				next_joker.getting_sliced = true
 				G.E_MANAGER:add_event(Event({
 					func = function()

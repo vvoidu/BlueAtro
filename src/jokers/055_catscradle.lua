@@ -9,7 +9,11 @@ SMODS.Joker({
 	eternal_compat = true,
 	perishable_compat = true,
 	loc_vars = function(_, info_queue, card)
-		info_queue[#info_queue + 1] = { key = "blueatro_furin_kazan", set = "Other", vars = { 1.75 } }
+		info_queue[#info_queue + 1] = {
+			key = "blueatro_furin_kazan",
+			set = "Other",
+			vars = { SMODS.Stickers.blueatro_furin_kazan.config.extra.xmult },
+		}
 		return {
 			vars = {
 				card.ability.extra.xmult,

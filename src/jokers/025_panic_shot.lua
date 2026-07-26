@@ -32,7 +32,7 @@ SMODS.Joker({
 			and context.main_eval
 			and not context.blueprint
 			and not context.game_over
-			and card.ability.extra.odss ~= self.config.extra.odds
+			and card.ability.extra.odds ~= self.config.extra.odds
 		then
 			card.ability.extra.odds = self.config.extra.odds
 			return {

@@ -86,7 +86,7 @@ SMODS.Joker({
 				if text and text.children[1] and text.children[2] then
 					text.children[1].config.colour = card.joker_display_values.active and G.C.SECONDARY_SET.Tarot
 						or G.C.UI.TEXT_INACTIVE
-					text.children[1].config.colour = card.joker_display_values.active and G.C.SECONDARY_SET.Tarot
+					text.children[2].config.colour = card.joker_display_values.active and G.C.SECONDARY_SET.Tarot
 						or G.C.UI.TEXT_INACTIVE
 				end
 			end,

@@ -24,6 +24,7 @@ SMODS.Joker({
 						rarity = "Uncommon",
 						key_append = "mushiqueen",
 					})
+					G.GAME.joker_buffer = 0
 					return true
 				end,
 			}))

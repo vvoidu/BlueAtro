@@ -21,7 +21,7 @@ SMODS.Joker({
 	calculate = function(_, card, context)
 		-- press_play is calculated *before* the hand is used
 		if context.press_play and G.GAME.current_round.hands_left == 1 then
-			SMODS.destroy_cards(card, { bypass_eternal = true })
+			SMODS.destroy_cards({ card }, { bypass_eternal = true })
 		end
 	end,
 })

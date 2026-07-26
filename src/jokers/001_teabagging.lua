@@ -23,13 +23,12 @@ SMODS.Joker({
 				return
 			end
 			for i = 1, #context.removed do
-				SMODS.calculate_effect({
-					message = localize({
-						type = "variable",
-						key = "a_mult",
-						vars = { card.ability.extra.mult },
-					}),
-				}, card)
+				SMODS.scale_card(card, {
+					ref_table = card.ability.extra,
+					ref_value = "mult",
+					scalar_value = "mult_gain",
+					message_colour = G.C.MULT,
+				})
 			end
 		elseif
 			context.joker_type_destroyed

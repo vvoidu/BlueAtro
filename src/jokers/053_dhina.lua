@@ -15,7 +15,7 @@ SMODS.Joker({
 			},
 		}
 	end,
-	calculate = function(_, card, context)
+	calculate = function(self, card, context)
 		if
 			context.before
 			and card.ability.extra.uses > 0
@@ -28,7 +28,7 @@ SMODS.Joker({
 			card.ability.extra.uses = card.ability.extra.uses - 1
 			return { message = localize({ type = "variable", key = "a_hands", vars = { 1 } }) }
 		elseif context.end_of_round and context.main_eval and not context.game_over and not context.blueprint then
-			card.ability.extra.uses = 0
+			card.ability.extra.uses = self.config.extra.uses
 		end
 	end,
 })

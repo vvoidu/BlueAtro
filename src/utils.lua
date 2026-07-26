@@ -5,12 +5,12 @@ end
 
 --- @param array table
 --- @param filter function
---- @param count_debuffed boolean?
+--- @param count_debuffed boolean? when falsy (default), debuffed entries are skipped
 BlueAtro.count_filtered = function(array, filter, count_debuffed)
 	count_debuffed = count_debuffed or false
 	local count = 0
 	for _, x in ipairs(array) do
-		if count_debuffed and x.debuff then
+		if not count_debuffed and x.debuff then
 			goto continue
 		end
 		if filter(x) then

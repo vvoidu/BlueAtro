@@ -43,6 +43,7 @@ SMODS.Joker({
 				card.joker_display_values.count = BlueAtro.count_filtered(G.playing_cards, function(c)
 					return next(SMODS.get_enhancements(c))
 				end, true)
+				card.joker_display_values.active = card.joker_display_values.count == 4
 			end,
 			style_function = function(card, text, reminder_text, extra)
 				if reminder_text and reminder_text.children then

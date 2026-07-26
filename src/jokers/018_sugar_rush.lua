@@ -23,7 +23,7 @@ SMODS.Joker({
 				message = localize("k_blueatro_sugar_replenished"),
 				colour = G.C.FILTER,
 			}
-		elseif context.after then
+		elseif context.after and not context.blueprint then
 			if card.ability.extra.xmult > 1.0 then
 				SMODS.scale_card(card, {
 					ref_table = card.ability.extra,
