@@ -577,7 +577,7 @@ return {
 				text = {
 					"{C:attention}라운드 종료 시{},",
 					"{C:green}#1#/#2#{}의 확률로 무작위한",
-					"조커에 {C:attention}포일{} 에디션을 부여합니다",
+					"조커에 {C:dark_edition}포일{} 에디션을 부여합니다",
 				},
 			},
 		},

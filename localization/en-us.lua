@@ -583,7 +583,7 @@ return {
 				text = {
 					"At the {C:attention}end of round{},",
 					"{C:green}#1# in #2#{} chance to add",
-					"{C:attention}Foil{} edition to a random Joker",
+					"{C:dark_edition}Foil{} edition to a random Joker",
 				},
 			},
 		},
