@@ -578,6 +578,14 @@ return {
 					"{X:mult,C:white}X#2#{} Mult when scored",
 				},
 			},
+			j_blueatro_wiretap_device = {
+				name = "Wiretap Device",
+				text = {
+					"At the {C:attention}end of round{},",
+					"{C:green}#1# in #2#{} chance to add",
+					"{C:attention}Foil{} edition to a random Joker",
+				},
+			},
 		},
 		Other = {
 			blueatro_furin_kazan = {
