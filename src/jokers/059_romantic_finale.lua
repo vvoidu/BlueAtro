@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "romantic_finale",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(59),
-	config = { extra = { cards = 15, xmult = 15.2 } },
+	config = { extra = { cards = 15, xmult = 5 } },
 	rarity = 3,
 	cost = 9,
 	blueprint_compat = true,
