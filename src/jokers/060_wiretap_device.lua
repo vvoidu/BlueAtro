@@ -15,7 +15,14 @@ SMODS.Joker({
 	calculate = function(_, card, context)
 		if context.end_of_round and context.main_eval and not context.game_over then
 			if SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds) then
-				local target = pseudorandom_element(G.jokers.cards, pseudoseed(card.config.center.key))
+				local eligible = {}
+				for _, joker in ipairs(G.jokers.cards) do
+					if joker.edition == nil then
+						eligible[#eligible + 1] = joker
+					end
+				end
+				local target = #eligible > 0 and pseudorandom_element(eligible, pseudoseed(card.config.center.key))
+					or nil
 				if target then
 					target:set_edition("e_foil")
 					return {
