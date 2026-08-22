@@ -522,7 +522,7 @@ return {
 			j_blueatro_dhina = {
 				name = "마 논 트로포",
 				text = {
-					"한 라운드에 3번 까지,",
+					"한 라운드에 {C:attention}3{}번 까지,",
 					"{C:attention}6{}만 플레이 하면",
 					"핸드 {C:blue}+1{}번을 얻습니다",
 					"{C:inactive}({C:attention}#1#{}번 남음)",

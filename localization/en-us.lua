@@ -517,7 +517,7 @@ return {
 				text = {
 					"If only {C:attention}6{}s are played,",
 					"gain {C:blue}+1{} hand up to",
-					"3 times per round",
+					"{C:attention}3{} times per round",
 					"{C:inactive}({C:attention}#1#{} uses left)",
 				},
 			},
