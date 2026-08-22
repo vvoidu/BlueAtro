@@ -567,6 +567,25 @@ return {
 					"{C:attention}final hand{} is played",
 				},
 			},
+			j_blueatro_romantic_finale = {
+				name = "Romantic Finale",
+				text = {
+					"If you played a hand",
+					"containing a {C:attention}Straight{}",
+					"and your deck has exactly",
+					"{C:attention}#1#{} cards remaining, then",
+					"each played card gives",
+					"{X:mult,C:white}X#2#{} Mult when scored",
+				},
+			},
+			j_blueatro_wiretap_device = {
+				name = "Wiretap Device",
+				text = {
+					"At the {C:attention}end of round{},",
+					"{C:green}#1# in #2#{} chance to add",
+					"{C:dark_edition}Foil{} edition to a random Joker",
+				},
+			},
 		},
 		Other = {
 			blueatro_furin_kazan = {
