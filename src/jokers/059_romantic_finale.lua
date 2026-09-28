@@ -12,7 +12,7 @@ SMODS.Joker({
 		return { vars = { card.ability.extra.xmult_gain, card.ability.extra.xmult, card.ability.extra.cards } }
 	end,
 	calculate = function(self, card, context)
-		if context.joker_main and card.ability.extra.xmult >= 1 then
+		if context.joker_main then
 			return {
 				x_mult = card.ability.extra.xmult,
 				card = context.blueprint_card or card,

@@ -482,7 +482,7 @@ return {
 			j_blueatro_harmonica = {
 				name = "Worn Harmonica",
 				text = {
-					"After your {C:attnention}final discard{},",
+					"After your {C:attention}final discard{},",
 					"draw the first discard of",
 					"the round to hand",
 					"{C:inactive}(May draw past hand size){}",
@@ -575,7 +575,7 @@ return {
 					"with a {C:attention}multiple of #3#{}",
 					"cards remaining in deck,",
 					"this gains {X:mult,C:white}X#1#{} Mult",
-					"{C:inactive}(Currently {X:mult,C:white}X#2#{}{C:inactive} Mult{C:inactive})",
+					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
 			},
 			j_blueatro_wiretap_device = {

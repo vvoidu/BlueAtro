@@ -12,7 +12,9 @@ SMODS.Joker({
 		return {}
 	end,
 	calculate = function(self, card, context)
-		if context.discard and not context.blueprint then
+		if context.pre_discard and not context.blueprint then
+			-- Evaluate the discarded hand once; context.discard then fires per card
+			card.blueatro_hydro_target = nil
 			local text, _, _, scoring_hand = G.FUNCS.get_poker_hand_info(context.full_hand)
 			if text == "Two Pair" then
 				local higher_id
@@ -22,10 +24,12 @@ SMODS.Joker({
 						higher_id = id
 					end
 				end
-				card:juice_up()
-				if context.other_card:get_id() == higher_id then
-					return { remove = true }
-				end
+				card.blueatro_hydro_target = higher_id
+			end
+		elseif context.discard and not context.blueprint and card.blueatro_hydro_target then
+			card:juice_up()
+			if context.other_card:get_id() == card.blueatro_hydro_target then
+				return { remove = true }
 			end
 		end
 	end,
