@@ -29,7 +29,7 @@ SMODS.Joker({
 
 			local has_heart = BlueAtro.count_filtered(context.scoring_hand, function(c)
 				return c:is_suit("Hearts")
-			end, true) > 0
+			end) > 0
 			if not has_heart then
 				return
 			end
