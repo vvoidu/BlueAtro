@@ -13,12 +13,9 @@ SMODS.Joker({
 	end,
 	calculate = function(_, card, context)
 		if context.setting_blind and G.jokers and not context.blueprint and not context.retrigger_joker then
-			local common_count = 0
-			for i = 1, #G.jokers.cards do
-				if G.jokers.cards[i]:is_rarity(1) then
-					common_count = common_count + 1
-				end
-			end
+			local common_count = BlueAtro.count_filtered(G.jokers.cards, function(j)
+				return j ~= card and j:is_rarity(1)
+			end, true)
 
 			SMODS.scale_card(card, {
 				ref_table = card.ability.extra,

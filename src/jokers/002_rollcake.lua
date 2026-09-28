@@ -97,10 +97,11 @@ SMODS.Joker({
 					G.GAME and G.GAME.current_round.hands_played == 0 and localize("jdis_active")
 					or localize("jdis_inactive")
 				)
+				local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
 				card.joker_display_values.odds = localize({
 					type = "variable",
 					key = "jdis_odds",
-					vars = { G.GAME and G.GAME.probabilities.normal or 1, card.ability.extra.odds },
+					vars = { num, denom },
 				})
 			end,
 		}

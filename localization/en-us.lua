@@ -126,7 +126,7 @@ return {
 					"After selling {C:attention}#1#{} cards,",
 					"create a random {C:tarot}Tarot{} card",
 					"{C:inactive}(Must have room){}",
-					"{C:inactive}({C:attention}#2#{} left){}",
+					"{C:inactive}({C:attention}#2#{C:inactive} left)",
 				},
 			},
 			j_blueatro_dango = {
@@ -185,15 +185,15 @@ return {
 			j_blueatro_photocard = {
 				name = "Warakuhime Photocard",
 				text = {
-					"Played {C:attention}Queens{}",
-					"permanently gain",
-					"{C:mult}+#1#{} Mult when scored",
+					"When a played {C:attention}Queen{} scores,",
+					"permanently give it a",
+					"{C:mult}plus #1#{} Mult bonus",
 				},
 			},
 			j_blueatro_double_o = {
 				name = "Callsign Double O",
 				text = {
-					"Gains {X:mult,C:white}X#1#{} Mult for each card",
+					"Gives {X:mult,C:white}X#1#{} Mult for each card",
 					"discarded this {C:attention}Ante{}",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
@@ -382,7 +382,7 @@ return {
 					"All cards in the full deck",
 					"permanently gain {C:chips}+#3#{} Chips",
 					"every {C:money}$#1#{} spent",
-					"{C:inactive}(Currently ${C:attention}#2#{}/{C:attention}#1#{}){}",
+					"{C:inactive}(Currently ${C:attention}#2#{C:inactive}/{C:attention}#1#{C:inactive})",
 				},
 			},
 			j_blueatro_pillow_fight = {
@@ -443,7 +443,7 @@ return {
 					"Inactive until",
 					"{C:attention}#2# Boss Blinds{}",
 					"are beaten",
-					"{C:inactive}(Currently {C:attention}#3#{}/{C:attention}#2#{})",
+					"{C:inactive}(Currently {C:attention}#3#{C:inactive}/{C:attention}#2#{C:inactive})",
 				},
 			},
 			j_blueatro_cath_palug = {
@@ -451,7 +451,7 @@ return {
 				text = {
 					"{C:green}#1# in #2#{} chance to",
 					"upgrade played poker hand",
-					"for each {C:attention}Wild Card{} played",
+					"for each {C:attention}Wild Card{} scored",
 				},
 			},
 			j_blueatro_scoop = {
@@ -518,7 +518,7 @@ return {
 					"If only {C:attention}6{}s are played,",
 					"gain {C:blue}+1{} hand up to",
 					"{C:attention}3{} times per round",
-					"{C:inactive}({C:attention}#1#{} uses left)",
+					"{C:inactive}({C:attention}#1#{C:inactive} uses left)",
 				},
 			},
 			j_blueatro_americano = {
@@ -547,7 +547,7 @@ return {
 					"{C:attention}4{} Enhanced cards,",
 					"they give {X:mult,C:white}X#1#{} Mult",
 					"when they score",
-					"{C:inactive}(Currently {C:attention}#2#{}){}",
+					"{C:inactive}(Currently {C:attention}#2#{C:inactive})",
 				},
 			},
 			j_blueatro_fortified_city = {
@@ -572,10 +572,10 @@ return {
 				text = {
 					"If you played a hand",
 					"containing a {C:attention}Straight{}",
-					"and your deck has exactly",
-					"{C:attention}#1#{} cards remaining, then",
-					"each played card gives",
-					"{X:mult,C:white}X#2#{} Mult when scored",
+					"with a {C:attention}multiple of #3#{}",
+					"cards remaining in deck,",
+					"this gains {X:mult,C:white}X#1#{} Mult",
+					"{C:inactive}(Currently {X:mult,C:white}X#2#{}{C:inactive} Mult{C:inactive})",
 				},
 			},
 			j_blueatro_wiretap_device = {
@@ -584,6 +584,77 @@ return {
 					"At the {C:attention}end of round{},",
 					"{C:green}#1# in #2#{} chance to add",
 					"{C:dark_edition}Foil{} edition to a random Joker",
+				},
+			},
+			j_blueatro_banzai_stretch = {
+				name = "Banzai Stretch",
+				text = {
+					"When {C:attention}Blind{} is selected and",
+					"at the {C:attention}end of round{},",
+					"level up your lowest level",
+					"{C:attention}poker hand{}",
+				},
+			},
+			j_blueatro_noir = {
+				name = "Noir",
+				text = {
+					"Retrigger all scoring cards",
+					"if you do not own any",
+					"other {C:green}Uncommon{} {C:attention}Jokers{}",
+				},
+			},
+			j_blueatro_free_trade = {
+				name = "Free Trade",
+				text = {
+					"When a {C:attention}Joker{} or a",
+					"{C:attention}consumable{} is obtained,",
+					"its {C:attention}sell value{}",
+					"becomes {C:money}$#1#{}",
+				},
+			},
+			j_blueatro_hells_ninja_sword = {
+				name = "Hell's Ninja Sword",
+				text = {
+					"Gives {C:chips}Chips{} and {C:mult}Mult{}",
+					"of {C:attention}Three of a Kind{}",
+				},
+			},
+			j_blueatro_tsukuyo_ninja_scroll = {
+				name = "Tsukuyo Ninja Scroll",
+				text = {
+					"If played hand is a",
+					"{C:attention}Three of a Kind{}, transform",
+					"the second scoring card into",
+					"a copy of the first",
+				},
+			},
+			j_blueatro_explosive_shurikens = {
+				name = "Explosive Shurikens",
+				text = {
+					"{C:green}#1# in #2#{} chance to",
+					"upgrade played poker hand",
+					"{C:attention}Odds{} increase for each",
+					"consecutive {C:attention}Three of a Kind{}",
+				},
+			},
+			j_blueatro_hydrodynamics = {
+				name = "Hydrodynamics",
+				text = {
+					"If a {C:attention}Two Pair{} is discarded,",
+					"{C:attention}destroy{} the higher rank pair",
+				},
+			},
+			j_blueatro_quality_assurance = {
+				name = "Quality Assurance",
+				text = {
+					"{X:mult,C:white}X#1#{} Mult if played hand",
+					"has already been played this run,",
+					"contains a scoring {C:hearts}Heart{} card, and",
+					"contains no rank missing from your {C:attention}full deck{},",
+					"if a {C:hearts}Heart{} card is held in hand,",
+					"if a {C:tarot}Tarot{} card and a {C:planet}Planet{} card",
+					"have been used this run, and if",
+					"this Joker is not the {C:attention}leftmost{} Joker",
 				},
 			},
 		},

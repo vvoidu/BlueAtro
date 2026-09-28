@@ -20,8 +20,14 @@ SMODS.Joker({
 				remove = true,
 			}
 		elseif context.after and context.main_eval then
-			SMODS.destroy_cards({ card }, { bypass_eternal = true })
-			play_sound("blueatro_e_explosion")
+			G.E_MANAGER:add_event(Event({
+				trigger = "after",
+				func = function()
+					play_sound("blueatro_e_explosion")
+					SMODS.destroy_cards({ card }, { bypass_eternal = true })
+					return true
+				end,
+			}))
 		end
 	end,
 })

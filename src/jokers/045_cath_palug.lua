@@ -13,17 +13,18 @@ SMODS.Joker({
 		return { vars = { num, denom } }
 	end,
 	calculate = function(self, card, context)
-		if context.before and context.main_eval then
-			for _, playing_card in ipairs(G.play.cards) do
-				if SMODS.has_enhancement(playing_card, "m_wild") and not playing_card.debuff then
-					if SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds) then
-						card = context.blueprint or card
-						SMODS.calculate_effect({
-							message = localize("k_level_up_ex"),
-						}, card)
-						SMODS.upgrade_poker_hands({ from = playing_card, hands = { context.scoring_name } })
-					end
-				end
+		if
+			context.individual
+			and context.cardarea == G.play
+			and SMODS.has_enhancement(context.other_card, "m_wild")
+			and not context.other_card.debuff
+		then
+			if SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds) then
+				card = context.blueprint_card or card
+				SMODS.calculate_effect({
+					message = localize("k_level_up_ex"),
+				}, card)
+				SMODS.upgrade_poker_hands({ from = context.other_card, hands = { context.scoring_name } })
 			end
 		end
 	end,

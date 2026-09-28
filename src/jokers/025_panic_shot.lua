@@ -2,27 +2,38 @@ SMODS.Joker({
 	key = "panic_shot",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(25),
-	config = { extra = { xmult = 5, odds = 5 } },
+	config = { extra = { xmult = 5, odds = 5, numerator = 1 } },
 	rarity = 2,
 	cost = 6,
 	blueprint_compat = true,
 	eternal_compat = true,
 	perishable_compat = true,
 	loc_vars = function(self, info_queue, card)
-		local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
+		local num, denom = SMODS.get_probability_vars(card, card.ability.extra.numerator, card.ability.extra.odds)
 		return { vars = { num, denom, card.ability.extra.xmult } }
 	end,
 	calculate = function(self, card, context)
 		if context.joker_main and context.cardarea == G.jokers then
-			if SMODS.pseudorandom_probability(card, card.config.center.key, 1, card.ability.extra.odds) then
+			if
+				SMODS.pseudorandom_probability(
+					card,
+					card.config.center.key,
+					card.ability.extra.numerator,
+					card.ability.extra.odds
+				)
+			then
 				return {
 					x_mult = card.ability.extra.xmult,
 					card = context.blueprint_card or card,
 					colour = G.C.MULT,
 				}
 			end
-		elseif context.reroll_shop and card.ability.extra.odds > 1 and not context.blueprint then
-			card.ability.extra.odds = card.ability.extra.odds - 1
+		elseif
+			context.reroll_shop
+			and card.ability.extra.numerator < card.ability.extra.odds
+			and not context.blueprint
+		then
+			card.ability.extra.numerator = card.ability.extra.numerator + 1
 			return {
 				message = localize("k_upgrade_ex"),
 				colour = G.C.GREEN,
@@ -32,9 +43,9 @@ SMODS.Joker({
 			and context.main_eval
 			and not context.blueprint
 			and not context.game_over
-			and card.ability.extra.odds ~= self.config.extra.odds
+			and card.ability.extra.numerator ~= self.config.extra.numerator
 		then
-			card.ability.extra.odds = self.config.extra.odds
+			card.ability.extra.numerator = self.config.extra.numerator
 			return {
 				message = localize("k_reset"),
 				colour = G.C.GREEN,
@@ -56,7 +67,8 @@ SMODS.Joker({
 			},
 			extra_config = { colour = G.C.GREEN, scale = 0.3 },
 			calc_function = function(card)
-				local num, denom = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
+				local num, denom =
+					SMODS.get_probability_vars(card, card.ability.extra.numerator, card.ability.extra.odds)
 				card.joker_display_values.odds = localize({
 					type = "variable",
 					key = "jdis_odds",

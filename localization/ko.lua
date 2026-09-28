@@ -63,7 +63,7 @@ return {
 					"이 조커는 카드나",
 					"조커가 {C:attention}파괴{}될 때마다,",
 					"배수 획득량이 {C:mult}+#2#{} 증가합니다",
-					"{C:inactive}(현재 {C:mult}+#1#{}{C:inactive} 배수{})",
+					"{C:inactive}(현재 {C:mult}+#1#{}{C:inactive} 배수)",
 				},
 			},
 			j_blueatro_rollcake = {
@@ -90,7 +90,7 @@ return {
 					"이 조커는 카드가",
 					"{C:attention}#2#{}번 득점할 때마다",
 					"배수 획득량이 {C:mult}+#1#{} 증가합니다",
-					"{C:inactive}({C:attention}#4#{}번 남음)",
+					"{C:inactive}({C:attention}#4#{C:inactive}번 남음)",
 					"{C:inactive}(현재 {C:mult}+#3#{}{C:inactive} 배수)",
 				},
 			},
@@ -127,7 +127,7 @@ return {
 					"{C:attention}카드{}를 {C:attention}#1#{}장 판매할 때마다,",
 					"무작위한 {C:tarot}타로{} 카드를 생성합니다",
 					"{C:inactive}(공간이 있어야 합니다){}",
-					"{C:inactive}({C:attention}#2#{}장 남음){}",
+					"{C:inactive}({C:attention}#2#{C:inactive}장 남음)",
 				},
 			},
 			j_blueatro_dango = {
@@ -184,9 +184,9 @@ return {
 			j_blueatro_photocard = {
 				name = "와라쿠 히메 포토카드",
 				text = {
-					"플레이해 득점한 {C:attention}퀸{}에",
-					"배수 획득량을 영구적으로",
-					"{C:mult}+#1#{} 추가합니다",
+					"내고 득점한",
+					"{C:attention}퀸{}에 영구히 부여",
+					"{C:mult}#1#{} 배수 버프",
 				},
 			},
 			j_blueatro_double_o = {
@@ -367,7 +367,7 @@ return {
 					"{C:chips}+칩{}이나 {C:mult}+배수{}를 부여할 시",
 					"이 카드의 칩 획득량이",
 					"{C:chips}+#1#{}개 증가합니다",
-					"{C:inactive}(현재 칩 {C:chips}+#2#{}{C:inactive} 개{})",
+					"{C:inactive}(현재 칩 {C:chips}+#2#{}{C:inactive} 개)",
 				},
 			},
 			j_blueatro_overtime = {
@@ -385,7 +385,7 @@ return {
 					"덱의 모든 카드가",
 					"칩 {C:chips}+#3#{}개를",
 					"영구적으로 얻습니다",
-					"{C:inactive}(현재 ${C:attention}#2#{}/{C:attention}#1#{}){}",
+					"{C:inactive}(현재 ${C:attention}#2#{C:inactive}/{C:attention}#1#{C:inactive})",
 				},
 			},
 			j_blueatro_pillow_fight = {
@@ -446,13 +446,13 @@ return {
 					"{C:attention}보스 블라인드 #2#{}개를",
 					"클리어하기 전까지",
 					"발동하지 않습니다",
-					"{C:inactive}(현재 {C:attention}#3#{}/{C:attention}#2#{})",
+					"{C:inactive}(현재 {C:attention}#3#{C:inactive}/{C:attention}#2#{C:inactive})",
 				},
 			},
 			j_blueatro_cath_palug = {
 				name = "카스 팔루그",
 				text = {
-					"플레이한 {C:attention}와일드 카드{}마다",
+					"득점한 {C:attention}와일드 카드{}마다",
 					"{C:green}#1#/#2#{}의 확률로",
 					"플레이한 족보 레벨을",
 					"업그레이드합니다",
@@ -525,7 +525,7 @@ return {
 					"한 라운드에 {C:attention}3{}번 까지,",
 					"{C:attention}6{}만 플레이 하면",
 					"핸드 {C:blue}+1{}번을 얻습니다",
-					"{C:inactive}({C:attention}#1#{}번 남음)",
+					"{C:inactive}({C:attention}#1#{C:inactive}번 남음)",
 				},
 			},
 			j_blueatro_americano = {
@@ -541,7 +541,8 @@ return {
 			j_blueatro_cats_cradle = {
 				name = "실뜨기",
 				text = {
-					"손패에 남은 {C:attention}강화된 카드{}에",
+					"손패에 남은",
+					"{C:attention}강화된 카드{}들에",
 					"{C:purple}풍림화산{} 스티커를",
 					"부여합니다",
 				},
@@ -553,7 +554,7 @@ return {
 					"카드가 정확히 {C:attention}4{}장",
 					"있을 시 그 카드들이",
 					"{X:mult,C:white}X#1#{} 배수를 부여합니다",
-					"{C:inactive}(현재 {C:attention}#2#{}장){}",
+					"{C:inactive}(현재 {C:attention}#2#{C:inactive}장)",
 				},
 			},
 			j_blueatro_fortified_city = {
@@ -575,11 +576,11 @@ return {
 			j_blueatro_romantic_finale = {
 				name = "로망의 대단원",
 				text = {
-					"{C:attention}스트레이트 플러시{}가 포함된",
-					"핸드를 제출했고 덱의 남은 카드가",
-					"정확히 {C:attention}#1#{}장 일 시,",
-					"플레이한 카드가 득점 시",
-					"{X:mult,C:white}X#2#{} 배수를 부여합니다",
+					"{C:attention}스트레이트{}가 포함된 핸드를",
+					"플레이했고 덱에 남은 카드가",
+					"{C:attention}#3#{}의 배수일 시,",
+					"{X:mult,C:white}X#1#{} 배수를 얻습니다",
+					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
 				},
 			},
 			j_blueatro_wiretap_device = {
@@ -589,6 +590,81 @@ return {
 					"{C:green}#1#/#2#{} 확률로",
 					"무작위 조커에게",
 					"{C:attention}포일{} 에디션을 부여합니다",
+				},
+			},
+			j_blueatro_banzai_stretch = {
+				name = "쭉쭉 체조",
+				text = {
+					"{C:attention}블라인드{}를 선택할 시와",
+					"라운드가 끝날 때,",
+					"레벨이 가장 낮은",
+					"{C:attention}족보{}를 업그레이드합니다",
+				},
+			},
+			j_blueatro_noir = {
+				name = "느와르",
+				text = {
+					"다른 {C:green}희귀{} {C:attention}조커{}를",
+					"보유하고 있지 않다면",
+					"득점하는 모든 카드를",
+					"재발동합니다",
+				},
+			},
+			j_blueatro_free_trade = {
+				name = "특수교역",
+				text = {
+					"획득하는 {C:attention}조커{}와",
+					"{C:attention}소모품{} 카드의",
+					"{C:attention}판매 가치{}가",
+					"{C:money}$#1#{}가 됩니다",
+				},
+			},
+			j_blueatro_hells_ninja_sword = {
+				name = "지옥닌마도",
+				text = {
+					"{C:attention}트리플{}의",
+					"{C:chips}칩{}과 {C:mult}배수{}를",
+					"부여합니다",
+				},
+			},
+			j_blueatro_tsukuyo_ninja_scroll = {
+				name = "츠쿠요 인법첩",
+				text = {
+					"{C:attention}트리플{}을 냈을 시,",
+					"득점하는 두 번째 카드가",
+					"첫 번째 카드의 복사본으로",
+					"변합니다",
+				},
+			},
+			j_blueatro_explosive_shurikens = {
+				name = "폭발 수리검",
+				text = {
+					"{C:green}#1#/#2#{}의 확률로",
+					"플레이한 족보를 업그레이드합니다",
+					"연속으로 낸 {C:attention}트리플{}마다",
+					"확률이 증가합니다",
+				},
+			},
+			j_blueatro_hydrodynamics = {
+				name = "유체역학",
+				text = {
+					"{C:attention}투 페어{}를 버릴 시,",
+					"더 높은 랭크의 페어를",
+					"{C:attention}파괴{}합니다",
+				},
+			},
+			j_blueatro_quality_assurance = {
+				name = "QA 테스트",
+				text = {
+					"플레이한 족보가 이번 런에서",
+					"이미 플레이된 적이 있고,",
+					"{C:attention}전체 덱{}에 없는 랭크를 포함하지 않고,",
+					"득점하는 {C:hearts}하트{} 카드를 포함하며,",
+					"손패에 {C:hearts}하트{} 카드가 남아 있고,",
+					"이번 런에서 {C:tarot}타로{} 카드와",
+					"{C:planet}행성{} 카드를 사용한 적이 있고,",
+					"이 조커가 {C:attention}가장 왼쪽{}에 있지 않다면",
+					"{X:mult,C:white}X#1#{} 배수",
 				},
 			},
 		},
