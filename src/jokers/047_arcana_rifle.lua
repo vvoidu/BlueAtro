@@ -12,7 +12,7 @@ SMODS.Joker({
 		return { vars = { card.ability.extra.xmult_gain, card.ability.extra.xmult } }
 	end,
 	calculate = function(self, card, context)
-		if context.using_consumeable and context.consumeable.ability.set == "Tarot" then
+		if context.using_consumeable and context.consumeable.ability.set == "Tarot" and not context.blueprint then
 			SMODS.scale_card(card, {
 				ref_table = card.ability.extra,
 				ref_value = "xmult",

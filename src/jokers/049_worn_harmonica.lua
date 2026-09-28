@@ -48,11 +48,13 @@ SMODS.Joker({
 			and #G.GAME.blueatro_first_discard > 0
 			and G.GAME.current_round.discards_left == 0
 		then
-			-- Holy O(N)
+			-- take ownership
+			local first_discard = G.GAME.blueatro_first_discard
+			G.GAME.blueatro_first_discard = nil
+
 			card:juice_up()
 
-			-- This is purely fluff, so has no
-			-- need to conform to Balatro's pseudorandom stuff.
+			-- doesn't need to need to conform to Balatro's pseudorandom stuff.
 			if love.math.random() < 0.95 then
 				play_sound("blueatro_e_harmonica", 1.0, 0.7)
 			else
@@ -63,14 +65,13 @@ SMODS.Joker({
 				delay = 0.4,
 				timer = "REAL",
 				func = function()
-					for _, id in ipairs(G.GAME.blueatro_first_discard) do
+					for _, id in ipairs(first_discard) do
 						for _, c in ipairs(G.discard.cards) do
 							if c.sort_id == id then
 								draw_card(G.discard, G.hand, 100, "up", false, c)
 							end
 						end
 					end
-					G.GAME.blueatro_first_discard = nil
 					return true
 				end,
 			}))

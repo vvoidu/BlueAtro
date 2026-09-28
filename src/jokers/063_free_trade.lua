@@ -5,7 +5,7 @@ SMODS.Joker({
 	config = { extra = { sell_price = 6 } },
 	rarity = 2,
 	cost = 8,
-	blueprint_compat = true,
+	blueprint_compat = false,
 	eternal_compat = true,
 	perishable_compat = true,
 	loc_vars = function(self, info_queue, card)
@@ -13,7 +13,12 @@ SMODS.Joker({
 	end,
 	calculate = function(self, card, context)
 		if context.card_added then
-			context.card.sell_cost = card.ability.extra.sell_price
+			local target = context.card
+			assert(target)
+			target:set_cost()
+			target.ability.extra_value = (target.ability.extra_value or 0)
+				+ (card.ability.extra.sell_price - target.sell_cost)
+			target:set_cost()
 		end
 	end,
 })

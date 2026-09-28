@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "elixir_of_youth",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(5),
-	config = { extra = { odds = 3 } },
+	config = { extra = { odds = 2 } },
 	rarity = 3,
 	cost = 7,
 	blueprint_compat = true,

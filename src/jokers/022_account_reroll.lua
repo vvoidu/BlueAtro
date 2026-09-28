@@ -17,21 +17,35 @@ SMODS.Joker({
 			end
 
 			local next_joker = G.jokers.cards[pos + 1]
-			if next_joker and not next_joker.ability.eternal then
-				next_joker.getting_sliced = true
+			if next_joker and not next_joker.getting_sliced then
+				-- next_joker is still in the area while it dissolves, so check room as if it were
+				-- already gone (including any slots it gives, e.g. Negative, or takes up).
+				local ability = next_joker.ability
+				local has_room = #G.jokers.cards - 1 + G.GAME.joker_buffer
+					< G.jokers.config.card_limit - (ability.card_limit or 0) + (ability.extra_slots_used or 0)
+
+				local destroyed = SMODS.destroy_cards(next_joker)
+				if not destroyed or #destroyed == 0 then
+					return
+				end
+				if has_room then
+					G.GAME.joker_buffer = G.GAME.joker_buffer + 1
+				end
+
 				G.E_MANAGER:add_event(Event({
 					func = function()
 						card:juice_up(0.8)
-						next_joker:remove()
-						if #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then
-							local c = SMODS.add_card({
+						if has_room then
+							SMODS.add_card({
 								set = "Joker",
 								key_append = "risemara",
 							})
-							for i = #G.jokers.cards, pos + 1, -1 do
-								G.jokers.cards[i] = G.jokers.cards[i - 1]
+							G.GAME.joker_buffer = 0
+							-- Take the destroyed joker's spot.
+							local target = BlueAtro.get_card_pos(G.jokers, next_joker)
+							if target then
+								BlueAtro.move_to_index(G.jokers.cards, #G.jokers.cards, target)
 							end
-							G.jokers.cards[pos + 1] = c
 							play_sound("generic1")
 							SMODS.calculate_effect({
 								message = localize("k_blueatro_rerolled"),

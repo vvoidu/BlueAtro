@@ -10,10 +10,7 @@ SMODS.Joker({
 	perishable_compat = true,
 	loc_vars = function(self, info_queue, card) end,
 	calculate = function(self, card, context)
-		if
-			(context.setting_blind or (context.end_of_round and context.main_eval and not context.game_over))
-			and not context.blueprint
-		then
+		if context.setting_blind or (context.end_of_round and context.main_eval and not context.game_over) then
 			local lowest_level, candidates = nil, {}
 			for hand, hand_data in pairs(G.GAME.hands) do
 				if hand_data.visible then

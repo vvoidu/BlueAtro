@@ -7,24 +7,24 @@ SMODS.Joker({
 	key = "white_rabbit",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(7),
-	config = { extra = { mult = 2 } },
+	config = { extra = { chips = 15 } },
 	rarity = 1,
-	cost = 5,
+	cost = 3,
 	blueprint_compat = true,
-	eternal_compat = true,
-	perishable_compat = false,
+	eternal_compat = false,
+	perishable_compat = true,
 	loc_vars = function(_, info_queue, card)
 		local main_end
 		if card.edition and card.edition.negative then
 			main_end = {}
 			localize({ type = "other", key = "remove_negative", nodes = main_end, vars = {} })
 		end
-		return { vars = { card.ability.extra.mult }, main_end = main_end and main_end[1] }
+		return { vars = { card.ability.extra.chips }, main_end = main_end and main_end[1] }
 	end,
 	calculate = function(_, card, context)
 		if context.joker_main then
 			return {
-				mult = card.ability.extra.mult,
+				chips = card.ability.extra.chips,
 				card = context.blueprint_card or card,
 			}
 		elseif context.setting_blind and not context.blueprint then
@@ -46,8 +46,8 @@ SMODS.Joker({
 	joker_display_def = function(JokerDisplay)
 		return {
 			text = {
-				{ text = "+", colour = G.C.MULT },
-				{ ref_table = "card.ability.extra", ref_value = "mult", colour = G.C.MULT },
+				{ text = "+", colour = G.C.CHIPS },
+				{ ref_table = "card.ability.extra", ref_value = "chips", colour = G.C.CHIPS },
 			},
 		}
 	end,

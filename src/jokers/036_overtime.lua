@@ -7,7 +7,7 @@ SMODS.Joker({
 	cost = 5,
 	blueprint_compat = true,
 	eternal_compat = true,
-	perishable_compat = false,
+	perishable_compat = true,
 	calculate = function(self, card, context)
 		if context.joker_main then
 			G.GAME.blueatro_overtime_list = G.GAME.blueatro_overtime_list or {}

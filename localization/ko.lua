@@ -73,6 +73,7 @@ return {
 					"{C:green}#2#/#3#{} 확률로 첫 번째로",
 					"플레이한 {C:attention}포커 핸드{}에",
 					"해당하는 {C:planet}행성{} 카드를 생성합니다",
+					"{C:inactive}(공간이 있어야 합니다){}",
 				},
 			},
 			j_blueatro_contraband = {
@@ -98,24 +99,21 @@ return {
 				name = "회춘의 비약",
 				text = {
 					"{C:attention}그림 카드{}가 득점할 때",
-					"{C:green}1/2{}의 확률로",
+					"{C:green}#1#/#2#{}의 확률로",
 					"랭크가 {C:attention}1{} 감소합니다",
 				},
 			},
 			j_blueatro_pointman = {
 				name = "포인트맨",
 				text = {
-					"이 조커의 배수 획득량은",
-					"이 조커의 {C:attention}오른쪽{}에 있는",
-					"조커의 갯수에 {X:mult,C:white}X#1#{}를",
-					"곱한 값입니다",
-					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
+					"이 조커가 {C:attention}가장 왼쪽{}에 있다면",
+					"{X:mult,C:white}X#1#{} 배수",
 				},
 			},
 			j_blueatro_white_rabbit = {
 				name = "백토",
 				text = {
-					"{C:mult}+#1#{} 배수",
+					"칩 {C:chips}+#1#{}개",
 					"{C:attention}블라인드{}를 선택할 시",
 					"모든 빈 조커 슬롯을 이 카드의",
 					"복제본으로 채웁니다",
@@ -177,8 +175,8 @@ return {
 				name = "닭꼬치",
 				text = {
 					"{X:mult,C:white} X#1# {} 배수를 획득합니다",
-					"{C:attention}조커{}를 얻을 때마다",
-					"{X:mult,C:white} X#2# {} 배수를 잃습니다",
+					"{C:attention}조커{}나 {C:attention}소모품{} 카드를",
+					"얻을 때마다 {X:mult,C:white} X#2# {} 배수를 잃습니다",
 				},
 			},
 			j_blueatro_photocard = {
@@ -192,8 +190,9 @@ return {
 			j_blueatro_double_o = {
 				name = "콜사인 더블오",
 				text = {
-					"이번 {C:attention}앤티{} 동안 버린 카드마다",
+					"버린 핸드에 {C:attention}페어{}가 포함될 경우",
 					"{X:mult,C:white}X#1#{} 배수를 얻습니다",
+					"{C:attention}보스 블라인드{}에 승리하면 초기화됩니다",
 					"{C:inactive}(현재 {X:mult,C:white}X#2#{C:inactive} 배수)",
 				},
 			},
@@ -303,8 +302,8 @@ return {
 			j_blueatro_vanivani = {
 				name = "바니타스 바니타툼",
 				text = {
-					"손에 남은 카드들이",
-					"아무런 포커 핸드를",
+					"손에 남은 카드들과 득점하지 않은",
+					"카드들이 아무런 포커 핸드를",
 					"만들지 않을 시",
 					"{C:inactive}({C:attention}하이 카드{C:inactive} 제외)",
 					"{X:mult,C:white}X#1#{} 배수를 획득합니다",
@@ -437,6 +436,7 @@ return {
 					"정확히 카드 {C:attention}4{}장이 득점하는",
 					"핸드를 플레이할 때마다",
 					"무작위한 {C:green}희귀 {C:attention}조커{}를 생성합니다",
+					"{C:inactive}(공간이 있어야 합니다){}",
 				},
 			},
 			j_blueatro_challenge_letter = {
@@ -479,9 +479,10 @@ return {
 			j_blueatro_peroro = {
 				name = "페로로 조커",
 				text = {
-					"{C:attention}보스 블라인드{}를 선택할 시",
-					"양 옆에 있는 조커의 {C:attention}판매가{}를",
-					"이 조커의 {C:attention}판매가{}에 더합니다",
+					"{C:attention}에이스{}, {C:attention}2{} 또는 {C:attention}3{}이",
+					"득점할 때마다",
+					"{C:green}#1#/#2#{} 확률로 이 조커의",
+					"{C:attention}판매 가치{}가 {C:money}$#3#{} 증가합니다",
 				},
 			},
 			j_blueatro_harmonica = {

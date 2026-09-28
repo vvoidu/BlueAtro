@@ -74,6 +74,7 @@ return {
 					"{C:green}#2# in #3#{} chance to",
 					"create a {C:planet}Planet{} card for",
 					"the first played {C:attention}poker hand{}",
+					"{C:inactive}(Must have room){}",
 				},
 			},
 			j_blueatro_contraband = {
@@ -90,7 +91,7 @@ return {
 				text = {
 					"Gains {C:mult}+#1#{} Mult every",
 					"{C:attention}#2#{} cards scored",
-					"{C:inactive}({C:attention}#4#{} cards left)",
+					"{C:inactive}({C:attention}#4# {C:inactive}cards left)",
 					"{C:inactive}(Currently {C:mult}+#3#{}{C:inactive} Mult){}",
 				},
 			},
@@ -106,15 +107,14 @@ return {
 			j_blueatro_pointman = {
 				name = "Pointman",
 				text = {
-					"This has {X:mult,C:white}X#1#{} Mult for",
-					"each Joker to the {C:attention}right{}",
-					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+					"{X:mult,C:white}X#1#{} Mult if this is",
+					"the {C:attention}leftmost{} Joker",
 				},
 			},
 			j_blueatro_white_rabbit = {
 				name = "White Rabbit",
 				text = {
-					"{C:mult}+#1#{} Mult",
+					"{C:chips}+#1#{} Chips",
 					"When {C:attention}Blind{} is selected,",
 					"duplicates itself until",
 					"Joker slots are full",
@@ -158,10 +158,9 @@ return {
 			j_blueatro_cheerleader = {
 				name = "Cheerleader",
 				text = {
-					"Each scored card is",
-					"retriggered number of times",
-					"equal to the number of cards",
-					"held in hand with the {C:attention}same rank{}",
+					"Retrigger each scored card",
+					"once for every card of the",
+					"{C:attention}same rank{} held in hand",
 				},
 			},
 			j_blueatro_bookkeeping = {
@@ -178,8 +177,8 @@ return {
 				text = {
 					"{X:mult,C:white}X#1#{} Mult",
 					"Loses {X:mult,C:white}X#2#{} Mult",
-					"whenever a {C:attention}Joker{}",
-					"is obtained",
+					"whenever a {C:attention}Joker{} or",
+					"a {C:attention}consumable{} is obtained",
 				},
 			},
 			j_blueatro_photocard = {
@@ -193,8 +192,9 @@ return {
 			j_blueatro_double_o = {
 				name = "Callsign Double O",
 				text = {
-					"Gives {X:mult,C:white}X#1#{} Mult for each card",
-					"discarded this {C:attention}Ante{}",
+					"This Joker gains {X:mult,C:white}X#1#{} Mult",
+					"if discarded hand contains",
+					"a {C:attention}Pair{}, resets each {C:attention}Ante{}",
 					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				},
 			},
@@ -303,14 +303,14 @@ return {
 			j_blueatro_vanivani = {
 				name = "Vanitas Vanitatum",
 				text = {
-					"{X:mult,C:white}X#1#{} Mult if cards",
-					"held in hand do not",
-					"form any poker hand",
+					"{X:mult,C:white}X#1#{} Mult if cards held",
+					"in hand and unscored cards",
+					"do not form any poker hand",
 					"{C:inactive}(except {C:attention}High Card{C:inactive})",
 				},
 			},
 			j_blueatro_helmet_gang = {
-				name = "Helmat Gang",
+				name = "Helmet Gang",
 				text = {
 					"{X:mult,C:white}X#1#{} Mult",
 					"Must pay {C:money}$#2#{} to",
@@ -434,6 +434,7 @@ return {
 					"{C:green}Uncommon {C:attention}Joker{} if",
 					"played hand contains",
 					"exactly {C:attention}4{} scoring cards",
+					"{C:inactive}(Must have room){}",
 				},
 			},
 			j_blueatro_challenge_letter = {
@@ -474,9 +475,10 @@ return {
 			j_blueatro_peroro = {
 				name = "Peroro Joker",
 				text = {
-					"When a {C:attention}Boss Blind{} is selected,",
-					"this gains the {C:attention}sell value{}",
-					"of adjacent Jokers",
+					"This has a {C:green}#1# in #2#{} chance",
+					"to gain {C:money}$#3#{} in {C:attention}sell value{}",
+					"when an {C:attention}Ace{}, {C:attention}2{} or {C:attention}3{}",
+					"is scored",
 				},
 			},
 			j_blueatro_harmonica = {

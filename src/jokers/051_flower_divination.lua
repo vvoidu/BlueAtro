@@ -24,10 +24,9 @@ SMODS.Joker({
 			end
 
 			local chip_value = 0
-			for i = 1, #G.play.cards - 1 do
-				local prev_card = G.play.cards[i]
-				if not prev_card.debuff then
-					chip_value = chip_value + prev_card:get_chip_bonus()
+			for _, scoring_card in ipairs(context.scoring_hand) do
+				if scoring_card ~= context.other_card and not scoring_card.debuff then
+					chip_value = chip_value + scoring_card:get_chip_bonus()
 				end
 			end
 

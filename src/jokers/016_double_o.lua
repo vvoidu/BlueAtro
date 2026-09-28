@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "double_o",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(16),
-	config = { extra = { xmult = 1, xmult_gain = 0.15 } },
+	config = { extra = { xmult = 1, xmult_gain = 0.5 } },
 	rarity = 3,
 	cost = 9,
 	blueprint_compat = true,
@@ -18,7 +18,11 @@ SMODS.Joker({
 				card = context.blueprint_card or card,
 				colour = G.C.MULT,
 			}
-		elseif context.discard and not context.blueprint then
+		elseif context.pre_discard and not context.blueprint then
+			local _, _, poker_hands = G.FUNCS.get_poker_hand_info(context.full_hand)
+			if not next(poker_hands["Pair"]) then
+				return
+			end
 			SMODS.scale_card(card, {
 				ref_table = card.ability.extra,
 				ref_value = "xmult",

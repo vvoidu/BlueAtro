@@ -7,17 +7,18 @@ SMODS.Joker({
 	cost = 10,
 	blueprint_compat = false,
 	eternal_compat = true,
-	perishable_compat = false,
+	perishable_compat = true,
 	set_card_type_badge = function(self, card, badges)
 		badges[#badges + 1] = create_badge(localize("k_blueatro_mistranslated_rare"), G.C.RARITY[3], G.C.WHITE, 1.2)
 	end,
 	calculate = function(self, card, context)
 		if context.post_trigger and context.other_card ~= card and context.other_ret.jokers then
 			local t = context.other_ret.jokers
-			local chips = t.chips or t.chip_mod
+			local chips = t.chips or t.chip_mod or t.h_chips
 			if chips then
 				-- A Joker might give chips and mult at the same time
 				t.mult = chips + (t.mult or 0)
+				t.h_chips = nil
 				t.chips = nil
 				t.chip_mod = nil
 				t.message = nil

@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "tsuchinoko_search",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(56),
-	config = { extra = { xmult = 4 } },
+	config = { extra = { xmult = 2 } },
 	rarity = 2,
 	cost = 6,
 	blueprint_compat = true,

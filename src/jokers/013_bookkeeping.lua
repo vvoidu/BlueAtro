@@ -26,7 +26,7 @@ SMODS.Joker({
 	key = "bookkeeping",
 	atlas = "blueatro_joker_atlas",
 	pos = BlueAtro.id_to_atlas_pos(13),
-	config = { extra = { dollar_gain = 4 } },
+	config = { extra = { dollar_gain = 3 } },
 	rarity = 1,
 	cost = 5,
 	blueprint_compat = true,

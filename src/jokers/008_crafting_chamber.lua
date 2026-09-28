@@ -18,6 +18,17 @@ SMODS.Joker({
 			card.ability.extra.cards_sold = card.ability.extra.cards_sold + 1
 			if card.ability.extra.cards_sold >= card.ability.extra.cards_needed then
 				card.ability.extra.cards_sold = 0
+
+				-- sold consumable counts as freeing up a consumable slot
+				local slots_used = #G.consumeables.cards + G.GAME.consumeable_buffer
+				if context.card and context.card.area == G.consumeables then
+					slots_used = slots_used - 1
+				end
+				if slots_used >= G.consumeables.config.card_limit then
+					return
+				end
+
+				G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 				G.E_MANAGER:add_event(Event({
 					func = function()
 						SMODS.add_card({
@@ -25,6 +36,7 @@ SMODS.Joker({
 							area = G.consumeables,
 							key_append = "craft_chamber",
 						})
+						G.GAME.consumeable_buffer = 0
 						return true
 					end,
 				}))

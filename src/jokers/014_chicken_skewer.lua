@@ -21,7 +21,7 @@ SMODS.Joker({
 		else
 			if
 				context.card_added
-				and context.card.ability.set == "Joker"
+				and (context.card.ability.set == "Joker" or context.card.ability.consumeable)
 				and context.card ~= card
 				and not context.blueprint
 			then

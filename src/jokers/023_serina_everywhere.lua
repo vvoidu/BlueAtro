@@ -51,17 +51,22 @@ SMODS.calculate_context = function(context, return_table)
 
 		if slots_needed > available_slots then
 			local destruction_count = slots_needed - available_slots
+			local victims = {}
 			for _, victim in ipairs(G.jokers.cards) do
-				if not victim.ability.eternal and (not victim.edition or not victim.edition.negative) then
-					victim:start_dissolve({ G.C.RED })
-					destruction_count = destruction_count - 1
-				end
-				if destruction_count == 0 then
-					break
+				if
+					not victim.getting_sliced
+					and not SMODS.is_eternal(victim, { destroy_cards = true })
+					and (not victim.edition or not victim.edition.negative)
+				then
+					victims[#victims + 1] = victim
+					if #victims == destruction_count then
+						break
+					end
 				end
 			end
 			-- Sliced *something*?
-			if destruction_count < slots_needed - available_slots then
+			if #victims > 0 then
+				SMODS.destroy_cards(victims, { colours = { G.C.RED }, immediate = true })
 				play_sound("slice1", 1.0)
 			end
 		end
