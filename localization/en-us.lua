@@ -187,7 +187,7 @@ return {
 				text = {
 					"When a played {C:attention}Queen{} scores,",
 					"permanently give it a",
-					"{C:mult}plus #1#{} Mult bonus",
+					"{C:mult}+#1#{} Mult bonus",
 				},
 			},
 			j_blueatro_double_o = {
